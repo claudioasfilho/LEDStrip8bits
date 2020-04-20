@@ -1,0 +1,947 @@
+; src/EFM8UB1_Blinky.SRC generated from: /Users/clfilho/SimplicityStudio/March20/LEDStrip_UB1/src/EFM8UB1_Blinky.c
+; COMPILER INVOKED BY:
+;        Z:\Applications\Simplicity Studio.app\Contents\Eclipse\developer\toolchains\keil_8051\9.60\BIN\C51.exe /Users/clfilho/SimplicityStudio/March20/LEDStrip_UB1/src/EFM8UB1_Blinky.c OMF2 SMALL DEBUG OBJECTEXTEND ROM(LARGE) WARNINGLEVEL(2) FLOATFUZZY(3) OPTIMIZE(0,SPEED) INTVECTOR(0X0000) INTPROMOTE SRC(src/EFM8UB1_Blinky.SRC) INCDIR(/Users/clfilho/SimplicityStudio/March20/LEDStrip_UB1/inc;/Applications/Simplicity Studio.app/Contents/Eclipse/developer/sdks/8051/v4.1.7//Device/shared/si8051Base;/Applications/Simplicity Studio.app/Contents/Eclipse/developer/sdks/8051/v4.1.7//Device/EFM8UB1/inc) NOAREGS PRINT(.\src/EFM8UB1_Blinky.lst) COND CODE PAGEWIDTH(120) PAGELENGTH(65)
+
+$NOMOD51
+
+NAME	EFM8UB1_BLINKY
+
+SPI0CKR	DATA	0A2H
+P0	DATA	080H
+SCON1_PERR	BIT	0C8H.6
+PSW_OV	BIT	0D0H.2
+P1	DATA	090H
+SPI0CN0_TXNF	BIT	0F8H.1
+WDTCN	DATA	097H
+P2	DATA	0A0H
+P3	DATA	0B0H
+ADC0CF	DATA	0BCH
+SMB0CN0_MASTER	BIT	0C0H.7
+PCA0	DATA	0F9H
+EIE1	DATA	0E6H
+SMB0CN0_ACK	BIT	0C0H.1
+USB0XCN	DATA	0B3H
+EIE2	DATA	0CEH
+PSCTL	DATA	08FH
+IT01CF	DATA	0E4H
+SMB0CN0_TXMODE	BIT	0C0H.6
+DERIVID	DATA	0ADH
+SFRPAGE	DATA	0A7H
+P0MDOUT	DATA	0A4H
+USB0CDSTA	DATA	0BFH
+P1MDOUT	DATA	0A5H
+ADC0CN0_ADINT	BIT	0E8H.5
+TMR2RLH	DATA	0CBH
+P2MDOUT	DATA	0A6H
+IE	DATA	0A8H
+TMR3RLH	DATA	093H
+P3MDOUT	DATA	09CH
+TMR4RLH	DATA	0A3H
+EIP1	DATA	0F3H
+EIP2	DATA	0F4H
+SCON0_RB8	BIT	098H.2
+TMR2RLL	DATA	0CAH
+PCA0CPH0	DATA	0FCH
+TMR3RLL	DATA	092H
+PCA0CPH1	DATA	0EAH
+SCON0_TB8	BIT	098H.3
+B_B0	BIT	0F0H.0
+DP	DATA	082H
+TMR4RLL	DATA	0A2H
+PCA0CPH2	DATA	0ECH
+B_B1	BIT	0F0H.1
+ADC0GT	DATA	0C3H
+I2C0SLAD	DATA	0BDH
+UART1FCN1_RFRQ	BIT	0D8H.3
+B_B2	BIT	0F0H.2
+SFRPGCN	DATA	0CFH
+PCA0CPL0	DATA	0FBH
+B_B3	BIT	0F0H.3
+PCA0MD	DATA	0D9H
+PCA0CPM0	DATA	0DAH
+PCA0CPL1	DATA	0E9H
+UART1FCN1_TFRQ	BIT	0D8H.7
+B_B4	BIT	0F0H.4
+PCA0CPM1	DATA	0DBH
+PCA0CPL2	DATA	0EBH
+B_B5	BIT	0F0H.5
+PCA0CPM2	DATA	0DCH
+IP	DATA	0B8H
+ADC0TK	DATA	0B9H
+B_B6	BIT	0F0H.6
+ADC0LT	DATA	0C5H
+UART1FCN1_TXNF	BIT	0D8H.6
+SCON0_MCE	BIT	098H.5
+B_B7	BIT	0F0H.7
+SMB0FCN0	DATA	0C3H
+XBR0	DATA	0E1H
+SMB0FCN1	DATA	0C4H
+SMB0CF	DATA	0C1H
+XBR1	DATA	0E2H
+PFE0CN	DATA	0C1H
+EMI0CN	DATA	0E7H
+SMB0CN0_STA	BIT	0C0H.5
+XBR2	DATA	0E3H
+ADC0MX	DATA	0BBH
+ACC_ACC0	BIT	0E0H.0
+REF0CN	DATA	0D1H
+CKCON0	DATA	08EH
+ACC_ACC1	BIT	0E0H.1
+REG0CN	DATA	0C9H
+CRC0IN	DATA	0DDH
+CKCON1	DATA	0A6H
+TMR2CN0_TR2	BIT	0C8H.2
+ACC_ACC2	BIT	0E0H.2
+REG1CN	DATA	0C6H
+ACC_ACC3	BIT	0E0H.3
+SP	DATA	081H
+CMP0MD	DATA	09DH
+ACC_ACC4	BIT	0E0H.4
+LFO0CN	DATA	0B1H
+CMP1MD	DATA	0ABH
+DISP_EN	BIT	0A0H.3
+PCA0CN0_CCF0	BIT	0D8H.0
+ACC_ACC5	BIT	0E0H.5
+USB0CF	DATA	0B5H
+TMR4CN0_TR4	BIT	098H.2
+PCA0CN0_CCF1	BIT	0D8H.1
+ACC_ACC6	BIT	0E0H.6
+TMR2	DATA	0CCH
+SPI0FCN0	DATA	09AH
+PCA0CN0_CCF2	BIT	0D8H.2
+ACC_ACC7	BIT	0E0H.7
+TMR3	DATA	094H
+SPI0FCN1	DATA	09BH
+TMR4	DATA	0A4H
+SBCON1	DATA	094H
+SMB0CN0_ACKRQ	BIT	0C0H.3
+VDM0CN	DATA	0FFH
+P0MDIN	DATA	0F1H
+SCON0_REN	BIT	098H.4
+SMB0TC	DATA	0ACH
+P1MDIN	DATA	0F2H
+SCON1_REN	BIT	0C8H.4
+P2MDIN	DATA	0F3H
+SMB0CN0_STO	BIT	0C0H.4
+USB0CDCF	DATA	0B6H
+P3MDIN	DATA	0F4H
+I2C0STAT	DATA	0B9H
+I2C0DOUT	DATA	0BBH
+SBRLH1	DATA	096H
+P0MASK	DATA	0FEH
+UART1FCN1_TXHOLD	BIT	0D8H.5
+P1MASK	DATA	0EEH
+P2MASK	DATA	0FCH
+PSW_RS0	BIT	0D0H.3
+PCA0CN0_CF	BIT	0D8H.7
+PCA0CENT	DATA	09EH
+I2C0CN0	DATA	0BAH
+CRC0ST	DATA	0D2H
+SPI0CN0_RXOVRN	BIT	0F8H.4
+PSW_RS1	BIT	0D0H.4
+SBRLL1	DATA	095H
+SCON1_RBX	BIT	0C8H.2
+TMR2CN0_T2XCLK0	BIT	0C8H.0
+TMR2CN0_T2XCLK1	BIT	0C8H.1
+SCON1_TBX	BIT	0C8H.3
+ADC0CN0_ADEN	BIT	0E8H.7
+USB0CDCN	DATA	0BEH
+TMOD	DATA	089H
+TCON	DATA	088H
+CRC0FLIP	DATA	0CFH
+PSW_PARITY	BIT	0D0H.0
+IE_ES0	BIT	0A8H.4
+CMP0MX	DATA	09FH
+TMR4CN0_T4XCLK0	BIT	098H.0
+IE_ET0	BIT	0A8H.1
+CMP1MX	DATA	0AAH
+TMR4CN0_T4XCLK1	BIT	098H.1
+IE_ET1	BIT	0A8H.3
+P0SKIP	DATA	0D4H
+UART1FCN1_RIE	BIT	0D8H.0
+IE_ET2	BIT	0A8H.5
+P1SKIP	DATA	0D5H
+P2SKIP	DATA	0CCH
+ADC0CN0	DATA	0E8H
+UART1FCN1_TIE	BIT	0D8H.4
+IE_EX0	BIT	0A8H.0
+ADC0CN1	DATA	0B2H
+PCA0CN0_CR	BIT	0D8H.6
+IE_EX1	BIT	0A8H.2
+SCON1_OVR	BIT	0C8H.7
+SCON0_SMODE	BIT	098H.7
+DEVICEID	DATA	0B5H
+CLKSEL	DATA	0A9H
+SPI0CN0_SPIEN	BIT	0F8H.0
+B	DATA	0F0H
+ADC0H	DATA	0BEH
+ADC0CN0_ADBMEN	BIT	0E8H.6
+TMR2RL	DATA	0CAH
+ADC0L	DATA	0BDH
+TMR3RL	DATA	092H
+TMR4RL	DATA	0A2H
+PCA0CN0	DATA	0D8H
+ACC	DATA	0E0H
+PCA0CP0	DATA	0FBH
+PCA0CP1	DATA	0E9H
+PCA0CP2	DATA	0EBH
+I2C0DIN	DATA	0BCH
+CRC0CN0	DATA	0CEH
+TH0	DATA	08CH
+CRC0CN1	DATA	086H
+IP_PS0	BIT	0B8H.4
+UART1FCT	DATA	0FAH
+TH1	DATA	08DH
+PCA0H	DATA	0FAH
+I2C0FCT	DATA	0F5H
+IP_PT0	BIT	0B8H.1
+IP_PT1	BIT	0B8H.3
+SMB0CN0_ARBLOST	BIT	0C0H.2
+IP_PT2	BIT	0B8H.5
+TL0	DATA	08AH
+PSW_F0	BIT	0D0H.5
+IE_ESPI0	BIT	0A8H.6
+TL1	DATA	08BH
+PCA0L	DATA	0F9H
+SMB0CN0_SI	BIT	0C0H.0
+PSW_F1	BIT	0D0H.1
+P0_B0	BIT	080H.0
+IP_PX0	BIT	0B8H.0
+P1_B0	BIT	090H.0
+P0_B1	BIT	080H.1
+IP_PX1	BIT	0B8H.2
+UART1LIN	DATA	09EH
+CMP0CN0	DATA	09BH
+TCON_IE0	BIT	088H.1
+P2_B0	BIT	0A0H.0
+P1_B1	BIT	090H.1
+P0_B2	BIT	080H.2
+CMP1CN0	DATA	0BFH
+CMP0CN1	DATA	099H
+TCON_IE1	BIT	088H.3
+P3_B0	BIT	0B0H.0
+P2_B1	BIT	0A0H.1
+P1_B2	BIT	090H.2
+P0_B3	BIT	080H.3
+SMB0CN0	DATA	0C0H
+CMP1CN1	DATA	0ACH
+P3_B1	BIT	0B0H.1
+P2_B2	BIT	0A0H.2
+P1_B3	BIT	090H.3
+P0_B4	BIT	080H.4
+P2_B3	BIT	0A0H.3
+P1_B4	BIT	090H.4
+P0_B5	BIT	080H.5
+UART1FCN1_RXTO0	BIT	0D8H.1
+P1_B5	BIT	090H.5
+P0_B6	BIT	080H.6
+EIP1H	DATA	0F5H
+UART1FCN1_RXTO1	BIT	0D8H.2
+P1_B6	BIT	090H.6
+P0_B7	BIT	080H.7
+SMB0RXLN	DATA	0C5H
+EIP2H	DATA	0F6H
+P1_B7	BIT	090H.7
+DPH	DATA	083H
+ADC0GTH	DATA	0C4H
+TMR2CN0_TF2H	BIT	0C8H.7
+TMR2CN0_T2SPLIT	BIT	0C8H.3
+PSW_AC	BIT	0D0H.6
+SPI0CN0	DATA	0F8H
+HFO0CAL	DATA	0C7H
+TCON_TF0	BIT	088H.5
+SCON0_RI	BIT	098H.0
+HFO1CAL	DATA	0D6H
+DPL	DATA	082H
+TCON_TF1	BIT	088H.7
+SCON1_RI	BIT	0C8H.0
+SBUF0	DATA	099H
+PCON0	DATA	087H
+IPH	DATA	0F2H
+ADC0GTL	DATA	0C3H
+TMR4CN0_TF4H	BIT	098H.7
+TMR4CN0_T4SPLIT	BIT	098H.3
+TMR2CN0_TF2L	BIT	0C8H.6
+SCON0_TI	BIT	098H.1
+ADC0CN0_ADCM0	BIT	0E8H.0
+SBUF1	DATA	092H
+PCON1	DATA	09AH
+ADC0LTH	DATA	0C6H
+TCON_IT0	BIT	088H.0
+SCON1_TI	BIT	0C8H.1
+ADC0CN0_ADCM1	BIT	0E8H.1
+RSTSRC	DATA	0EFH
+P0MAT	DATA	0FDH
+CRC0DAT	DATA	0DEH
+TCON_IT1	BIT	088H.2
+ADC0CN0_ADCM2	BIT	0E8H.2
+SFRSTACK	DATA	0D7H
+SCON0	DATA	098H
+PRTDRV	DATA	0F6H
+P1MAT	DATA	0EDH
+ADC0CN0_ADWINT	BIT	0E8H.3
+SBRL1	DATA	095H
+USB0AEC	DATA	0B2H
+SMOD1	DATA	093H
+SCON1	DATA	0C8H
+P2MAT	DATA	0FBH
+TMR4CN0_TF4L	BIT	098H.6
+ADC0CN0_ADBUSY	BIT	0E8H.4
+SMB0ADM	DATA	0D6H
+ADC0LTL	DATA	0C5H
+SPI0CN0_MODF	BIT	0F8H.5
+IP_PSPI0	BIT	0B8H.6
+PCA0CLR	DATA	09CH
+TMR2CN0	DATA	0C8H
+TMR3CN0	DATA	091H
+TMR2CN1	DATA	0FDH
+TMR4CN0	DATA	098H
+TMR3CN1	DATA	0FEH
+TMR4CN1	DATA	0FFH
+SMB0ADR	DATA	0D7H
+TCON_TR0	BIT	088H.4
+TMR2CN0_TF2CEN	BIT	0C8H.4
+TCON_TR1	BIT	088H.6
+SMB0DAT	DATA	0C2H
+TMR2H	DATA	0CDH
+SPI0CFG	DATA	0A1H
+TMR3H	DATA	095H
+HFOCN	DATA	0EFH
+CRC0CNT	DATA	0D3H
+TMR4H	DATA	0A5H
+TMR4CN0_TF4CEN	BIT	098H.4
+SMB0FCT	DATA	0EFH
+PCA0POL	DATA	096H
+TMR2L	DATA	0CCH
+SPI0CN0_SPIF	BIT	0F8H.7
+USB0ADR	DATA	0AEH
+TMR3L	DATA	094H
+ADC0PWR	DATA	0DFH
+IE_EA	BIT	0A8H.7
+TMR4L	DATA	0A4H
+USB0DAT	DATA	0AFH
+TMR2CN0_TF2LEN	BIT	0C8H.5
+SPI0CN0_WCOL	BIT	0F8H.6
+SPI0CN0_NSSMD0	BIT	0F8H.2
+PSW_CY	BIT	0D0H.7
+UART1FCN0	DATA	09DH
+SPI0DAT	DATA	0A3H
+I2C0FCN0	DATA	0ADH
+SPI0CN0_NSSMD1	BIT	0F8H.3
+ADC0	DATA	0BDH
+UART1FCN1	DATA	0D8H
+I2C0FCN1	DATA	0ABH
+TMR4CN0_TF4LEN	BIT	098H.5
+PSW	DATA	0D0H
+PCA0PWM	DATA	0F7H
+SPI0FCT	DATA	0F7H
+REVID	DATA	0B6H
+FLKEY	DATA	0B7H
+ADC0AC	DATA	0B3H
+?PR?SiLabs_Startup?EFM8UB1_BLINKY        SEGMENT CODE 
+?PR?logicZero?EFM8UB1_BLINKY             SEGMENT CODE 
+?PR?logicOne?EFM8UB1_BLINKY              SEGMENT CODE 
+?PR?logicReseta?EFM8UB1_BLINKY           SEGMENT CODE 
+?PR?main?EFM8UB1_BLINKY                  SEGMENT CODE 
+	EXTRN	CODE (enter_DefaultMode_from_RESET)
+	EXTRN	CODE (?C_STARTUP)
+	PUBLIC	main
+	PUBLIC	logicReseta
+	PUBLIC	logicOne
+	PUBLIC	logicZero
+	PUBLIC	SiLabs_Startup
+; //-----------------------------------------------------------------------------
+; // EFM8UB1_Blinky.c
+; //-----------------------------------------------------------------------------
+; // Copyright 2014 Silicon Laboratories, Inc.
+; // http://developer.silabs.com/legal/version/v11/Silicon_Labs_Software_License_Agreement.txt
+; //
+; // Program Description:
+; //
+; // This program flashes the red/green/blue LED on the EFM8UB1 STK board about
+; // five times a second using the interrupt handler for Timer2.
+; //
+; // Resources:
+; //   SYSCLK - 24.5 MHz HFOSC0 / 8
+; //   Timer2 - 5 Hz interrupt
+; //   P1.4   - LED green
+; //   P1.5   - LED blue
+; //   P1.6   - LED red
+; //   P2.3   - Display enable
+; //
+; //-----------------------------------------------------------------------------
+; // How To Test: EFM8UB1 STK
+; //-----------------------------------------------------------------------------
+; // 1) Place the switch in "AEM" mode.
+; // 2) Connect the EFM8UB1 STK board to a PC using a mini USB cable.
+; // 3) Compile and download code to the EFM8UB1 STK board.
+; //    In Simplicity Studio IDE, select Run -> Debug from the menu bar,
+; //    click the Debug button in the quick menu, or press F11.
+; // 4) Run the code.
+; //    In Simplicity Studio IDE, select Run -> Resume from the menu bar,
+; //    click the Resume button in the quick menu, or press F8.
+; // 5) The RGB LED should alternate colors at approximately 5 Hz.
+; //
+; // Target:         EFM8UB1
+; // Tool chain:     Generic
+; //
+; // Release 0.1 (MW, ST)
+; //    - Initial Revision
+; //    - 10 OCT 2014
+; //
+; 
+; //-----------------------------------------------------------------------------
+; // Includes
+; //-----------------------------------------------------------------------------
+; #include <SI_EFM8UB1_Register_Enums.h>
+; #include <InitDevice.h>
+; 
+; //-----------------------------------------------------------------------------
+; // Pin Definitions
+; //-----------------------------------------------------------------------------
+; SI_SBIT (DISP_EN, SFR_P2, 3);          // Display Enable
+; #define DISP_BC_DRIVEN   0             // 0 = Board Controller drives display
+; #define DISP_EFM8_DRIVEN 1             // 1 = EFM8 drives display
+; 
+; //-----------------------------------------------------------------------------
+; // SiLabs_Startup() Routine
+; // ----------------------------------------------------------------------------
+; // This function is called immediately after reset, before the initialization
+; // code is run in SILABS_STARTUP.A51 (which runs before main() ). This is a
+; // useful place to disable the watchdog timer, which is enable by default
+; // and may trigger before main() in some instances.
+; //-----------------------------------------------------------------------------
+; void SiLabs_Startup (void)
+
+	RSEG  ?PR?SiLabs_Startup?EFM8UB1_BLINKY
+SiLabs_Startup:
+	USING	0
+			; SOURCE LINE # 62
+; {
+			; SOURCE LINE # 63
+;   // Disable the watchdog here
+; }
+			; SOURCE LINE # 65
+	RET  	
+; END OF SiLabs_Startup
+
+; 
+; void logicZero()
+
+	RSEG  ?PR?logicZero?EFM8UB1_BLINKY
+logicZero:
+	USING	0
+			; SOURCE LINE # 67
+; {
+			; SOURCE LINE # 68
+; 	#pragma asm
+; 	   SETB P1.4;
+	  SETB P1.4;
+; 	   NOP;
+	  NOP ;
+; 	   NOP;
+	  NOP ;
+; 	   NOP;
+	  NOP ;
+; 	   NOP;
+	  NOP ;
+; 	   NOP;
+	  NOP ;
+; 	   CLR P1.4;
+	  CLR P1.4;
+; 	   NOP;
+	  NOP ;
+; 	   NOP;
+	  NOP ;
+; 	   NOP;
+	  NOP ;
+; 	   NOP;
+	  NOP ;
+; 	   NOP;
+	  NOP ;
+; 	   NOP;
+	  NOP ;
+; 	   NOP;
+	  NOP ;
+; 	   NOP;
+	  NOP ;
+; 	   NOP;
+	  NOP ;
+; 	#pragma endasm
+; }
+			; SOURCE LINE # 87
+	RET  	
+; END OF logicZero
+
+; 
+; void logicOne()
+
+	RSEG  ?PR?logicOne?EFM8UB1_BLINKY
+logicOne:
+	USING	0
+			; SOURCE LINE # 89
+; {
+			; SOURCE LINE # 90
+; 
+; }
+			; SOURCE LINE # 92
+	RET  	
+; END OF logicOne
+
+; 
+; void logicReseta()
+
+	RSEG  ?PR?logicReseta?EFM8UB1_BLINKY
+logicReseta:
+	USING	0
+			; SOURCE LINE # 94
+; {
+			; SOURCE LINE # 95
+; 	//static unsigned int counterLedReset;
+; 
+; 
+; 	//for(counterLedReset=0 ; counterLedReset<390; counterLedReset++)__asm__("NOP");
+; 
+; 
+; }
+			; SOURCE LINE # 102
+	RET  	
+; END OF logicReseta
+
+;  
+; //-----------------------------------------------------------------------------
+; // Main Routine
+; //-----------------------------------------------------------------------------
+; void main (void)
+
+	RSEG  ?PR?main?EFM8UB1_BLINKY
+main:
+	USING	0
+			; SOURCE LINE # 107
+; {
+			; SOURCE LINE # 108
+;    enter_DefaultMode_from_RESET();
+			; SOURCE LINE # 109
+	LCALL	enter_DefaultMode_from_RESET
+; 
+;    DISP_EN = DISP_BC_DRIVEN;           // Display not driven by EFM8
+			; SOURCE LINE # 111
+	CLR  	DISP_EN
+; 
+;    IE_EA = 0;                          // Enable global interrupts
+			; SOURCE LINE # 113
+	CLR  	IE_EA
+?C0005:
+; 
+; 
+; 
+; 
+;    while (1) {
+			; SOURCE LINE # 118
+; 	   //logicZero();
+; #if 1
+; #pragma asm
+; 
+	  
+; DELAY MACRO CNT;
+	  DELAY MACRO CNT;
+; 	  REPT  CNT;
+	  REPT  CNT;
+; 	   NOP;
+	  NOP ;
+; 	   ENDM
+	  ENDM
+; 	  ENDM
+	  ENDM
+; 
+	  
+; LOGICAZERO MACRO;
+	  LOGICAZERO MACRO;
+; SETB P1.4;
+	  SETB P1.4;
+; REPT  13;
+	  REPT  13;
+; 	NOP;
+	  NOP ;
+; 	ENDM
+	  ENDM
+; CLR P1.4;
+	  CLR P1.4;
+; REPT  40;
+	  REPT  40;
+; 	NOP;
+	  NOP ;
+; 	ENDM
+	  ENDM
+; SETB P1.4;
+	  SETB P1.4;
+; ENDM
+	  ENDM
+; 
+	  
+; LOGICAONE MACRO;
+	  LOGICAONE MACRO;
+; SETB P1.4;
+	  SETB P1.4;
+; REPT  22;
+	  REPT  22;
+; 	NOP;
+	  NOP ;
+; 	ENDM
+	  ENDM
+; CLR P1.4;
+	  CLR P1.4;
+; REPT  27;
+	  REPT  27;
+; 	NOP;
+	  NOP ;
+; 	ENDM
+	  ENDM
+; SETB P1.4;
+	  SETB P1.4;
+; ENDM
+	  ENDM
+; 
+	  
+; DELAY1US MACRO;
+	  DELAY1US MACRO;
+; REPT  48;
+	  REPT  48;
+; 	NOP;
+	  NOP ;
+; 	ENDM
+	  ENDM
+; ENDM
+	  ENDM
+; 
+	  
+; 
+	  
+; LOGICARESET MACRO;
+	  LOGICARESET MACRO;
+; CLR P1.4;
+	  CLR P1.4;
+; REPT  80;
+	  REPT  80;
+; 	DELAY1US;
+	  DELAY1US;
+; 	ENDM
+	  ENDM
+; SETB P1.4;
+	  SETB P1.4;
+; ENDM
+	  ENDM
+; 
+	  
+; COLORRED Macro;
+	  COLORRED Macro;
+; 
+	  
+; ;GREEN
+	  ;GREEN
+; 
+	  
+; 	LOGICAZERO;
+	  LOGICAZERO;
+; 	LOGICAZERO;
+	  LOGICAZERO;
+; 	LOGICAZERO;
+	  LOGICAZERO;
+; 	LOGICAZERO;
+	  LOGICAZERO;
+; 	LOGICAZERO;
+	  LOGICAZERO;
+; 	LOGICAZERO;
+	  LOGICAZERO;
+; 	LOGICAZERO;
+	  LOGICAZERO;
+; 	LOGICAZERO;
+	  LOGICAZERO;
+; 
+	  
+; ;RED
+	  ;RED
+; 
+	  
+; 	LOGICAONE;
+	  LOGICAONE;
+; 	LOGICAONE;
+	  LOGICAONE;
+; 	LOGICAONE;
+	  LOGICAONE;
+; 	LOGICAONE;
+	  LOGICAONE;
+; 	LOGICAONE;
+	  LOGICAONE;
+; 	LOGICAONE;
+	  LOGICAONE;
+; 	LOGICAONE;
+	  LOGICAONE;
+; 	LOGICAONE;
+	  LOGICAONE;
+; 
+	  
+; ;BLUE
+	  ;BLUE
+; 	LOGICAZERO;
+	  LOGICAZERO;
+; 	LOGICAZERO;
+	  LOGICAZERO;
+; 	LOGICAZERO;
+	  LOGICAZERO;
+; 	LOGICAZERO;
+	  LOGICAZERO;
+; 	LOGICAZERO;
+	  LOGICAZERO;
+; 	LOGICAZERO;
+	  LOGICAZERO;
+; 	LOGICAZERO;
+	  LOGICAZERO;
+; 	LOGICAZERO;
+	  LOGICAZERO;
+; 
+	  
+; 
+	  
+; 
+	  
+; 	ENDM
+	  ENDM
+; 
+	  
+; COLORBLUE Macro;
+	  COLORBLUE Macro;
+; 
+	  
+; 	;GREEN
+	  ;GREEN
+; 		LOGICAZERO;
+	  LOGICAZERO;
+; 		LOGICAZERO;
+	  LOGICAZERO;
+; 		LOGICAZERO;
+	  LOGICAZERO;
+; 		LOGICAZERO;
+	  LOGICAZERO;
+; 		LOGICAZERO;
+	  LOGICAZERO;
+; 		LOGICAZERO;
+	  LOGICAZERO;
+; 		LOGICAZERO;
+	  LOGICAZERO;
+; 		LOGICAZERO;
+	  LOGICAZERO;
+; 
+	  
+; 
+	  
+; 	;RED
+	  ;RED
+; 		LOGICAZERO;
+	  LOGICAZERO;
+; 		LOGICAZERO;
+	  LOGICAZERO;
+; 		LOGICAZERO;
+	  LOGICAZERO;
+; 		LOGICAZERO;
+	  LOGICAZERO;
+; 		LOGICAZERO;
+	  LOGICAZERO;
+; 		LOGICAZERO;
+	  LOGICAZERO;
+; 		LOGICAZERO;
+	  LOGICAZERO;
+; 		LOGICAZERO;
+	  LOGICAZERO;
+; 
+	  
+; 	;BLUE
+	  ;BLUE
+; 
+	  
+; 		LOGICAONE;
+	  LOGICAONE;
+; 		LOGICAONE;
+	  LOGICAONE;
+; 		LOGICAONE;
+	  LOGICAONE;
+; 		LOGICAONE;
+	  LOGICAONE;
+; 		LOGICAONE;
+	  LOGICAONE;
+; 		LOGICAONE;
+	  LOGICAONE;
+; 		LOGICAONE;
+	  LOGICAONE;
+; 		LOGICAONE;
+	  LOGICAONE;
+; 
+	  
+; 		ENDM
+	  ENDM
+; 
+	  
+; COLORGREEN Macro;
+	  COLORGREEN Macro;
+; 
+	  
+; 	;GREEN
+	  ;GREEN
+; 		LOGICAONE;
+	  LOGICAONE;
+; 		LOGICAONE;
+	  LOGICAONE;
+; 		LOGICAONE;
+	  LOGICAONE;
+; 		LOGICAONE;
+	  LOGICAONE;
+; 		LOGICAONE;
+	  LOGICAONE;
+; 		LOGICAONE;
+	  LOGICAONE;
+; 		LOGICAONE;
+	  LOGICAONE;
+; 		LOGICAONE;
+	  LOGICAONE;
+; 
+	  
+; 
+	  
+; 	;RED
+	  ;RED
+; 		LOGICAZERO;
+	  LOGICAZERO;
+; 		LOGICAZERO;
+	  LOGICAZERO;
+; 		LOGICAZERO;
+	  LOGICAZERO;
+; 		LOGICAZERO;
+	  LOGICAZERO;
+; 		LOGICAZERO;
+	  LOGICAZERO;
+; 		LOGICAZERO;
+	  LOGICAZERO;
+; 		LOGICAZERO;
+	  LOGICAZERO;
+; 		LOGICAZERO;
+	  LOGICAZERO;
+; 
+	  
+; 	;BLUE
+	  ;BLUE
+; 		LOGICAZERO;
+	  LOGICAZERO;
+; 		LOGICAZERO;
+	  LOGICAZERO;
+; 		LOGICAZERO;
+	  LOGICAZERO;
+; 		LOGICAZERO;
+	  LOGICAZERO;
+; 		LOGICAZERO;
+	  LOGICAZERO;
+; 		LOGICAZERO;
+	  LOGICAZERO;
+; 		LOGICAZERO;
+	  LOGICAZERO;
+; 		LOGICAZERO;
+	  LOGICAZERO;
+; 
+	  
+; 
+	  
+; 
+	  
+; 		ENDM
+	  ENDM
+; 
+	  
+; SETB P1.4;
+	  SETB P1.4;
+;  LOOP:
+	  LOOP:
+; 
+	  
+; 
+	  
+; 
+	  
+; 
+	  
+;  COLORGREEN;
+	  COLORGREEN;
+;  COLORBLUE;
+	  COLORBLUE;
+;  COLORRED;
+	  COLORRED;
+;  ;LOGICARESET;
+	  ;LOGICARESET;
+; 
+	  
+; 
+	  
+;    JMP LOOP;
+	  JMP LOOP;
+; #pragma endasm
+; 
+; #else
+; 
+; 
+; 
+; 
+;    	P1 = 0xFF;
+;    	_nop_ ();    // delay
+;    	_nop_ ();    // delay
+;    	_nop_ ();    // delay
+;    	_nop_ ();    // delay
+;    	_nop_ ();    // delay
+;    	_nop_ ();    // delay
+;      P1 = 0x00;
+; 	_nop_ ();    // delay
+; 	_nop_ ();    // delay
+; 	_nop_ ();    // delay
+;    	_nop_ ();    // delay
+;    	_nop_ ();    // delay
+;    	_nop_ ();    // delay
+;    	_nop_ ();    // delay
+;    	_nop_ ();    // delay
+;    	_nop_ ();    // delay
+;    	_nop_ ();    // delay
+;    	_nop_ ();    // delay
+;    	_nop_ ();    // delay
+;    	_nop_ ();    // delay
+;    	_nop_ ();    // delay
+;    	_nop_ ();    // delay
+; 	P1 = 0xFF;
+;    	_nop_ ();    // delay
+;    	_nop_ ();    // delay
+;    	_nop_ ();    // delay
+;    	_nop_ ();    // delay
+;    	_nop_ ();    // delay
+;    	_nop_ ();    // delay
+;      P1 = 0x00;
+; 	_nop_ ();    // delay
+; 	_nop_ ();    // delay
+; 	_nop_ ();    // delay
+;    	_nop_ ();    // delay
+;    	_nop_ ();    // delay
+;    	_nop_ ();    // delay
+;    	_nop_ ();    // delay
+;    	_nop_ ();    // delay
+;    	_nop_ ();    // delay
+;    	_nop_ ();    // delay
+;    	_nop_ ();    // delay
+;    	_nop_ ();    // delay
+;    	_nop_ ();    // delay
+;    	_nop_ ();    // delay
+;    	_nop_ ();    // delay
+;    	//P1 = 0xFF;
+; 
+; #endif
+; 
+;    }                        // Spin forever
+			; SOURCE LINE # 349
+	LJMP 	?C0005
+	RET  	
+; END OF main
+
+	END
