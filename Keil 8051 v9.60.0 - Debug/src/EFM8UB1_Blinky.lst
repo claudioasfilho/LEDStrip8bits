@@ -1,4 +1,4 @@
-AX51 MACRO ASSEMBLER  EFM8UB1_BLINKY                                                        04/21/20 09:42:24 PAGE     1
+AX51 MACRO ASSEMBLER  EFM8UB1_BLINKY                                                        04/21/20 14:49:06 PAGE     1
 
 
 MACRO ASSEMBLER AX51 V3.15.3.0
@@ -62,7 +62,7 @@ LOC    OBJ             LINE     SOURCE
  00CF                    39     CRC0FLIP        DATA    0CFH
  00DD                    40     CRC0IN  DATA    0DDH
  00D2                    41     CRC0ST  DATA    0D2H
-AX51 MACRO ASSEMBLER  EFM8UB1_BLINKY                                                        04/21/20 09:42:24 PAGE     2
+AX51 MACRO ASSEMBLER  EFM8UB1_BLINKY                                                        04/21/20 14:49:06 PAGE     2
 
  00AD                    42     DERIVID DATA    0ADH
  00B5                    43     DEVICEID        DATA    0B5H
@@ -127,7 +127,7 @@ LOC    OBJ             LINE     SOURCE
  00DC                   102     PCA0CPM2        DATA    0DCH
  00FA                   103     PCA0H   DATA    0FAH
  00F9                   104     PCA0L   DATA    0F9H
-AX51 MACRO ASSEMBLER  EFM8UB1_BLINKY                                                        04/21/20 09:42:24 PAGE     3
+AX51 MACRO ASSEMBLER  EFM8UB1_BLINKY                                                        04/21/20 14:49:06 PAGE     3
 
  00D9                   105     PCA0MD  DATA    0D9H
  0096                   106     PCA0POL DATA    096H
@@ -192,7 +192,7 @@ LOC    OBJ             LINE     SOURCE
  0092                   165     TMR3RLL DATA    092H
  0098                   166     TMR4CN0 DATA    098H
  00FF                   167     TMR4CN1 DATA    0FFH
-AX51 MACRO ASSEMBLER  EFM8UB1_BLINKY                                                        04/21/20 09:42:24 PAGE     4
+AX51 MACRO ASSEMBLER  EFM8UB1_BLINKY                                                        04/21/20 14:49:06 PAGE     4
 
  00A5                   168     TMR4H   DATA    0A5H
  00A4                   169     TMR4L   DATA    0A4H
@@ -257,7 +257,7 @@ LOC    OBJ             LINE     SOURCE
  00A8.0                 228     IE_EX0  BIT     0A8H.0
  00A8.1                 229     IE_ET0  BIT     0A8H.1
  00A8.2                 230     IE_EX1  BIT     0A8H.2
-AX51 MACRO ASSEMBLER  EFM8UB1_BLINKY                                                        04/21/20 09:42:24 PAGE     5
+AX51 MACRO ASSEMBLER  EFM8UB1_BLINKY                                                        04/21/20 14:49:06 PAGE     5
 
  00A8.3                 231     IE_ET1  BIT     0A8H.3
  00A8.4                 232     IE_ES0  BIT     0A8H.4
@@ -322,7 +322,7 @@ LOC    OBJ             LINE     SOURCE
  00C8.7                 291     SCON1_OVR       BIT     0C8H.7
  00C0.0                 292     SMB0CN0_SI      BIT     0C0H.0
  00C0.1                 293     SMB0CN0_ACK     BIT     0C0H.1
-AX51 MACRO ASSEMBLER  EFM8UB1_BLINKY                                                        04/21/20 09:42:24 PAGE     6
+AX51 MACRO ASSEMBLER  EFM8UB1_BLINKY                                                        04/21/20 14:49:06 PAGE     6
 
  00C0.2                 294     SMB0CN0_ARBLOST BIT     0C0H.2
  00C0.3                 295     SMB0CN0_ACKRQ   BIT     0C0H.3
@@ -372,463 +372,133 @@ LOC    OBJ             LINE     SOURCE
  00D8.7                 339     UART1FCN1_TFRQ  BIT     0D8H.7
  00A0.3                 340     DISP_EN BIT     0A0H.3
 ------                  341     ?PR?SiLabs_Startup?EFM8UB1_BLINKY        SEGMENT CODE 
-------                  342     ?PR?logicZero?EFM8UB1_BLINKY             SEGMENT CODE 
-------                  343     ?PR?logicOne?EFM8UB1_BLINKY              SEGMENT CODE 
-------                  344     ?PR?logicReseta?EFM8UB1_BLINKY           SEGMENT CODE 
-------                  345     ?PR?main?EFM8UB1_BLINKY                  SEGMENT CODE 
-                        346             EXTRN   CODE (enter_DefaultMode_from_RESET)
-                        347             EXTRN   CODE (LEDSLOOP)
-                        348             EXTRN   CODE (?C_STARTUP)
-                        349             PUBLIC  main
-                        350             PUBLIC  logicReseta
-                        351             PUBLIC  logicOne
-                        352             PUBLIC  logicZero
-                        353             PUBLIC  SiLabs_Startup
-                        354     ; //-----------------------------------------------------------------------------
-                        355     ; // EFM8UB1_Blinky.c
-                        356     ; //-----------------------------------------------------------------------------
-AX51 MACRO ASSEMBLER  EFM8UB1_BLINKY                                                        04/21/20 09:42:24 PAGE     7
-
-                        357     ; // Copyright 2014 Silicon Laboratories, Inc.
-                        358     ; // http://developer.silabs.com/legal/version/v11/Silicon_Labs_Software_License_Agreeme
+------                  342     ?PR?main?EFM8UB1_BLINKY                  SEGMENT CODE 
+                        343             EXTRN   CODE (enter_DefaultMode_from_RESET)
+                        344             EXTRN   CODE (_LEDSLOOP)
+                        345             EXTRN   CODE (?C_STARTUP)
+                        346             PUBLIC  main
+                        347             PUBLIC  SiLabs_Startup
+                        348     ; //-----------------------------------------------------------------------------
+                        349     ; // EFM8UB1_Blinky.c
+                        350     ; //-----------------------------------------------------------------------------
+                        351     ; // Copyright 2014 Silicon Laboratories, Inc.
+                        352     ; // http://developer.silabs.com/legal/version/v11/Silicon_Labs_Software_License_Agreeme
                                nt.txt
-                        359     ; //
-                        360     ; // Program Description:
-                        361     ; //
-                        362     ; // This program flashes the red/green/blue LED on the EFM8UB1 STK board about
-                        363     ; // five times a second using the interrupt handler for Timer2.
-                        364     ; //
-                        365     ; // Resources:
-                        366     ; //   SYSCLK - 24.5 MHz HFOSC0 / 8
-                        367     ; //   Timer2 - 5 Hz interrupt
-                        368     ; //   P1.4   - LED green
-                        369     ; //   P1.5   - LED blue
-                        370     ; //   P1.6   - LED red
-                        371     ; //   P2.3   - Display enable
-                        372     ; //
-                        373     ; //-----------------------------------------------------------------------------
-                        374     ; // How To Test: EFM8UB1 STK
-                        375     ; //-----------------------------------------------------------------------------
-                        376     ; // 1) Place the switch in "AEM" mode.
-                        377     ; // 2) Connect the EFM8UB1 STK board to a PC using a mini USB cable.
-                        378     ; // 3) Compile and download code to the EFM8UB1 STK board.
-                        379     ; //    In Simplicity Studio IDE, select Run -> Debug from the menu bar,
-                        380     ; //    click the Debug button in the quick menu, or press F11.
-                        381     ; // 4) Run the code.
-                        382     ; //    In Simplicity Studio IDE, select Run -> Resume from the menu bar,
-                        383     ; //    click the Resume button in the quick menu, or press F8.
-                        384     ; // 5) The RGB LED should alternate colors at approximately 5 Hz.
-                        385     ; //
-                        386     ; // Target:         EFM8UB1
-                        387     ; // Tool chain:     Generic
-                        388     ; //
-                        389     ; // Release 0.1 (MW, ST)
-                        390     ; //    - Initial Revision
-                        391     ; //    - 10 OCT 2014
-                        392     ; //
+                        353     ; //
+                        354     ; // Program Description:
+                        355     ; //
+AX51 MACRO ASSEMBLER  EFM8UB1_BLINKY                                                        04/21/20 14:49:06 PAGE     7
+
+                        356     ; // This program flashes the red/green/blue LED on the EFM8UB1 STK board about
+                        357     ; // five times a second using the interrupt handler for Timer2.
+                        358     ; //
+                        359     ; // Resources:
+                        360     ; //   SYSCLK - 24.5 MHz HFOSC0 / 8
+                        361     ; //   Timer2 - 5 Hz interrupt
+                        362     ; //   P1.4   - LED green
+                        363     ; //   P1.5   - LED blue
+                        364     ; //   P1.6   - LED red
+                        365     ; //   P2.3   - Display enable
+                        366     ; //
+                        367     ; //-----------------------------------------------------------------------------
+                        368     ; // How To Test: EFM8UB1 STK
+                        369     ; //-----------------------------------------------------------------------------
+                        370     ; // 1) Place the switch in "AEM" mode.
+                        371     ; // 2) Connect the EFM8UB1 STK board to a PC using a mini USB cable.
+                        372     ; // 3) Compile and download code to the EFM8UB1 STK board.
+                        373     ; //    In Simplicity Studio IDE, select Run -> Debug from the menu bar,
+                        374     ; //    click the Debug button in the quick menu, or press F11.
+                        375     ; // 4) Run the code.
+                        376     ; //    In Simplicity Studio IDE, select Run -> Resume from the menu bar,
+                        377     ; //    click the Resume button in the quick menu, or press F8.
+                        378     ; // 5) The RGB LED should alternate colors at approximately 5 Hz.
+                        379     ; //
+                        380     ; // Target:         EFM8UB1
+                        381     ; // Tool chain:     Generic
+                        382     ; //
+                        383     ; // Release 0.1 (MW, ST)
+                        384     ; //    - Initial Revision
+                        385     ; //    - 10 OCT 2014
+                        386     ; //
+                        387     ; 
+                        388     ; //-----------------------------------------------------------------------------
+                        389     ; // Includes
+                        390     ; //-----------------------------------------------------------------------------
+                        391     ; #include <SI_EFM8UB1_Register_Enums.h>
+                        392     ; #include <InitDevice.h>
                         393     ; 
-                        394     ; //-----------------------------------------------------------------------------
-                        395     ; // Includes
-                        396     ; //-----------------------------------------------------------------------------
-                        397     ; #include <SI_EFM8UB1_Register_Enums.h>
-                        398     ; #include <InitDevice.h>
-                        399     ; 
-                        400     ; 
-                        401     ; //-----------------------------------------------------------------------------
-                        402     ; // Pin Definitions
-                        403     ; //-----------------------------------------------------------------------------
-                        404     ; SI_SBIT (DISP_EN, SFR_P2, 3);          // Display Enable
-                        405     ; #define DISP_BC_DRIVEN   0             // 0 = Board Controller drives display
-                        406     ; #define DISP_EFM8_DRIVEN 1             // 1 = EFM8 drives display
-                        407     ; 
-                        408     ; 
-                        409     ; void ANYCOLORS (void);
-                        410     ; void LEDSLOOP (void);
-                        411     ; //-----------------------------------------------------------------------------
-                        412     ; // SiLabs_Startup() Routine
-                        413     ; // ----------------------------------------------------------------------------
-                        414     ; // This function is called immediately after reset, before the initialization
-                        415     ; // code is run in SILABS_STARTUP.A51 (which runs before main() ). This is a
-                        416     ; // useful place to disable the watchdog timer, which is enable by default
-                        417     ; // and may trigger before main() in some instances.
-                        418     ; //-----------------------------------------------------------------------------
-AX51 MACRO ASSEMBLER  EFM8UB1_BLINKY                                                        04/21/20 09:42:24 PAGE     8
+                        394     ; 
+                        395     ; //-----------------------------------------------------------------------------
+                        396     ; // Pin Definitions
+                        397     ; //-----------------------------------------------------------------------------
+                        398     ; SI_SBIT (DISP_EN, SFR_P2, 3);          // Display Enable
+                        399     ; #define DISP_BC_DRIVEN   0             // 0 = Board Controller drives display
+                        400     ; #define DISP_EFM8_DRIVEN 1             // 1 = EFM8 drives display
+                        401     ; 
+                        402     ; 
+                        403     ; void ANYCOLORS (void);
+                        404     ; void LEDSLOOP (uint8_t count);
+                        405     ; //-----------------------------------------------------------------------------
+                        406     ; // SiLabs_Startup() Routine
+                        407     ; // ----------------------------------------------------------------------------
+                        408     ; // This function is called immediately after reset, before the initialization
+                        409     ; // code is run in SILABS_STARTUP.A51 (which runs before main() ). This is a
+                        410     ; // useful place to disable the watchdog timer, which is enable by default
+                        411     ; // and may trigger before main() in some instances.
+                        412     ; //-----------------------------------------------------------------------------
+                        413     ; void SiLabs_Startup (void)
+                        414     
+------                  415             RSEG  ?PR?SiLabs_Startup?EFM8UB1_BLINKY
+000000                  416     SiLabs_Startup:
+                        417             USING   0
+                        418                             ; SOURCE LINE # 66
+AX51 MACRO ASSEMBLER  EFM8UB1_BLINKY                                                        04/21/20 14:49:06 PAGE     8
 
-                        419     ; void SiLabs_Startup (void)
-                        420     
-------                  421             RSEG  ?PR?SiLabs_Startup?EFM8UB1_BLINKY
-000000                  422     SiLabs_Startup:
-                        423             USING   0
-                        424                             ; SOURCE LINE # 66
-                        425     ; {
-                        426                             ; SOURCE LINE # 67
-                        427     ;   // Disable the watchdog here
-                        428     ; }
-                        429                             ; SOURCE LINE # 69
-000000 22               430             RET     
-                        431     ; END OF SiLabs_Startup
-                        432     
-                        433     ; 
-                        434     ; void logicZero()
-                        435     
-------                  436             RSEG  ?PR?logicZero?EFM8UB1_BLINKY
-000000                  437     logicZero:
-                        438             USING   0
-                        439                             ; SOURCE LINE # 71
-                        440     ; {
-                        441                             ; SOURCE LINE # 72
-                        442     ;       #pragma asm
-                        443     ;          SETB P1.4;
-000000 D294             444               SETB P1.4;
-                        445     ;          NOP;
-000002 00               446               NOP ;
-                        447     ;          NOP;
-000003 00               448               NOP ;
-                        449     ;          NOP;
-000004 00               450               NOP ;
-                        451     ;          NOP;
-000005 00               452               NOP ;
-                        453     ;          NOP;
-000006 00               454               NOP ;
-                        455     ;          CLR P1.4;
-000007 C294             456               CLR P1.4;
-                        457     ;          NOP;
-000009 00               458               NOP ;
-                        459     ;          NOP;
-00000A 00               460               NOP ;
-                        461     ;          NOP;
-00000B 00               462               NOP ;
-                        463     ;          NOP;
-00000C 00               464               NOP ;
-                        465     ;          NOP;
-00000D 00               466               NOP ;
-                        467     ;          NOP;
-00000E 00               468               NOP ;
-                        469     ;          NOP;
-00000F 00               470               NOP ;
-                        471     ;          NOP;
-000010 00               472               NOP ;
-                        473     ;          NOP;
-000011 00               474               NOP ;
-                        475     ;       #pragma endasm
-                        476     ; }
-                        477                             ; SOURCE LINE # 91
-000012 22               478             RET     
-                        479     ; END OF logicZero
-                        480     
-                        481     ; 
-AX51 MACRO ASSEMBLER  EFM8UB1_BLINKY                                                        04/21/20 09:42:24 PAGE     9
-
-                        482     ; void logicOne()
-                        483     
-------                  484             RSEG  ?PR?logicOne?EFM8UB1_BLINKY
-000000                  485     logicOne:
-                        486             USING   0
-                        487                             ; SOURCE LINE # 93
-                        488     ; {
-                        489                             ; SOURCE LINE # 94
-                        490     ; 
-                        491     ; }
-                        492                             ; SOURCE LINE # 96
-000000 22               493             RET     
-                        494     ; END OF logicOne
-                        495     
-                        496     ; 
-                        497     ; void logicReseta()
-                        498     
-------                  499             RSEG  ?PR?logicReseta?EFM8UB1_BLINKY
-000000                  500     logicReseta:
-                        501             USING   0
-                        502                             ; SOURCE LINE # 98
-                        503     ; {
-                        504                             ; SOURCE LINE # 99
-                        505     ;       //static unsigned int counterLedReset;
-                        506     ; 
-                        507     ; 
-                        508     ;       //for(counterLedReset=0 ; counterLedReset<390; counterLedReset++)__asm__("NOP");
-                        509     ; 
-                        510     ; 
-                        511     ; }
-                        512                             ; SOURCE LINE # 106
-000000 22               513             RET     
-                        514     ; END OF logicReseta
-                        515     
-                        516     ;  
-                        517     ; //-----------------------------------------------------------------------------
-                        518     ; // Main Routine
-                        519     ; //-----------------------------------------------------------------------------
-                        520     ; void main (void)
-                        521     
-------                  522             RSEG  ?PR?main?EFM8UB1_BLINKY
-000000                  523     main:
-                        524             USING   0
-                        525                             ; SOURCE LINE # 111
-                        526     ; {
-                        527                             ; SOURCE LINE # 112
-                        528     ;    enter_DefaultMode_from_RESET();
-                        529                             ; SOURCE LINE # 113
-000000 120000     E     530             LCALL   enter_DefaultMode_from_RESET
-                        531     ; 
-                        532     ;    DISP_EN = DISP_BC_DRIVEN;           // Display not driven by EFM8
-                        533                             ; SOURCE LINE # 115
-000003 C2A3             534             CLR     DISP_EN
-                        535     ; 
-                        536     ;    IE_EA = 0;                          // Enable global interrupts
-                        537                             ; SOURCE LINE # 117
-000005 C2AF             538             CLR     IE_EA
-                        539     ; 
-                        540     ;    LEDSLOOP();
-                        541                             ; SOURCE LINE # 119
-000007 120000     E     542             LCALL   LEDSLOOP
-                        543     ; 
-                        544     ; #if 0
-AX51 MACRO ASSEMBLER  EFM8UB1_BLINKY                                                        04/21/20 09:42:24 PAGE    10
-
-                        545     ; #pragma asm
-                        546     ; 
-                        547     ; DELAY MACRO CNT;
-                        548     ;         REPT  CNT;
-                        549     ;          NOP;
-                        550     ;          ENDM
-                        551     ;         ENDM
-                        552     ; 
-                        553     ; LOGICAZERO MACRO;
-                        554     ; SETB P1.4;
-                        555     ; REPT  13;
-                        556     ;       NOP;
-                        557     ;       ENDM
-                        558     ; CLR P1.4;
-                        559     ; REPT  40;
-                        560     ;       NOP;
-                        561     ;       ENDM
-                        562     ; SETB P1.4;
-                        563     ; ENDM
-                        564     ; 
-                        565     ; LOGICAONE MACRO;
-                        566     ; SETB P1.4;
-                        567     ; REPT  22;
-                        568     ;       NOP;
-                        569     ;       ENDM
-                        570     ; CLR P1.4;
-                        571     ; REPT  27;
-                        572     ;       NOP;
-                        573     ;       ENDM
-                        574     ; SETB P1.4;
-                        575     ; ENDM
-                        576     ; 
-                        577     ; LOGICBZERO MACRO;
-                        578     ; SETB P1.4;
-                        579     ; REPT  8;
-                        580     ;       NOP;
-                        581     ;       ENDM
-                        582     ; CLR P1.4;
-                        583     ; REPT  40;
-                        584     ;       NOP;
-                        585     ;       ENDM
-                        586     ; SETB P1.4;
-                        587     ; ENDM
-                        588     ; 
-                        589     ; LOGICBONE MACRO;
-                        590     ; SETB P1.4;
-                        591     ; REPT  22;
-                        592     ;       NOP;
-                        593     ;       ENDM
-                        594     ; CLR P1.4;
-                        595     ; REPT  15;
-                        596     ;       NOP;
-                        597     ;       ENDM
-                        598     ; SETB P1.4;
-                        599     ; ENDM
-                        600     ; 
-                        601     ; 
-                        602     ; DELAY1US MACRO;
-                        603     ; REPT  48;
-                        604     ;       NOP;
-                        605     ;       ENDM
-                        606     ; ENDM
-                        607     ; 
-AX51 MACRO ASSEMBLER  EFM8UB1_BLINKY                                                        04/21/20 09:42:24 PAGE    11
-
-                        608     ; 
-                        609     ; LOGICARESET MACRO;
-                        610     ; CLR P1.4;
-                        611     ; REPT  80;
-                        612     ;       DELAY1US;
-                        613     ;       ENDM
-                        614     ; SETB P1.4;
-                        615     ; ENDM
-                        616     ; 
-                        617     ; COLORRED Macro;
-                        618     ; 
-                        619     ; ;GREEN
-                        620     ; 
-                        621     ;       LOGICAZERO;
-                        622     ;       LOGICAZERO;
-                        623     ;       LOGICAZERO;
-                        624     ;       LOGICAZERO;
-                        625     ;       LOGICAZERO;
-                        626     ;       LOGICAZERO;
-                        627     ;       LOGICAZERO;
-                        628     ;       LOGICAZERO;
-                        629     ; 
-                        630     ; ;RED
-                        631     ; 
-                        632     ;       LOGICAONE;
-                        633     ;       LOGICAONE;
-                        634     ;       LOGICAONE;
-                        635     ;       LOGICAONE;
-                        636     ;       LOGICAONE;
-                        637     ;       LOGICAONE;
-                        638     ;       LOGICAONE;
-                        639     ;       LOGICAONE;
-                        640     ; 
-                        641     ; ;BLUE
-                        642     ;       LOGICAZERO;
-                        643     ;       LOGICAZERO;
-                        644     ;       LOGICAZERO;
-                        645     ;       LOGICAZERO;
-                        646     ;       LOGICAZERO;
-                        647     ;       LOGICAZERO;
-                        648     ;       LOGICAZERO;
-                        649     ;       LOGICAZERO;
-                        650     ; 
-                        651     ; 
-                        652     ; 
-                        653     ;       ENDM
-                        654     ; 
-                        655     ; BMOVE   MACRO   cnt
-                        656     ; LOCAL   lab
-                        657     ;               MOV     R2,#cnt
-                        658     ; 
-                        659     ; lab:    MOV     A,@R1
-                        660     ;               MOV     @R0,A
-                        661     ;               INC     R0
-                        662     ;               INC     R1
-                        663     ;               DJNZ    R2,lab
-                        664     ;               ENDM
-                        665     ; 
-                        666     ; 
-                        667     ; COLORBLUE Macro;
-                        668     ; 
-                        669     ;       ;GREEN
-                        670     ;               LOGICAZERO;
-AX51 MACRO ASSEMBLER  EFM8UB1_BLINKY                                                        04/21/20 09:42:24 PAGE    12
-
-                        671     ;               LOGICAZERO;
-                        672     ;               LOGICAZERO;
-                        673     ;               LOGICAZERO;
-                        674     ;               LOGICAZERO;
-                        675     ;               LOGICAZERO;
-                        676     ;               LOGICAZERO;
-                        677     ;               LOGICAZERO;
-                        678     ; 
-                        679     ; 
-                        680     ;       ;RED
-                        681     ;               LOGICAZERO;
-                        682     ;               LOGICAZERO;
-                        683     ;               LOGICAZERO;
-                        684     ;               LOGICAZERO;
-                        685     ;               LOGICAZERO;
-                        686     ;               LOGICAZERO;
-                        687     ;               LOGICAZERO;
-                        688     ;               LOGICAZERO;
-                        689     ; 
-                        690     ;       ;BLUE
-                        691     ; 
-                        692     ;               LOGICAONE;
-                        693     ;               LOGICAONE;
-                        694     ;               LOGICAONE;
-                        695     ;               LOGICAONE;
-                        696     ;               LOGICAONE;
-                        697     ;               LOGICAONE;
-                        698     ;               LOGICAONE;
-                        699     ;               LOGICAONE;
-                        700     ; 
-                        701     ;               ENDM
-                        702     ; 
-                        703     ; COLORGREEN Macro;
-                        704     ; 
-                        705     ;       ;GREEN
-                        706     ;               LOGICAONE;
-                        707     ;               LOGICAONE;
-                        708     ;               LOGICAONE;
-                        709     ;               LOGICAONE;
-                        710     ;               LOGICAONE;
-                        711     ;               LOGICAONE;
-                        712     ;               LOGICAONE;
-                        713     ;               LOGICAONE;
-                        714     ; 
-                        715     ; 
-                        716     ;       ;RED
-                        717     ;               LOGICAZERO;
-                        718     ;               LOGICAZERO;
-                        719     ;               LOGICAZERO;
-                        720     ;               LOGICAZERO;
-                        721     ;               LOGICAZERO;
-                        722     ;               LOGICAZERO;
-                        723     ;               LOGICAZERO;
-                        724     ;               LOGICAZERO;
-                        725     ; 
-                        726     ;       ;BLUE
-                        727     ;               LOGICAZERO;
-                        728     ;               LOGICAZERO;
-                        729     ;               LOGICAZERO;
-                        730     ;               LOGICAZERO;
-                        731     ;               LOGICAZERO;
-                        732     ;               LOGICAZERO;
-                        733     ;               LOGICAZERO;
-AX51 MACRO ASSEMBLER  EFM8UB1_BLINKY                                                        04/21/20 09:42:24 PAGE    13
-
-                        734     ;               LOGICAZERO;
-                        735     ;               ENDM
-                        736     ; 
-                        737     ; 
-                        738     ; 
-                        739     ; 
-                        740     ; 
-                        741     ; COLORTEST Macro;
-                        742     ; 
-                        743     ;               LOGICAZERO;
-                        744     ;               LOGICAZERO;
-                        745     ;               LOGICAZERO;
-                        746     ;               LOGICAZERO;
-                        747     ;               LOGICAZERO;
-                        748     ;               LOGICAZERO;
-                        749     ;               LOGICAZERO;
-                        750     ;               LOGICAZERO;
-                        751     ;               ENDM
-                        752     ; 
-                        753     ; 
-                        754     ; 
-                        755     ; 
-                        756     ; SETB P1.4;
-                        757     ; 
-                        758     ;  COLORTEST
-                        759     ;  ANYCOLORS:   MOV B,#08h;
-                        760     ;                       MOV A, #0Fh;
-                        761     ;  BBSTART:     CLR C;
-                        762     ;                       RLC A;
-                        763     ;                       JC CASELONE;
-                        764     ;  CASELONE:    LOGICBONE;
-                        765     ;                       JMP BBEND;
-                        766     ;  CASELZERO:   LOGICBZERO;
-                        767     ;  BBEND:               DJNZ B, BBSTART;
-                        768     ;  COLORTEST;
-                        769     ; 
-                        770     ;  LOGICARESET;
-                        771     ;  END
-                        772     ; 
-                        773     ; #pragma endasm
-                        774     ; 
-                        775     ; #endif
-                        776     ; 
-                        777     ; }
-                        778                             ; SOURCE LINE # 354
-00000A 22               779             RET     
-                        780     ; END OF main
-                        781     
-                        782             END
-AX51 MACRO ASSEMBLER  EFM8UB1_BLINKY                                                        04/21/20 09:42:24 PAGE    14
+                        419     ; {
+                        420                             ; SOURCE LINE # 67
+                        421     ;   // Disable the watchdog here
+                        422     ; }
+                        423                             ; SOURCE LINE # 69
+000000 22               424             RET     
+                        425     ; END OF SiLabs_Startup
+                        426     
+                        427     ; 
+                        428     ;  
+                        429     ; //-----------------------------------------------------------------------------
+                        430     ; // Main Routine
+                        431     ; //-----------------------------------------------------------------------------
+                        432     ; void main (void)
+                        433     
+------                  434             RSEG  ?PR?main?EFM8UB1_BLINKY
+000000                  435     main:
+                        436             USING   0
+                        437                             ; SOURCE LINE # 75
+                        438     ; {
+                        439                             ; SOURCE LINE # 76
+                        440     ;    enter_DefaultMode_from_RESET();
+                        441                             ; SOURCE LINE # 77
+000000 120000     E     442             LCALL   enter_DefaultMode_from_RESET
+                        443     ; 
+                        444     ;    DISP_EN = DISP_BC_DRIVEN;           // Display not driven by EFM8
+                        445                             ; SOURCE LINE # 79
+000003 C2A3             446             CLR     DISP_EN
+                        447     ; 
+                        448     ;    IE_EA = 0;                          // Enable global interrupts
+                        449                             ; SOURCE LINE # 81
+000005 C2AF             450             CLR     IE_EA
+                        451     ; 
+                        452     ;    LEDSLOOP(10);
+                        453                             ; SOURCE LINE # 83
+000007 7F0A             454             MOV     R7,#0AH
+000009 120000     E     455             LCALL   _LEDSLOOP
+                        456     ; 
+                        457     ; }
+                        458                             ; SOURCE LINE # 85
+00000C 22               459             RET     
+                        460     ; END OF main
+                        461     
+                        462             END
+AX51 MACRO ASSEMBLER  EFM8UB1_BLINKY                                                        04/21/20 14:49:06 PAGE     9
 
 SYMBOL TABLE LISTING
 ------ ----- -------
@@ -837,11 +507,9 @@ SYMBOL TABLE LISTING
 N A M E                                    T Y P E  V A L U E     ATTRIBUTES
 
 ?C_STARTUP. . . . . . . . . . . . . . .    C  ADDR  -------       EXT
-?PR?LOGICONE?EFM8UB1_BLINKY . . . . . .    C  SEG   000001H       REL=UNIT, ALN=BYTE
-?PR?LOGICRESETA?EFM8UB1_BLINKY. . . . .    C  SEG   000001H       REL=UNIT, ALN=BYTE
-?PR?LOGICZERO?EFM8UB1_BLINKY. . . . . .    C  SEG   000013H       REL=UNIT, ALN=BYTE
-?PR?MAIN?EFM8UB1_BLINKY . . . . . . . .    C  SEG   00000BH       REL=UNIT, ALN=BYTE
+?PR?MAIN?EFM8UB1_BLINKY . . . . . . . .    C  SEG   00000DH       REL=UNIT, ALN=BYTE
 ?PR?SILABS_STARTUP?EFM8UB1_BLINKY . . .    C  SEG   000001H       REL=UNIT, ALN=BYTE
+_LEDSLOOP . . . . . . . . . . . . . . .    C  ADDR  -------       EXT
 ACC . . . . . . . . . . . . . . . . . .    D  ADDR  00E0H     A   
 ACC_ACC0. . . . . . . . . . . . . . . .    B  ADDR  00E0H.0   A   
 ACC_ACC1. . . . . . . . . . . . . . . .    B  ADDR  00E0H.1   A   
@@ -893,10 +561,10 @@ CMP0MD. . . . . . . . . . . . . . . . .    D  ADDR  009DH     A
 CMP0MX. . . . . . . . . . . . . . . . .    D  ADDR  009FH     A   
 CMP1CN0 . . . . . . . . . . . . . . . .    D  ADDR  00BFH     A   
 CMP1CN1 . . . . . . . . . . . . . . . .    D  ADDR  00ACH     A   
-AX51 MACRO ASSEMBLER  EFM8UB1_BLINKY                                                        04/21/20 09:42:24 PAGE    15
-
 CMP1MD. . . . . . . . . . . . . . . . .    D  ADDR  00ABH     A   
 CMP1MX. . . . . . . . . . . . . . . . .    D  ADDR  00AAH     A   
+AX51 MACRO ASSEMBLER  EFM8UB1_BLINKY                                                        04/21/20 14:49:06 PAGE    10
+
 CRC0CN0 . . . . . . . . . . . . . . . .    D  ADDR  00CEH     A   
 CRC0CN1 . . . . . . . . . . . . . . . .    D  ADDR  0086H     A   
 CRC0CNT . . . . . . . . . . . . . . . .    D  ADDR  00D3H     A   
@@ -950,22 +618,18 @@ IP_PX0. . . . . . . . . . . . . . . . .    B  ADDR  00B8H.0   A
 IP_PX1. . . . . . . . . . . . . . . . .    B  ADDR  00B8H.2   A   
 IPH . . . . . . . . . . . . . . . . . .    D  ADDR  00F2H     A   
 IT01CF. . . . . . . . . . . . . . . . .    D  ADDR  00E4H     A   
-LEDSLOOP. . . . . . . . . . . . . . . .    C  ADDR  -------       EXT
 LFO0CN. . . . . . . . . . . . . . . . .    D  ADDR  00B1H     A   
-LOGICONE. . . . . . . . . . . . . . . .    C  ADDR  0000H     R   SEG=?PR?LOGICONE?EFM8UB1_BLINKY
-LOGICRESETA . . . . . . . . . . . . . .    C  ADDR  0000H     R   SEG=?PR?LOGICRESETA?EFM8UB1_BLINKY
-LOGICZERO . . . . . . . . . . . . . . .    C  ADDR  0000H     R   SEG=?PR?LOGICZERO?EFM8UB1_BLINKY
 MAIN. . . . . . . . . . . . . . . . . .    C  ADDR  0000H     R   SEG=?PR?MAIN?EFM8UB1_BLINKY
 P0. . . . . . . . . . . . . . . . . . .    D  ADDR  0080H     A   
 P0_B0 . . . . . . . . . . . . . . . . .    B  ADDR  0080H.0   A   
-AX51 MACRO ASSEMBLER  EFM8UB1_BLINKY                                                        04/21/20 09:42:24 PAGE    16
-
 P0_B1 . . . . . . . . . . . . . . . . .    B  ADDR  0080H.1   A   
 P0_B2 . . . . . . . . . . . . . . . . .    B  ADDR  0080H.2   A   
 P0_B3 . . . . . . . . . . . . . . . . .    B  ADDR  0080H.3   A   
 P0_B4 . . . . . . . . . . . . . . . . .    B  ADDR  0080H.4   A   
 P0_B5 . . . . . . . . . . . . . . . . .    B  ADDR  0080H.5   A   
 P0_B6 . . . . . . . . . . . . . . . . .    B  ADDR  0080H.6   A   
+AX51 MACRO ASSEMBLER  EFM8UB1_BLINKY                                                        04/21/20 14:49:06 PAGE    11
+
 P0_B7 . . . . . . . . . . . . . . . . .    B  ADDR  0080H.7   A   
 P0MASK. . . . . . . . . . . . . . . . .    D  ADDR  00FEH     A   
 P0MAT . . . . . . . . . . . . . . . . .    D  ADDR  00FDH     A   
@@ -1023,14 +687,14 @@ PCA0CPM0. . . . . . . . . . . . . . . .    D  ADDR  00DAH     A
 PCA0CPM1. . . . . . . . . . . . . . . .    D  ADDR  00DBH     A   
 PCA0CPM2. . . . . . . . . . . . . . . .    D  ADDR  00DCH     A   
 PCA0H . . . . . . . . . . . . . . . . .    D  ADDR  00FAH     A   
-AX51 MACRO ASSEMBLER  EFM8UB1_BLINKY                                                        04/21/20 09:42:24 PAGE    17
-
 PCA0L . . . . . . . . . . . . . . . . .    D  ADDR  00F9H     A   
 PCA0MD. . . . . . . . . . . . . . . . .    D  ADDR  00D9H     A   
 PCA0POL . . . . . . . . . . . . . . . .    D  ADDR  0096H     A   
 PCA0PWM . . . . . . . . . . . . . . . .    D  ADDR  00F7H     A   
 PCON0 . . . . . . . . . . . . . . . . .    D  ADDR  0087H     A   
 PCON1 . . . . . . . . . . . . . . . . .    D  ADDR  009AH     A   
+AX51 MACRO ASSEMBLER  EFM8UB1_BLINKY                                                        04/21/20 14:49:06 PAGE    12
+
 PFE0CN. . . . . . . . . . . . . . . . .    D  ADDR  00C1H     A   
 PRTDRV. . . . . . . . . . . . . . . . .    D  ADDR  00F6H     A   
 PSCTL . . . . . . . . . . . . . . . . .    D  ADDR  008FH     A   
@@ -1088,14 +752,14 @@ SMB0CN0_STO . . . . . . . . . . . . . .    B  ADDR  00C0H.4   A
 SMB0CN0_TXMODE. . . . . . . . . . . . .    B  ADDR  00C0H.6   A   
 SMB0DAT . . . . . . . . . . . . . . . .    D  ADDR  00C2H     A   
 SMB0FCN0. . . . . . . . . . . . . . . .    D  ADDR  00C3H     A   
-AX51 MACRO ASSEMBLER  EFM8UB1_BLINKY                                                        04/21/20 09:42:24 PAGE    18
-
 SMB0FCN1. . . . . . . . . . . . . . . .    D  ADDR  00C4H     A   
 SMB0FCT . . . . . . . . . . . . . . . .    D  ADDR  00EFH     A   
 SMB0RXLN. . . . . . . . . . . . . . . .    D  ADDR  00C5H     A   
 SMB0TC. . . . . . . . . . . . . . . . .    D  ADDR  00ACH     A   
 SMOD1 . . . . . . . . . . . . . . . . .    D  ADDR  0093H     A   
 SP. . . . . . . . . . . . . . . . . . .    D  ADDR  0081H     A   
+AX51 MACRO ASSEMBLER  EFM8UB1_BLINKY                                                        04/21/20 14:49:06 PAGE    13
+
 SPI0CFG . . . . . . . . . . . . . . . .    D  ADDR  00A1H     A   
 SPI0CKR . . . . . . . . . . . . . . . .    D  ADDR  00A2H     A   
 SPI0CN0 . . . . . . . . . . . . . . . .    D  ADDR  00F8H     A   
@@ -1153,14 +817,14 @@ TMR4. . . . . . . . . . . . . . . . . .    D  ADDR  00A4H     A
 TMR4CN0 . . . . . . . . . . . . . . . .    D  ADDR  0098H     A   
 TMR4CN0_T4SPLIT . . . . . . . . . . . .    B  ADDR  0098H.3   A   
 TMR4CN0_T4XCLK0 . . . . . . . . . . . .    B  ADDR  0098H.0   A   
-AX51 MACRO ASSEMBLER  EFM8UB1_BLINKY                                                        04/21/20 09:42:24 PAGE    19
-
 TMR4CN0_T4XCLK1 . . . . . . . . . . . .    B  ADDR  0098H.1   A   
 TMR4CN0_TF4CEN. . . . . . . . . . . . .    B  ADDR  0098H.4   A   
 TMR4CN0_TF4H. . . . . . . . . . . . . .    B  ADDR  0098H.7   A   
 TMR4CN0_TF4L. . . . . . . . . . . . . .    B  ADDR  0098H.6   A   
 TMR4CN0_TF4LEN. . . . . . . . . . . . .    B  ADDR  0098H.5   A   
 TMR4CN0_TR4 . . . . . . . . . . . . . .    B  ADDR  0098H.2   A   
+AX51 MACRO ASSEMBLER  EFM8UB1_BLINKY                                                        04/21/20 14:49:06 PAGE    14
+
 TMR4CN1 . . . . . . . . . . . . . . . .    D  ADDR  00FFH     A   
 TMR4H . . . . . . . . . . . . . . . . .    D  ADDR  00A5H     A   
 TMR4L . . . . . . . . . . . . . . . . .    D  ADDR  00A4H     A   

@@ -1,4 +1,4 @@
-AX51 MACRO ASSEMBLER  LEDSTRIP                                                              04/21/20 09:40:39 PAGE     1
+AX51 MACRO ASSEMBLER  LEDSTRIP                                                              04/21/20 14:50:40 PAGE     1
 
 
 MACRO ASSEMBLER AX51 V3.15.3.0
@@ -62,7 +62,7 @@ LOC    OBJ             LINE     SOURCE
  00AB               +1   47     CMP1MD    DATA 0ABH; Comparator 1 Mode                      
  00AA               +1   48     CMP1MX    DATA 0AAH; Comparator 1 Multiplexer Selection     
  00CE               +1   49     CRC0CN0   DATA 0CEH; CRC0 Control 0                         
-AX51 MACRO ASSEMBLER  LEDSTRIP                                                              04/21/20 09:40:39 PAGE     2
+AX51 MACRO ASSEMBLER  LEDSTRIP                                                              04/21/20 14:50:40 PAGE     2
 
  0086               +1   50     CRC0CN1   DATA 086H; CRC0 Control 1                         
  00D3               +1   51     CRC0CNT   DATA 0D3H; CRC0 Automatic Flash Sector Count      
@@ -127,7 +127,7 @@ LOC    OBJ             LINE     SOURCE
  00EC               +1  110     PCA0CPH2  DATA 0ECH; PCA Channel 2 Capture Module High Byte 
  00FB               +1  111     PCA0CPL0  DATA 0FBH; PCA Channel 0 Capture Module Low Byte  
  00E9               +1  112     PCA0CPL1  DATA 0E9H; PCA Channel 1 Capture Module Low Byte  
-AX51 MACRO ASSEMBLER  LEDSTRIP                                                              04/21/20 09:40:39 PAGE     3
+AX51 MACRO ASSEMBLER  LEDSTRIP                                                              04/21/20 14:50:40 PAGE     3
 
  00EB               +1  113     PCA0CPL2  DATA 0EBH; PCA Channel 2 Capture Module Low Byte  
  00DA               +1  114     PCA0CPM0  DATA 0DAH; PCA Channel 0 Capture/Compare Mode     
@@ -192,7 +192,7 @@ LOC    OBJ             LINE     SOURCE
  00CA               +1  173     TMR2RLL   DATA 0CAH; Timer 2 Reload Low Byte                
  0091               +1  174     TMR3CN0   DATA 091H; Timer 3 Control 0                      
  00FE               +1  175     TMR3CN1   DATA 0FEH; Timer 3 Control 1                      
-AX51 MACRO ASSEMBLER  LEDSTRIP                                                              04/21/20 09:40:39 PAGE     4
+AX51 MACRO ASSEMBLER  LEDSTRIP                                                              04/21/20 14:50:40 PAGE     4
 
  0095               +1  176     TMR3H     DATA 095H; Timer 3 High Byte                      
  0094               +1  177     TMR3L     DATA 094H; Timer 3 Low Byte                       
@@ -257,7 +257,7 @@ LOC    OBJ             LINE     SOURCE
  0015               +1  236     EOUTCSRH  EQU 015H ; USB0 OUT Endpoint Control High    
  0014               +1  237     EOUTCSRL  EQU 014H ; USB0 OUT Endpoint Control         
  0000               +1  238     FADDR     EQU 000H ; USB0 Function Address             
-AX51 MACRO ASSEMBLER  LEDSTRIP                                                              04/21/20 09:40:39 PAGE     5
+AX51 MACRO ASSEMBLER  LEDSTRIP                                                              04/21/20 14:50:40 PAGE     5
 
  0020               +1  239     FIFO0     EQU 020H ; USB0 Endpoint 0 FIFO Access       
  0021               +1  240     FIFO1     EQU 021H ; USB0 Endpoint 1 FIFO Access       
@@ -322,7 +322,7 @@ LOC    OBJ             LINE     SOURCE
  00B8.2             +1  299     IP_PX1   BIT IP.2 ; External Interrupt 1 Priority Control LSB                        
  00B8.3             +1  300     IP_PT1   BIT IP.3 ; Timer 1 Interrupt Priority Control LSB                           
  00B8.4             +1  301     IP_PS0   BIT IP.4 ; UART0 Interrupt Priority Control LSB                             
-AX51 MACRO ASSEMBLER  LEDSTRIP                                                              04/21/20 09:40:39 PAGE     6
+AX51 MACRO ASSEMBLER  LEDSTRIP                                                              04/21/20 14:50:40 PAGE     6
 
  00B8.5             +1  302     IP_PT2   BIT IP.5 ; Timer 2 Interrupt Priority Control LSB                           
  00B8.6             +1  303     IP_PSPI0 BIT IP.6 ; Serial Peripheral Interface (SPI0) Interrupt Priority Control LSB
@@ -387,7 +387,7 @@ LOC    OBJ             LINE     SOURCE
  00C8.0             +1  362     SCON1_RI   BIT SCON1.0 ; Receive Interrupt Flag   
  00C8.1             +1  363     SCON1_TI   BIT SCON1.1 ; Transmit Interrupt Flag  
  00C8.2             +1  364     SCON1_RBX  BIT SCON1.2 ; Extra Receive Bit        
-AX51 MACRO ASSEMBLER  LEDSTRIP                                                              04/21/20 09:40:39 PAGE     7
+AX51 MACRO ASSEMBLER  LEDSTRIP                                                              04/21/20 14:50:40 PAGE     7
 
  00C8.3             +1  365     SCON1_TBX  BIT SCON1.3 ; Extra Transmission Bit   
  00C8.4             +1  366     SCON1_REN  BIT SCON1.4 ; Receive Enable           
@@ -452,7 +452,7 @@ LOC    OBJ             LINE     SOURCE
  00D8.4             +1  425     UART1FCN1_TIE    BIT UART1FCN1.4 ; Transmit Interrupt Enable
  00D8.5             +1  426     UART1FCN1_TXHOLD BIT UART1FCN1.5 ; Transmit Hold            
  00D8.6             +1  427     UART1FCN1_TXNF   BIT UART1FCN1.6 ; TX FIFO Not Full         
-AX51 MACRO ASSEMBLER  LEDSTRIP                                                              04/21/20 09:40:39 PAGE     8
+AX51 MACRO ASSEMBLER  LEDSTRIP                                                              04/21/20 14:50:40 PAGE     8
 
  00D8.7             +1  428     UART1FCN1_TFRQ   BIT UART1FCN1.7 ; Transmit FIFO Request    
                     +1  429     
@@ -503,7 +503,7 @@ LOC    OBJ             LINE     SOURCE
 ------                  474     ?PR?ANYCOLORS?LEDStrip         SEGMENT CODE
 ------                  475     ?PR?LEDSLOOP?LEDStrip       SEGMENT CODE
                         476     PUBLIC  ANYCOLORS
-                        477     PUBLIC  LEDSLOOP
+                        477     PUBLIC  _LEDSLOOP
                         478     
                         479     
                         480     DELAY MACRO CNT;
@@ -517,7 +517,7 @@ LOC    OBJ             LINE     SOURCE
                         488     REPT  13;
                         489             NOP;
                         490             ENDM
-AX51 MACRO ASSEMBLER  LEDSTRIP                                                              04/21/20 09:40:39 PAGE     9
+AX51 MACRO ASSEMBLER  LEDSTRIP                                                              04/21/20 14:50:40 PAGE     9
 
                         491     CLR P1.4;
                         492     REPT  40;
@@ -582,7 +582,7 @@ LOC    OBJ             LINE     SOURCE
                         551     
                         552     ;GREEN
                         553     
-AX51 MACRO ASSEMBLER  LEDSTRIP                                                              04/21/20 09:40:39 PAGE    10
+AX51 MACRO ASSEMBLER  LEDSTRIP                                                              04/21/20 14:50:40 PAGE    10
 
                         554             LOGICAZERO;
                         555             LOGICAZERO;
@@ -647,7 +647,7 @@ LOC    OBJ             LINE     SOURCE
                         614                     LOGICAONE;
                         615                     LOGICAONE;
                         616                     LOGICAONE;
-AX51 MACRO ASSEMBLER  LEDSTRIP                                                              04/21/20 09:40:39 PAGE    11
+AX51 MACRO ASSEMBLER  LEDSTRIP                                                              04/21/20 14:50:40 PAGE    11
 
                         617                     LOGICAONE;
                         618                     LOGICAONE;
@@ -688,52 +688,83 @@ LOC    OBJ             LINE     SOURCE
                         653                     LOGICAZERO;
                         654                     ENDM
                         655     
-                        656     COLORTEST Macro;
+                        656     COLORWHITE Macro;
                         657     
-                        658                     LOGICAZERO;
-                        659                     LOGICAZERO;
-                        660                     LOGICAZERO;
-                        661                     LOGICAZERO;
-                        662                     LOGICAZERO;
-                        663                     LOGICAZERO;
-                        664                     LOGICAZERO;
-                        665                     LOGICAZERO;
-                        666                     ENDM
+                        658             ;GREEN
+                        659                     LOGICAONE;
+                        660                     LOGICAONE;
+                        661                     LOGICAONE;
+                        662                     LOGICAONE;
+                        663                     LOGICAONE;
+                        664                     LOGICAONE;
+                        665                     LOGICAONE;
+                        666                     LOGICAONE;
                         667     
-------                  668     RSEG  ?PR?ANYCOLORS?LEDStrip
-000000                  669     ANYCOLORS:
-000000 75F008           670                     MOV B,#08h;
-000003 740F             671                     MOV A, #0Fh;
-000005 C3               672     BBSTART:        CLR C;
-000006 33               673                     RLC A;
-000007 4000             674                     JC CASELONE;
-000009                  675+1   CASELONE:       LOGICBONE;
-000034 8036             722                     JMP BBEND;
-000036                  723+1   CASELZERO:      LOGICBZERO;
-00006C D5F096           781     BBEND:          DJNZ B, BBSTART;
-                        782     
-AX51 MACRO ASSEMBLER  LEDSTRIP                                                              04/21/20 09:40:39 PAGE    12
+                        668     
+                        669             ;RED
+                        670                     LOGICAONE;
+                        671                     LOGICAONE;
+                        672                     LOGICAONE;
+                        673                     LOGICAONE;
+                        674                     LOGICAONE;
+                        675                     LOGICAONE;
+                        676                     LOGICAONE;
+                        677                     LOGICAONE;
+                        678     
+                        679             ;BLUE
+AX51 MACRO ASSEMBLER  LEDSTRIP                                                              04/21/20 14:50:40 PAGE    12
 
-00006F 22               783     RET
-                        784     
-------                  785     RSEG  ?PR?LEDSLOOP?LEDStrip
-000000                  786     LEDSLOOP:
-000000 D294             787     SETB P1.4;
-                        788     
-                        789+1    COLORGREEN
-                       2277     
-                       2278+1    COLORGREEN
-                       3766     
-                       3767+1    COLORGREEN
-                       5255     
-                       5256+1    LOGICARESET;
-                       9422     
-001F3E 020000     F    9423      JMP LEDSLOOP
-                       9424     
-001F41 22              9425      RET
-                       9426     
-                       9427      END
-AX51 MACRO ASSEMBLER  LEDSTRIP                                                              04/21/20 09:40:39 PAGE    13
+                        680                     LOGICAONE;
+                        681                     LOGICAONE;
+                        682                     LOGICAONE;
+                        683                     LOGICAONE;
+                        684                     LOGICAONE;
+                        685                     LOGICAONE;
+                        686                     LOGICAONE;
+                        687                     LOGICAONE;
+                        688                     ENDM
+                        689     
+                        690     
+                        691     COLORTEST Macro;
+                        692     
+                        693                     LOGICAZERO;
+                        694                     LOGICAZERO;
+                        695                     LOGICAZERO;
+                        696                     LOGICAZERO;
+                        697                     LOGICAZERO;
+                        698                     LOGICAZERO;
+                        699                     LOGICAZERO;
+                        700                     LOGICAZERO;
+                        701                     ENDM
+                        702     
+------                  703     RSEG  ?PR?ANYCOLORS?LEDStrip
+000000                  704     ANYCOLORS:
+000000 75F008           705                     MOV B,#08h;
+000003 740F             706                     MOV A, #0Fh;
+000005 C3               707     BBSTART:        CLR C;
+000006 33               708                     RLC A;
+000007 4000             709                     JC CASELONE;
+000009                  710+1   CASELONE:       LOGICBONE;
+000034 8036             757                     JMP BBEND;
+000036                  758+1   CASELZERO:      LOGICBZERO;
+00006C D5F096           816     BBEND:          DJNZ B, BBSTART;
+                        817     
+00006F 22               818     RET
+                        819     
+------                  820     RSEG  ?PR?LEDSLOOP?LEDStrip
+                        821     
+000000                  822     _LEDSLOOP:
+000000 D294             823             SETB P1.4;
+000002 EF               824             MOV A, R7
+000003                  825+1   LOP: COLORWHITE
+00052B 14              2249              DEC A
+00052C 6003            2250              JZ ENDB
+00052E 020000     F    2251     ENDA: JMP LOP
+000531                 2252+1   ENDB:LOGICARESET
+001435 22              6418      RET
+                       6419     
+                       6420      END
+AX51 MACRO ASSEMBLER  LEDSTRIP                                                              04/21/20 14:50:40 PAGE    13
 
 SYMBOL TABLE LISTING
 ------ ----- -------
@@ -742,7 +773,8 @@ SYMBOL TABLE LISTING
 N A M E                                 T Y P E  V A L U E     ATTRIBUTES
 
 ?PR?ANYCOLORS?LEDSTRIP . . . . . . . .  C  SEG   000070H       REL=UNIT, ALN=BYTE
-?PR?LEDSLOOP?LEDSTRIP. . . . . . . . .  C  SEG   001F42H       REL=UNIT, ALN=BYTE
+?PR?LEDSLOOP?LEDSTRIP. . . . . . . . .  C  SEG   001436H       REL=UNIT, ALN=BYTE
+_LEDSLOOP. . . . . . . . . . . . . . .  C  ADDR  0000H     R   SEG=?PR?LEDSLOOP?LEDSTRIP
 ACC. . . . . . . . . . . . . . . . . .  D  ADDR  00E0H     A   
 ACC_ACC0 . . . . . . . . . . . . . . .  B  ADDR  00E0H.0   A   
 ACC_ACC1 . . . . . . . . . . . . . . .  B  ADDR  00E0H.1   A   
@@ -797,9 +829,9 @@ CKCON1 . . . . . . . . . . . . . . . .  D  ADDR  00A6H     A
 CLKREC . . . . . . . . . . . . . . . .  N  NUMB  000FH     A   
 CLKSEL . . . . . . . . . . . . . . . .  D  ADDR  00A9H     A   
 CMIE . . . . . . . . . . . . . . . . .  N  NUMB  000BH     A   
-CMINT. . . . . . . . . . . . . . . . .  N  NUMB  0006H     A   
-AX51 MACRO ASSEMBLER  LEDSTRIP                                                              04/21/20 09:40:39 PAGE    14
+AX51 MACRO ASSEMBLER  LEDSTRIP                                                              04/21/20 14:50:40 PAGE    14
 
+CMINT. . . . . . . . . . . . . . . . .  N  NUMB  0006H     A   
 CMP0_IRQN. . . . . . . . . . . . . . .  N  NUMB  000CH     A   
 CMP0CN0. . . . . . . . . . . . . . . .  D  ADDR  009BH     A   
 CMP0CN1. . . . . . . . . . . . . . . .  D  ADDR  0099H     A   
@@ -835,6 +867,8 @@ EIP1H. . . . . . . . . . . . . . . . .  D  ADDR  00F5H     A
 EIP2 . . . . . . . . . . . . . . . . .  D  ADDR  00F4H     A   
 EIP2H. . . . . . . . . . . . . . . . .  D  ADDR  00F6H     A   
 EMI0CN . . . . . . . . . . . . . . . .  D  ADDR  00E7H     A   
+ENDA . . . . . . . . . . . . . . . . .  C  ADDR  052EH     R   SEG=?PR?LEDSLOOP?LEDSTRIP
+ENDB . . . . . . . . . . . . . . . . .  C  ADDR  0531H     R   SEG=?PR?LEDSLOOP?LEDSTRIP
 EOUTCNTH . . . . . . . . . . . . . . .  N  NUMB  0017H     A   
 EOUTCNTL . . . . . . . . . . . . . . .  N  NUMB  0016H     A   
 EOUTCSRH . . . . . . . . . . . . . . .  N  NUMB  0015H     A   
@@ -860,11 +894,11 @@ I2C0FCT. . . . . . . . . . . . . . . .  D  ADDR  00F5H     A
 I2C0SLAD . . . . . . . . . . . . . . .  D  ADDR  00BDH     A   
 I2C0STAT . . . . . . . . . . . . . . .  D  ADDR  00B9H     A   
 I2CSLAVE0_PAGE . . . . . . . . . . . .  N  NUMB  0020H     A   
+AX51 MACRO ASSEMBLER  LEDSTRIP                                                              04/21/20 14:50:40 PAGE    15
+
 IE . . . . . . . . . . . . . . . . . .  D  ADDR  00A8H     A   
 IE_EA. . . . . . . . . . . . . . . . .  B  ADDR  00A8H.7   A   
 IE_ES0 . . . . . . . . . . . . . . . .  B  ADDR  00A8H.4   A   
-AX51 MACRO ASSEMBLER  LEDSTRIP                                                              04/21/20 09:40:39 PAGE    15
-
 IE_ESPI0 . . . . . . . . . . . . . . .  B  ADDR  00A8H.6   A   
 IE_ET0 . . . . . . . . . . . . . . . .  B  ADDR  00A8H.1   A   
 IE_ET1 . . . . . . . . . . . . . . . .  B  ADDR  00A8H.3   A   
@@ -886,10 +920,10 @@ IP_PX0 . . . . . . . . . . . . . . . .  B  ADDR  00B8H.0   A
 IP_PX1 . . . . . . . . . . . . . . . .  B  ADDR  00B8H.2   A   
 IPH. . . . . . . . . . . . . . . . . .  D  ADDR  00F2H     A   
 IT01CF . . . . . . . . . . . . . . . .  D  ADDR  00E4H     A   
-LEDSLOOP . . . . . . . . . . . . . . .  C  ADDR  0000H     R   SEG=?PR?LEDSLOOP?LEDSTRIP
 LEDSTRIP . . . . . . . . . . . . . . .  -- ----  -------       
 LEGACY_PAGE. . . . . . . . . . . . . .  N  NUMB  0000H     A   
 LFO0CN . . . . . . . . . . . . . . . .  D  ADDR  00B1H     A   
+LOP. . . . . . . . . . . . . . . . . .  C  ADDR  0003H     R   SEG=?PR?LEDSLOOP?LEDSTRIP
 OUT1IE . . . . . . . . . . . . . . . .  N  NUMB  0009H     A   
 OUT1INT. . . . . . . . . . . . . . . .  N  NUMB  0004H     A   
 P0 . . . . . . . . . . . . . . . . . .  D  ADDR  0080H     A   
@@ -925,11 +959,11 @@ P2_B0. . . . . . . . . . . . . . . . .  B  ADDR  00A0H.0   A
 P2_B1. . . . . . . . . . . . . . . . .  B  ADDR  00A0H.1   A   
 P2_B2. . . . . . . . . . . . . . . . .  B  ADDR  00A0H.2   A   
 P2_B3. . . . . . . . . . . . . . . . .  B  ADDR  00A0H.3   A   
+AX51 MACRO ASSEMBLER  LEDSTRIP                                                              04/21/20 14:50:40 PAGE    16
+
 P2MASK . . . . . . . . . . . . . . . .  D  ADDR  00FCH     A   
 P2MAT. . . . . . . . . . . . . . . . .  D  ADDR  00FBH     A   
 P2MDIN . . . . . . . . . . . . . . . .  D  ADDR  00F3H     A   
-AX51 MACRO ASSEMBLER  LEDSTRIP                                                              04/21/20 09:40:39 PAGE    16
-
 P2MDOUT. . . . . . . . . . . . . . . .  D  ADDR  00A6H     A   
 P2SKIP . . . . . . . . . . . . . . . .  D  ADDR  00CCH     A   
 P3 . . . . . . . . . . . . . . . . . .  D  ADDR  00B0H     A   
@@ -990,11 +1024,11 @@ REVID. . . . . . . . . . . . . . . . .  D  ADDR  00B6H     A
 RSTSRC . . . . . . . . . . . . . . . .  D  ADDR  00EFH     A   
 SBCON1 . . . . . . . . . . . . . . . .  D  ADDR  0094H     A   
 SBRL1. . . . . . . . . . . . . . . . .  D  ADDR  0095H     A   
+AX51 MACRO ASSEMBLER  LEDSTRIP                                                              04/21/20 14:50:40 PAGE    17
+
 SBRLH1 . . . . . . . . . . . . . . . .  D  ADDR  0096H     A   
 SBRLL1 . . . . . . . . . . . . . . . .  D  ADDR  0095H     A   
 SBUF0. . . . . . . . . . . . . . . . .  D  ADDR  0099H     A   
-AX51 MACRO ASSEMBLER  LEDSTRIP                                                              04/21/20 09:40:39 PAGE    17
-
 SBUF1. . . . . . . . . . . . . . . . .  D  ADDR  0092H     A   
 SCON0. . . . . . . . . . . . . . . . .  D  ADDR  0098H     A   
 SCON0_MCE. . . . . . . . . . . . . . .  B  ADDR  0098H.5   A   
@@ -1055,11 +1089,11 @@ SPI0FCN0 . . . . . . . . . . . . . . .  D  ADDR  009AH     A
 SPI0FCN1 . . . . . . . . . . . . . . .  D  ADDR  009BH     A   
 SPI0FCT. . . . . . . . . . . . . . . .  D  ADDR  00F7H     A   
 TCON . . . . . . . . . . . . . . . . .  D  ADDR  0088H     A   
+AX51 MACRO ASSEMBLER  LEDSTRIP                                                              04/21/20 14:50:40 PAGE    18
+
 TCON_IE0 . . . . . . . . . . . . . . .  B  ADDR  0088H.1   A   
 TCON_IE1 . . . . . . . . . . . . . . .  B  ADDR  0088H.3   A   
 TCON_IT0 . . . . . . . . . . . . . . .  B  ADDR  0088H.0   A   
-AX51 MACRO ASSEMBLER  LEDSTRIP                                                              04/21/20 09:40:39 PAGE    18
-
 TCON_IT1 . . . . . . . . . . . . . . .  B  ADDR  0088H.2   A   
 TCON_TF0 . . . . . . . . . . . . . . .  B  ADDR  0088H.5   A   
 TCON_TF1 . . . . . . . . . . . . . . .  B  ADDR  0088H.7   A   
@@ -1120,11 +1154,11 @@ TMR4RLH. . . . . . . . . . . . . . . .  D  ADDR  00A3H     A
 TMR4RLL. . . . . . . . . . . . . . . .  D  ADDR  00A2H     A   
 UART0_IRQN . . . . . . . . . . . . . .  N  NUMB  0004H     A   
 UART0_PAGE . . . . . . . . . . . . . .  N  NUMB  0020H     A   
+AX51 MACRO ASSEMBLER  LEDSTRIP                                                              04/21/20 14:50:40 PAGE    19
+
 UART1_IRQN . . . . . . . . . . . . . .  N  NUMB  0011H     A   
 UART1_PAGE . . . . . . . . . . . . . .  N  NUMB  0020H     A   
 UART1FCN0. . . . . . . . . . . . . . .  D  ADDR  009DH     A   
-AX51 MACRO ASSEMBLER  LEDSTRIP                                                              04/21/20 09:40:39 PAGE    19
-
 UART1FCN1. . . . . . . . . . . . . . .  D  ADDR  00D8H     A   
 UART1FCN1_RFRQ . . . . . . . . . . . .  B  ADDR  00D8H.3   A   
 UART1FCN1_RIE. . . . . . . . . . . . .  B  ADDR  00D8H.0   A   

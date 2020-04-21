@@ -339,17 +339,11 @@ UART1FCN1_TXNF	BIT	0D8H.6
 UART1FCN1_TFRQ	BIT	0D8H.7
 DISP_EN	BIT	0A0H.3
 ?PR?SiLabs_Startup?EFM8UB1_BLINKY        SEGMENT CODE 
-?PR?logicZero?EFM8UB1_BLINKY             SEGMENT CODE 
-?PR?logicOne?EFM8UB1_BLINKY              SEGMENT CODE 
-?PR?logicReseta?EFM8UB1_BLINKY           SEGMENT CODE 
 ?PR?main?EFM8UB1_BLINKY                  SEGMENT CODE 
 	EXTRN	CODE (enter_DefaultMode_from_RESET)
-	EXTRN	CODE (LEDSLOOP)
+	EXTRN	CODE (_LEDSLOOP)
 	EXTRN	CODE (?C_STARTUP)
 	PUBLIC	main
-	PUBLIC	logicReseta
-	PUBLIC	logicOne
-	PUBLIC	logicZero
 	PUBLIC	SiLabs_Startup
 ; //-----------------------------------------------------------------------------
 ; // EFM8UB1_Blinky.c
@@ -407,7 +401,7 @@ DISP_EN	BIT	0A0H.3
 ; 
 ; 
 ; void ANYCOLORS (void);
-; void LEDSLOOP (void);
+; void LEDSLOOP (uint8_t count);
 ; //-----------------------------------------------------------------------------
 ; // SiLabs_Startup() Routine
 ; // ----------------------------------------------------------------------------
@@ -431,88 +425,6 @@ SiLabs_Startup:
 ; END OF SiLabs_Startup
 
 ; 
-; void logicZero()
-
-	RSEG  ?PR?logicZero?EFM8UB1_BLINKY
-logicZero:
-	USING	0
-			; SOURCE LINE # 71
-; {
-			; SOURCE LINE # 72
-; 	#pragma asm
-; 	   SETB P1.4;
-	  SETB P1.4;
-; 	   NOP;
-	  NOP ;
-; 	   NOP;
-	  NOP ;
-; 	   NOP;
-	  NOP ;
-; 	   NOP;
-	  NOP ;
-; 	   NOP;
-	  NOP ;
-; 	   CLR P1.4;
-	  CLR P1.4;
-; 	   NOP;
-	  NOP ;
-; 	   NOP;
-	  NOP ;
-; 	   NOP;
-	  NOP ;
-; 	   NOP;
-	  NOP ;
-; 	   NOP;
-	  NOP ;
-; 	   NOP;
-	  NOP ;
-; 	   NOP;
-	  NOP ;
-; 	   NOP;
-	  NOP ;
-; 	   NOP;
-	  NOP ;
-; 	#pragma endasm
-; }
-			; SOURCE LINE # 91
-	RET  	
-; END OF logicZero
-
-; 
-; void logicOne()
-
-	RSEG  ?PR?logicOne?EFM8UB1_BLINKY
-logicOne:
-	USING	0
-			; SOURCE LINE # 93
-; {
-			; SOURCE LINE # 94
-; 
-; }
-			; SOURCE LINE # 96
-	RET  	
-; END OF logicOne
-
-; 
-; void logicReseta()
-
-	RSEG  ?PR?logicReseta?EFM8UB1_BLINKY
-logicReseta:
-	USING	0
-			; SOURCE LINE # 98
-; {
-			; SOURCE LINE # 99
-; 	//static unsigned int counterLedReset;
-; 
-; 
-; 	//for(counterLedReset=0 ; counterLedReset<390; counterLedReset++)__asm__("NOP");
-; 
-; 
-; }
-			; SOURCE LINE # 106
-	RET  	
-; END OF logicReseta
-
 ;  
 ; //-----------------------------------------------------------------------------
 ; // Main Routine
@@ -522,260 +434,28 @@ logicReseta:
 	RSEG  ?PR?main?EFM8UB1_BLINKY
 main:
 	USING	0
-			; SOURCE LINE # 111
+			; SOURCE LINE # 75
 ; {
-			; SOURCE LINE # 112
+			; SOURCE LINE # 76
 ;    enter_DefaultMode_from_RESET();
-			; SOURCE LINE # 113
+			; SOURCE LINE # 77
 	LCALL	enter_DefaultMode_from_RESET
 ; 
 ;    DISP_EN = DISP_BC_DRIVEN;           // Display not driven by EFM8
-			; SOURCE LINE # 115
+			; SOURCE LINE # 79
 	CLR  	DISP_EN
 ; 
 ;    IE_EA = 0;                          // Enable global interrupts
-			; SOURCE LINE # 117
+			; SOURCE LINE # 81
 	CLR  	IE_EA
 ; 
-;    LEDSLOOP();
-			; SOURCE LINE # 119
-	LCALL	LEDSLOOP
-; 
-; #if 0
-; #pragma asm
-; 
-; DELAY MACRO CNT;
-; 	  REPT  CNT;
-; 	   NOP;
-; 	   ENDM
-; 	  ENDM
-; 
-; LOGICAZERO MACRO;
-; SETB P1.4;
-; REPT  13;
-; 	NOP;
-; 	ENDM
-; CLR P1.4;
-; REPT  40;
-; 	NOP;
-; 	ENDM
-; SETB P1.4;
-; ENDM
-; 
-; LOGICAONE MACRO;
-; SETB P1.4;
-; REPT  22;
-; 	NOP;
-; 	ENDM
-; CLR P1.4;
-; REPT  27;
-; 	NOP;
-; 	ENDM
-; SETB P1.4;
-; ENDM
-; 
-; LOGICBZERO MACRO;
-; SETB P1.4;
-; REPT  8;
-; 	NOP;
-; 	ENDM
-; CLR P1.4;
-; REPT  40;
-; 	NOP;
-; 	ENDM
-; SETB P1.4;
-; ENDM
-; 
-; LOGICBONE MACRO;
-; SETB P1.4;
-; REPT  22;
-; 	NOP;
-; 	ENDM
-; CLR P1.4;
-; REPT  15;
-; 	NOP;
-; 	ENDM
-; SETB P1.4;
-; ENDM
-; 
-; 
-; DELAY1US MACRO;
-; REPT  48;
-; 	NOP;
-; 	ENDM
-; ENDM
-; 
-; 
-; LOGICARESET MACRO;
-; CLR P1.4;
-; REPT  80;
-; 	DELAY1US;
-; 	ENDM
-; SETB P1.4;
-; ENDM
-; 
-; COLORRED Macro;
-; 
-; ;GREEN
-; 
-; 	LOGICAZERO;
-; 	LOGICAZERO;
-; 	LOGICAZERO;
-; 	LOGICAZERO;
-; 	LOGICAZERO;
-; 	LOGICAZERO;
-; 	LOGICAZERO;
-; 	LOGICAZERO;
-; 
-; ;RED
-; 
-; 	LOGICAONE;
-; 	LOGICAONE;
-; 	LOGICAONE;
-; 	LOGICAONE;
-; 	LOGICAONE;
-; 	LOGICAONE;
-; 	LOGICAONE;
-; 	LOGICAONE;
-; 
-; ;BLUE
-; 	LOGICAZERO;
-; 	LOGICAZERO;
-; 	LOGICAZERO;
-; 	LOGICAZERO;
-; 	LOGICAZERO;
-; 	LOGICAZERO;
-; 	LOGICAZERO;
-; 	LOGICAZERO;
-; 
-; 
-; 
-; 	ENDM
-; 
-; BMOVE   MACRO   cnt
-; LOCAL   lab
-; 		MOV     R2,#cnt
-; 
-; lab:    MOV     A,@R1
-; 		MOV     @R0,A
-; 		INC     R0
-; 		INC     R1
-; 		DJNZ    R2,lab
-; 		ENDM
-; 
-; 
-; COLORBLUE Macro;
-; 
-; 	;GREEN
-; 		LOGICAZERO;
-; 		LOGICAZERO;
-; 		LOGICAZERO;
-; 		LOGICAZERO;
-; 		LOGICAZERO;
-; 		LOGICAZERO;
-; 		LOGICAZERO;
-; 		LOGICAZERO;
-; 
-; 
-; 	;RED
-; 		LOGICAZERO;
-; 		LOGICAZERO;
-; 		LOGICAZERO;
-; 		LOGICAZERO;
-; 		LOGICAZERO;
-; 		LOGICAZERO;
-; 		LOGICAZERO;
-; 		LOGICAZERO;
-; 
-; 	;BLUE
-; 
-; 		LOGICAONE;
-; 		LOGICAONE;
-; 		LOGICAONE;
-; 		LOGICAONE;
-; 		LOGICAONE;
-; 		LOGICAONE;
-; 		LOGICAONE;
-; 		LOGICAONE;
-; 
-; 		ENDM
-; 
-; COLORGREEN Macro;
-; 
-; 	;GREEN
-; 		LOGICAONE;
-; 		LOGICAONE;
-; 		LOGICAONE;
-; 		LOGICAONE;
-; 		LOGICAONE;
-; 		LOGICAONE;
-; 		LOGICAONE;
-; 		LOGICAONE;
-; 
-; 
-; 	;RED
-; 		LOGICAZERO;
-; 		LOGICAZERO;
-; 		LOGICAZERO;
-; 		LOGICAZERO;
-; 		LOGICAZERO;
-; 		LOGICAZERO;
-; 		LOGICAZERO;
-; 		LOGICAZERO;
-; 
-; 	;BLUE
-; 		LOGICAZERO;
-; 		LOGICAZERO;
-; 		LOGICAZERO;
-; 		LOGICAZERO;
-; 		LOGICAZERO;
-; 		LOGICAZERO;
-; 		LOGICAZERO;
-; 		LOGICAZERO;
-; 		ENDM
-; 
-; 
-; 
-; 
-; 
-; COLORTEST Macro;
-; 
-; 		LOGICAZERO;
-; 		LOGICAZERO;
-; 		LOGICAZERO;
-; 		LOGICAZERO;
-; 		LOGICAZERO;
-; 		LOGICAZERO;
-; 		LOGICAZERO;
-; 		LOGICAZERO;
-; 		ENDM
-; 
-; 
-; 
-; 
-; SETB P1.4;
-; 
-;  COLORTEST
-;  ANYCOLORS:	MOV B,#08h;
-;  			MOV A, #0Fh;
-;  BBSTART:	CLR C;
-;  			RLC A;
-;  			JC CASELONE;
-;  CASELONE:	LOGICBONE;
-;  			JMP BBEND;
-;  CASELZERO: 	LOGICBZERO;
-;  BBEND: 		DJNZ B, BBSTART;
-;  COLORTEST;
-; 
-;  LOGICARESET;
-;  END
-; 
-; #pragma endasm
-; 
-; #endif
+;    LEDSLOOP(10);
+			; SOURCE LINE # 83
+	MOV  	R7,#0AH
+	LCALL	_LEDSLOOP
 ; 
 ; }
-			; SOURCE LINE # 354
+			; SOURCE LINE # 85
 	RET  	
 ; END OF main
 
