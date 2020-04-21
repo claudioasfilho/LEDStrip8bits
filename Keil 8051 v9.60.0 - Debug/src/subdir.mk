@@ -4,6 +4,7 @@
 
 # Add inputs and outputs from these tool invocations to the build variables 
 A51_UPPER_SRCS += \
+../src/LEDStrip.A51 \
 ../src/SILABS_STARTUP.A51 
 
 ASM_SRCS += \
@@ -18,6 +19,7 @@ OBJS += \
 ./src/EFM8UB1_Blinky.OBJ \
 ./src/InitDevice.OBJ \
 ./src/Interrupts.OBJ \
+./src/LEDStrip.OBJ \
 ./src/SILABS_STARTUP.OBJ 
 
 

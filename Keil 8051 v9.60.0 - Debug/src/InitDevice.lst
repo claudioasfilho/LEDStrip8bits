@@ -1,4 +1,4 @@
-C51 COMPILER V9.60.0.0   INITDEVICE                                                        04/19/2020 11:21:00 PAGE 1   
+C51 COMPILER V9.60.0.0   INITDEVICE                                                        04/21/2020 09:26:29 PAGE 1   
 
 
 C51 COMPILER V9.60.0.0, COMPILATION OF MODULE INITDEVICE
@@ -63,7 +63,7 @@ line level    source
   49   1              // $[Watchdog Timer Init Variable Declarations]
   50   1              uint32_t i;
   51   1              bool ea;
-C51 COMPILER V9.60.0.0   INITDEVICE                                                        04/19/2020 11:21:00 PAGE 2   
+C51 COMPILER V9.60.0.0   INITDEVICE                                                        04/21/2020 09:26:29 PAGE 2   
 
   52   1              // [Watchdog Timer Init Variable Declarations]$
   53   1      
@@ -128,7 +128,7 @@ line level    source
  112   1      
  113   1              // $[P0MAT - Port 0 Match]
  114   1              // [P0MAT - Port 0 Match]$
-C51 COMPILER V9.60.0.0   INITDEVICE                                                        04/19/2020 11:21:00 PAGE 3   
+C51 COMPILER V9.60.0.0   INITDEVICE                                                        04/21/2020 09:26:29 PAGE 3   
 
  115   1      
  116   1      }
@@ -193,7 +193,7 @@ line level    source
  175   1              // $[P1MASK - Port 1 Mask]
  176   1              // [P1MASK - Port 1 Mask]$
  177   1      
-C51 COMPILER V9.60.0.0   INITDEVICE                                                        04/19/2020 11:21:00 PAGE 4   
+C51 COMPILER V9.60.0.0   INITDEVICE                                                        04/21/2020 09:26:29 PAGE 4   
 
  178   1              // $[P1MAT - Port 1 Match]
  179   1              // [P1MAT - Port 1 Match]$
@@ -258,7 +258,7 @@ line level    source
  238   1                              | XBR2_URT1E__DISABLED | XBR2_URT1RTSE__DISABLED
  239   1                              | XBR2_URT1CTSE__DISABLED;
  240   1              // [XBR2 - Port I/O Crossbar 2]$
-C51 COMPILER V9.60.0.0   INITDEVICE                                                        04/19/2020 11:21:00 PAGE 5   
+C51 COMPILER V9.60.0.0   INITDEVICE                                                        04/21/2020 09:26:29 PAGE 5   
 
  241   1      
  242   1              // $[PRTDRV - Port Drive Strength]
@@ -323,7 +323,7 @@ line level    source
  301          
  302          //================================================================================
  303          // TIMER16_2_enter_DefaultMode_from_RESET
-C51 COMPILER V9.60.0.0   INITDEVICE                                                        04/19/2020 11:21:00 PAGE 6   
+C51 COMPILER V9.60.0.0   INITDEVICE                                                        04/21/2020 09:26:29 PAGE 6   
 
  304          //================================================================================
  305          extern void TIMER16_2_enter_DefaultMode_from_RESET(void) {
@@ -388,7 +388,7 @@ line level    source
  364   1              // $[TMR3H - Timer 3 High Byte]
  365   1              // [TMR3H - Timer 3 High Byte]$
  366   1      
-C51 COMPILER V9.60.0.0   INITDEVICE                                                        04/19/2020 11:21:00 PAGE 7   
+C51 COMPILER V9.60.0.0   INITDEVICE                                                        04/21/2020 09:26:29 PAGE 7   
 
  367   1              // $[TMR3L - Timer 3 Low Byte]
  368   1              // [TMR3L - Timer 3 Low Byte]$
@@ -453,7 +453,7 @@ line level    source
  427          //================================================================================
  428          // TIMER_SETUP_0_enter_DefaultMode_from_RESET
  429          //================================================================================
-C51 COMPILER V9.60.0.0   INITDEVICE                                                        04/19/2020 11:21:00 PAGE 8   
+C51 COMPILER V9.60.0.0   INITDEVICE                                                        04/21/2020 09:26:29 PAGE 8   
 
  430          extern void TIMER_SETUP_0_enter_DefaultMode_from_RESET(void) {
  431   1              // $[CKCON0 - Clock Control 0]
@@ -518,7 +518,7 @@ line level    source
  490   1              // [EIP2 - Extended Interrupt Priority 2]$
  491   1      
  492   1              // $[EIP2H - Extended Interrupt Priority 2 High]
-C51 COMPILER V9.60.0.0   INITDEVICE                                                        04/19/2020 11:21:00 PAGE 9   
+C51 COMPILER V9.60.0.0   INITDEVICE                                                        04/21/2020 09:26:29 PAGE 9   
 
  493   1              // [EIP2H - Extended Interrupt Priority 2 High]$
  494   1      
@@ -583,7 +583,7 @@ line level    source
  553   1              // $[PFE0CN - Prefetch Engine Control]
  554   1              /***********************************************************************
  555   1               - Enable the prefetch engine 
-C51 COMPILER V9.60.0.0   INITDEVICE                                                        04/19/2020 11:21:00 PAGE 10  
+C51 COMPILER V9.60.0.0   INITDEVICE                                                        04/21/2020 09:26:29 PAGE 10  
 
  556   1               - SYSCLK < 50 MHz
  557   1               ***********************************************************************/

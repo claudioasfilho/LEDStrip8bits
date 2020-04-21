@@ -61,6 +61,11 @@
 						<tool id="com.silabs.ide.si8051.keil.toolchain.compiler.186672678.1349669319" name="Keil 8051 Compiler" superClass="com.silabs.ide.si8051.keil.toolchain.compiler.186672678">
 							<option id="com.silabs.ide.si8051.keil.compiler.category.listing.assembly.1185290418" name="Assembly code" superClass="com.silabs.ide.si8051.keil.compiler.category.listing.assembly" value="true" valueType="boolean"/>
 							<option id="com.silabs.ide.si8051.keil.compiler.category.general.assembly_src.550362887" name="Generate assembly SRC from &quot;.c&quot; file" superClass="com.silabs.ide.si8051.keil.compiler.category.general.assembly_src" value="true" valueType="boolean"/>
+							<option id="com.silabs.ide.si8051.keil.compiler.category.general.order_variables.1938198092" name="Keep variables in order" superClass="com.silabs.ide.si8051.keil.compiler.category.general.order_variables" value="true" valueType="boolean"/>
+							<option id="com.silabs.ide.si8051.keil.compiler.category.general.browse.365565600" name="Generate browse information" superClass="com.silabs.ide.si8051.keil.compiler.category.general.browse" value="true" valueType="boolean"/>
+							<option id="com.silabs.ide.si8051.keil.compiler.category.listing.symbols.355619636" name="Symbols" superClass="com.silabs.ide.si8051.keil.compiler.category.listing.symbols" value="true" valueType="boolean"/>
+							<option id="com.silabs.ide.si8051.keil.compiler.category.listing.includes.668468369" name="#include files" superClass="com.silabs.ide.si8051.keil.compiler.category.listing.includes" value="true" valueType="boolean"/>
+							<option id="com.silabs.ide.si8051.keil.compiler.category.listing.preprocessor.832354512" name="Create preprocessor listing file" superClass="com.silabs.ide.si8051.keil.compiler.category.listing.preprocessor" value="true" valueType="boolean"/>
 							<inputType id="com.silabs.ide.si8051.keil.compiler.inputType.990504559" superClass="com.silabs.ide.si8051.keil.compiler.inputType"/>
 						</tool>
 						<tool customBuildStep="true" id="org.eclipse.cdt.managedbuilder.ui.rcbs.476828305" name="Resource Custom Build Step">

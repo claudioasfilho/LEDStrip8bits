@@ -1,4 +1,4 @@
-AX51 MACRO ASSEMBLER  EFM8UB1_BLINKY                                                        04/20/20 12:55:48 PAGE     1
+AX51 MACRO ASSEMBLER  EFM8UB1_BLINKY                                                        04/21/20 09:42:24 PAGE     1
 
 
 MACRO ASSEMBLER AX51 V3.15.3.0
@@ -18,987 +18,817 @@ LOC    OBJ             LINE     SOURCE
                           3     ;        Z:\Applications\Simplicity Studio.app\Contents\Eclipse\developer\toolchains\kei
                                l_8051\9.60\BIN\C51.exe /Users/clfilho/SimplicityStudio/March20/LEDStrip_UB1/src/EFM8UB1_
                                Blinky.c OMF2 SMALL DEBUG OBJECTEXTEND ROM(LARGE) WARNINGLEVEL(2) FLOATFUZZY(3) OPTIMIZE(
-                               0,SPEED) INTVECTOR(0X0000) INTPROMOTE SRC(src/EFM8UB1_Blinky.SRC) INCDIR(/Users/clfilho/S
-                               implicityStudio/March20/LEDStrip_UB1/inc;/Applications/Simplicity Studio.app/Contents/Ecl
-                               ipse/developer/sdks/8051/v4.1.7//Device/shared/si8051Base;/Applications/Simplicity Studio
-                               .app/Contents/Eclipse/developer/sdks/8051/v4.1.7//Device/EFM8UB1/inc) NOAREGS PRINT(.\src
-                               /EFM8UB1_Blinky.lst) COND CODE PAGEWIDTH(120) PAGELENGTH(65)
+                               0,SPEED) INTVECTOR(0X0000) BROWSE ORDER INTPROMOTE SRC(src/EFM8UB1_Blinky.SRC) INCDIR(/Us
+                               ers/clfilho/SimplicityStudio/March20/LEDStrip_UB1/inc;/Applications/Simplicity Studio.app
+                               /Contents/Eclipse/developer/sdks/8051/v4.1.7//Device/shared/si8051Base;/Applications/Simp
+                               licity Studio.app/Contents/Eclipse/developer/sdks/8051/v4.1.7//Device/EFM8UB1/inc) NOAREG
+                               S PREPRINT(.\src/EFM8UB1_Blinky.I) PRINT(.\src/EFM8UB1_Blinky.lst) COND SYMBOLS LISTINCLU
+                               DE CODE PAGEWIDTH(120) PAGELENGTH(65)
                           4     
                           5     $nomod51 
                           6     
                           7     NAME    EFM8UB1_BLINKY
                           8     
- 00A2                     9     SPI0CKR DATA    0A2H
- 0080                    10     P0      DATA    080H
- 00C8.6                  11     SCON1_PERR      BIT     0C8H.6
- 00D0.2                  12     PSW_OV  BIT     0D0H.2
- 0090                    13     P1      DATA    090H
- 00F8.1                  14     SPI0CN0_TXNF    BIT     0F8H.1
- 0097                    15     WDTCN   DATA    097H
- 00A0                    16     P2      DATA    0A0H
- 00B0                    17     P3      DATA    0B0H
- 00BC                    18     ADC0CF  DATA    0BCH
- 00C0.7                  19     SMB0CN0_MASTER  BIT     0C0H.7
- 00F9                    20     PCA0    DATA    0F9H
- 00E6                    21     EIE1    DATA    0E6H
- 00C0.1                  22     SMB0CN0_ACK     BIT     0C0H.1
- 00B3                    23     USB0XCN DATA    0B3H
- 00CE                    24     EIE2    DATA    0CEH
- 008F                    25     PSCTL   DATA    08FH
- 00E4                    26     IT01CF  DATA    0E4H
- 00C0.6                  27     SMB0CN0_TXMODE  BIT     0C0H.6
- 00AD                    28     DERIVID DATA    0ADH
- 00A7                    29     SFRPAGE DATA    0A7H
- 00A4                    30     P0MDOUT DATA    0A4H
- 00BF                    31     USB0CDSTA       DATA    0BFH
- 00A5                    32     P1MDOUT DATA    0A5H
- 00E8.5                  33     ADC0CN0_ADINT   BIT     0E8H.5
- 00CB                    34     TMR2RLH DATA    0CBH
- 00A6                    35     P2MDOUT DATA    0A6H
- 00A8                    36     IE      DATA    0A8H
- 0093                    37     TMR3RLH DATA    093H
- 009C                    38     P3MDOUT DATA    09CH
- 00A3                    39     TMR4RLH DATA    0A3H
- 00F3                    40     EIP1    DATA    0F3H
- 00F4                    41     EIP2    DATA    0F4H
- 0098.2                  42     SCON0_RB8       BIT     098H.2
-AX51 MACRO ASSEMBLER  EFM8UB1_BLINKY                                                        04/20/20 12:55:48 PAGE     2
+ 00E0                     9     ACC     DATA    0E0H
+ 00B3                    10     ADC0AC  DATA    0B3H
+ 00BC                    11     ADC0CF  DATA    0BCH
+ 00E8                    12     ADC0CN0 DATA    0E8H
+ 00B2                    13     ADC0CN1 DATA    0B2H
+ 00C4                    14     ADC0GTH DATA    0C4H
+ 00C3                    15     ADC0GTL DATA    0C3H
+ 00BE                    16     ADC0H   DATA    0BEH
+ 00BD                    17     ADC0L   DATA    0BDH
+ 00C6                    18     ADC0LTH DATA    0C6H
+ 00C5                    19     ADC0LTL DATA    0C5H
+ 00BB                    20     ADC0MX  DATA    0BBH
+ 00DF                    21     ADC0PWR DATA    0DFH
+ 00B9                    22     ADC0TK  DATA    0B9H
+ 00F0                    23     B       DATA    0F0H
+ 008E                    24     CKCON0  DATA    08EH
+ 00A6                    25     CKCON1  DATA    0A6H
+ 00A9                    26     CLKSEL  DATA    0A9H
+ 009B                    27     CMP0CN0 DATA    09BH
+ 0099                    28     CMP0CN1 DATA    099H
+ 009D                    29     CMP0MD  DATA    09DH
+ 009F                    30     CMP0MX  DATA    09FH
+ 00BF                    31     CMP1CN0 DATA    0BFH
+ 00AC                    32     CMP1CN1 DATA    0ACH
+ 00AB                    33     CMP1MD  DATA    0ABH
+ 00AA                    34     CMP1MX  DATA    0AAH
+ 00CE                    35     CRC0CN0 DATA    0CEH
+ 0086                    36     CRC0CN1 DATA    086H
+ 00D3                    37     CRC0CNT DATA    0D3H
+ 00DE                    38     CRC0DAT DATA    0DEH
+ 00CF                    39     CRC0FLIP        DATA    0CFH
+ 00DD                    40     CRC0IN  DATA    0DDH
+ 00D2                    41     CRC0ST  DATA    0D2H
+AX51 MACRO ASSEMBLER  EFM8UB1_BLINKY                                                        04/21/20 09:42:24 PAGE     2
 
- 00CA                    43     TMR2RLL DATA    0CAH
- 00FC                    44     PCA0CPH0        DATA    0FCH
- 0092                    45     TMR3RLL DATA    092H
- 00EA                    46     PCA0CPH1        DATA    0EAH
- 0098.3                  47     SCON0_TB8       BIT     098H.3
- 00F0.0                  48     B_B0    BIT     0F0H.0
- 0082                    49     DP      DATA    082H
- 00A2                    50     TMR4RLL DATA    0A2H
- 00EC                    51     PCA0CPH2        DATA    0ECH
- 00F0.1                  52     B_B1    BIT     0F0H.1
- 00C3                    53     ADC0GT  DATA    0C3H
- 00BD                    54     I2C0SLAD        DATA    0BDH
- 00D8.3                  55     UART1FCN1_RFRQ  BIT     0D8H.3
- 00F0.2                  56     B_B2    BIT     0F0H.2
- 00CF                    57     SFRPGCN DATA    0CFH
- 00FB                    58     PCA0CPL0        DATA    0FBH
- 00F0.3                  59     B_B3    BIT     0F0H.3
- 00D9                    60     PCA0MD  DATA    0D9H
- 00DA                    61     PCA0CPM0        DATA    0DAH
- 00E9                    62     PCA0CPL1        DATA    0E9H
- 00D8.7                  63     UART1FCN1_TFRQ  BIT     0D8H.7
- 00F0.4                  64     B_B4    BIT     0F0H.4
- 00DB                    65     PCA0CPM1        DATA    0DBH
- 00EB                    66     PCA0CPL2        DATA    0EBH
- 00F0.5                  67     B_B5    BIT     0F0H.5
- 00DC                    68     PCA0CPM2        DATA    0DCH
- 00B8                    69     IP      DATA    0B8H
- 00B9                    70     ADC0TK  DATA    0B9H
- 00F0.6                  71     B_B6    BIT     0F0H.6
- 00C5                    72     ADC0LT  DATA    0C5H
- 00D8.6                  73     UART1FCN1_TXNF  BIT     0D8H.6
- 0098.5                  74     SCON0_MCE       BIT     098H.5
- 00F0.7                  75     B_B7    BIT     0F0H.7
- 00C3                    76     SMB0FCN0        DATA    0C3H
- 00E1                    77     XBR0    DATA    0E1H
- 00C4                    78     SMB0FCN1        DATA    0C4H
- 00C1                    79     SMB0CF  DATA    0C1H
- 00E2                    80     XBR1    DATA    0E2H
- 00C1                    81     PFE0CN  DATA    0C1H
- 00E7                    82     EMI0CN  DATA    0E7H
- 00C0.5                  83     SMB0CN0_STA     BIT     0C0H.5
- 00E3                    84     XBR2    DATA    0E3H
- 00BB                    85     ADC0MX  DATA    0BBH
- 00E0.0                  86     ACC_ACC0        BIT     0E0H.0
- 00D1                    87     REF0CN  DATA    0D1H
- 008E                    88     CKCON0  DATA    08EH
- 00E0.1                  89     ACC_ACC1        BIT     0E0H.1
- 00C9                    90     REG0CN  DATA    0C9H
- 00DD                    91     CRC0IN  DATA    0DDH
- 00A6                    92     CKCON1  DATA    0A6H
- 00C8.2                  93     TMR2CN0_TR2     BIT     0C8H.2
- 00E0.2                  94     ACC_ACC2        BIT     0E0H.2
- 00C6                    95     REG1CN  DATA    0C6H
- 00E0.3                  96     ACC_ACC3        BIT     0E0H.3
- 0081                    97     SP      DATA    081H
- 009D                    98     CMP0MD  DATA    09DH
- 00E0.4                  99     ACC_ACC4        BIT     0E0H.4
- 00B1                   100     LFO0CN  DATA    0B1H
- 00AB                   101     CMP1MD  DATA    0ABH
- 00A0.3                 102     DISP_EN BIT     0A0H.3
- 00D8.0                 103     PCA0CN0_CCF0    BIT     0D8H.0
- 00E0.5                 104     ACC_ACC5        BIT     0E0H.5
- 00B5                   105     USB0CF  DATA    0B5H
-AX51 MACRO ASSEMBLER  EFM8UB1_BLINKY                                                        04/20/20 12:55:48 PAGE     3
+ 00AD                    42     DERIVID DATA    0ADH
+ 00B5                    43     DEVICEID        DATA    0B5H
+ 0083                    44     DPH     DATA    083H
+ 0082                    45     DPL     DATA    082H
+ 00E6                    46     EIE1    DATA    0E6H
+ 00CE                    47     EIE2    DATA    0CEH
+ 00F3                    48     EIP1    DATA    0F3H
+ 00F5                    49     EIP1H   DATA    0F5H
+ 00F4                    50     EIP2    DATA    0F4H
+ 00F6                    51     EIP2H   DATA    0F6H
+ 00E7                    52     EMI0CN  DATA    0E7H
+ 00B7                    53     FLKEY   DATA    0B7H
+ 00C7                    54     HFO0CAL DATA    0C7H
+ 00D6                    55     HFO1CAL DATA    0D6H
+ 00EF                    56     HFOCN   DATA    0EFH
+ 00BA                    57     I2C0CN0 DATA    0BAH
+ 00BC                    58     I2C0DIN DATA    0BCH
+ 00BB                    59     I2C0DOUT        DATA    0BBH
+ 00AD                    60     I2C0FCN0        DATA    0ADH
+ 00AB                    61     I2C0FCN1        DATA    0ABH
+ 00F5                    62     I2C0FCT DATA    0F5H
+ 00BD                    63     I2C0SLAD        DATA    0BDH
+ 00B9                    64     I2C0STAT        DATA    0B9H
+ 00A8                    65     IE      DATA    0A8H
+ 00B8                    66     IP      DATA    0B8H
+ 00F2                    67     IPH     DATA    0F2H
+ 00E4                    68     IT01CF  DATA    0E4H
+ 00B1                    69     LFO0CN  DATA    0B1H
+ 0080                    70     P0      DATA    080H
+ 00FE                    71     P0MASK  DATA    0FEH
+ 00FD                    72     P0MAT   DATA    0FDH
+ 00F1                    73     P0MDIN  DATA    0F1H
+ 00A4                    74     P0MDOUT DATA    0A4H
+ 00D4                    75     P0SKIP  DATA    0D4H
+ 0090                    76     P1      DATA    090H
+ 00EE                    77     P1MASK  DATA    0EEH
+ 00ED                    78     P1MAT   DATA    0EDH
+ 00F2                    79     P1MDIN  DATA    0F2H
+ 00A5                    80     P1MDOUT DATA    0A5H
+ 00D5                    81     P1SKIP  DATA    0D5H
+ 00A0                    82     P2      DATA    0A0H
+ 00FC                    83     P2MASK  DATA    0FCH
+ 00FB                    84     P2MAT   DATA    0FBH
+ 00F3                    85     P2MDIN  DATA    0F3H
+ 00A6                    86     P2MDOUT DATA    0A6H
+ 00CC                    87     P2SKIP  DATA    0CCH
+ 00B0                    88     P3      DATA    0B0H
+ 00F4                    89     P3MDIN  DATA    0F4H
+ 009C                    90     P3MDOUT DATA    09CH
+ 009E                    91     PCA0CENT        DATA    09EH
+ 009C                    92     PCA0CLR DATA    09CH
+ 00D8                    93     PCA0CN0 DATA    0D8H
+ 00FC                    94     PCA0CPH0        DATA    0FCH
+ 00EA                    95     PCA0CPH1        DATA    0EAH
+ 00EC                    96     PCA0CPH2        DATA    0ECH
+ 00FB                    97     PCA0CPL0        DATA    0FBH
+ 00E9                    98     PCA0CPL1        DATA    0E9H
+ 00EB                    99     PCA0CPL2        DATA    0EBH
+ 00DA                   100     PCA0CPM0        DATA    0DAH
+ 00DB                   101     PCA0CPM1        DATA    0DBH
+ 00DC                   102     PCA0CPM2        DATA    0DCH
+ 00FA                   103     PCA0H   DATA    0FAH
+ 00F9                   104     PCA0L   DATA    0F9H
+AX51 MACRO ASSEMBLER  EFM8UB1_BLINKY                                                        04/21/20 09:42:24 PAGE     3
 
- 0098.2                 106     TMR4CN0_TR4     BIT     098H.2
- 00D8.1                 107     PCA0CN0_CCF1    BIT     0D8H.1
- 00E0.6                 108     ACC_ACC6        BIT     0E0H.6
- 00CC                   109     TMR2    DATA    0CCH
- 009A                   110     SPI0FCN0        DATA    09AH
- 00D8.2                 111     PCA0CN0_CCF2    BIT     0D8H.2
- 00E0.7                 112     ACC_ACC7        BIT     0E0H.7
- 0094                   113     TMR3    DATA    094H
- 009B                   114     SPI0FCN1        DATA    09BH
- 00A4                   115     TMR4    DATA    0A4H
- 0094                   116     SBCON1  DATA    094H
- 00C0.3                 117     SMB0CN0_ACKRQ   BIT     0C0H.3
- 00FF                   118     VDM0CN  DATA    0FFH
- 00F1                   119     P0MDIN  DATA    0F1H
- 0098.4                 120     SCON0_REN       BIT     098H.4
- 00AC                   121     SMB0TC  DATA    0ACH
- 00F2                   122     P1MDIN  DATA    0F2H
- 00C8.4                 123     SCON1_REN       BIT     0C8H.4
- 00F3                   124     P2MDIN  DATA    0F3H
- 00C0.4                 125     SMB0CN0_STO     BIT     0C0H.4
- 00B6                   126     USB0CDCF        DATA    0B6H
- 00F4                   127     P3MDIN  DATA    0F4H
- 00B9                   128     I2C0STAT        DATA    0B9H
- 00BB                   129     I2C0DOUT        DATA    0BBH
- 0096                   130     SBRLH1  DATA    096H
- 00FE                   131     P0MASK  DATA    0FEH
- 00D8.5                 132     UART1FCN1_TXHOLD        BIT     0D8H.5
- 00EE                   133     P1MASK  DATA    0EEH
- 00FC                   134     P2MASK  DATA    0FCH
- 00D0.3                 135     PSW_RS0 BIT     0D0H.3
- 00D8.7                 136     PCA0CN0_CF      BIT     0D8H.7
- 009E                   137     PCA0CENT        DATA    09EH
- 00BA                   138     I2C0CN0 DATA    0BAH
- 00D2                   139     CRC0ST  DATA    0D2H
- 00F8.4                 140     SPI0CN0_RXOVRN  BIT     0F8H.4
- 00D0.4                 141     PSW_RS1 BIT     0D0H.4
- 0095                   142     SBRLL1  DATA    095H
- 00C8.2                 143     SCON1_RBX       BIT     0C8H.2
- 00C8.0                 144     TMR2CN0_T2XCLK0 BIT     0C8H.0
- 00C8.1                 145     TMR2CN0_T2XCLK1 BIT     0C8H.1
- 00C8.3                 146     SCON1_TBX       BIT     0C8H.3
- 00E8.7                 147     ADC0CN0_ADEN    BIT     0E8H.7
- 00BE                   148     USB0CDCN        DATA    0BEH
- 0089                   149     TMOD    DATA    089H
- 0088                   150     TCON    DATA    088H
- 00CF                   151     CRC0FLIP        DATA    0CFH
- 00D0.0                 152     PSW_PARITY      BIT     0D0H.0
- 00A8.4                 153     IE_ES0  BIT     0A8H.4
- 009F                   154     CMP0MX  DATA    09FH
- 0098.0                 155     TMR4CN0_T4XCLK0 BIT     098H.0
- 00A8.1                 156     IE_ET0  BIT     0A8H.1
- 00AA                   157     CMP1MX  DATA    0AAH
- 0098.1                 158     TMR4CN0_T4XCLK1 BIT     098H.1
- 00A8.3                 159     IE_ET1  BIT     0A8H.3
- 00D4                   160     P0SKIP  DATA    0D4H
- 00D8.0                 161     UART1FCN1_RIE   BIT     0D8H.0
- 00A8.5                 162     IE_ET2  BIT     0A8H.5
- 00D5                   163     P1SKIP  DATA    0D5H
- 00CC                   164     P2SKIP  DATA    0CCH
- 00E8                   165     ADC0CN0 DATA    0E8H
- 00D8.4                 166     UART1FCN1_TIE   BIT     0D8H.4
- 00A8.0                 167     IE_EX0  BIT     0A8H.0
- 00B2                   168     ADC0CN1 DATA    0B2H
-AX51 MACRO ASSEMBLER  EFM8UB1_BLINKY                                                        04/20/20 12:55:48 PAGE     4
+ 00D9                   105     PCA0MD  DATA    0D9H
+ 0096                   106     PCA0POL DATA    096H
+ 00F7                   107     PCA0PWM DATA    0F7H
+ 0087                   108     PCON0   DATA    087H
+ 009A                   109     PCON1   DATA    09AH
+ 00C1                   110     PFE0CN  DATA    0C1H
+ 00F6                   111     PRTDRV  DATA    0F6H
+ 008F                   112     PSCTL   DATA    08FH
+ 00D0                   113     PSW     DATA    0D0H
+ 00D1                   114     REF0CN  DATA    0D1H
+ 00C9                   115     REG0CN  DATA    0C9H
+ 00C6                   116     REG1CN  DATA    0C6H
+ 00B6                   117     REVID   DATA    0B6H
+ 00EF                   118     RSTSRC  DATA    0EFH
+ 0094                   119     SBCON1  DATA    094H
+ 0096                   120     SBRLH1  DATA    096H
+ 0095                   121     SBRLL1  DATA    095H
+ 0099                   122     SBUF0   DATA    099H
+ 0092                   123     SBUF1   DATA    092H
+ 0098                   124     SCON0   DATA    098H
+ 00C8                   125     SCON1   DATA    0C8H
+ 00A7                   126     SFRPAGE DATA    0A7H
+ 00CF                   127     SFRPGCN DATA    0CFH
+ 00D7                   128     SFRSTACK        DATA    0D7H
+ 00D6                   129     SMB0ADM DATA    0D6H
+ 00D7                   130     SMB0ADR DATA    0D7H
+ 00C1                   131     SMB0CF  DATA    0C1H
+ 00C0                   132     SMB0CN0 DATA    0C0H
+ 00C2                   133     SMB0DAT DATA    0C2H
+ 00C3                   134     SMB0FCN0        DATA    0C3H
+ 00C4                   135     SMB0FCN1        DATA    0C4H
+ 00EF                   136     SMB0FCT DATA    0EFH
+ 00C5                   137     SMB0RXLN        DATA    0C5H
+ 00AC                   138     SMB0TC  DATA    0ACH
+ 0093                   139     SMOD1   DATA    093H
+ 0081                   140     SP      DATA    081H
+ 00A1                   141     SPI0CFG DATA    0A1H
+ 00A2                   142     SPI0CKR DATA    0A2H
+ 00F8                   143     SPI0CN0 DATA    0F8H
+ 00A3                   144     SPI0DAT DATA    0A3H
+ 009A                   145     SPI0FCN0        DATA    09AH
+ 009B                   146     SPI0FCN1        DATA    09BH
+ 00F7                   147     SPI0FCT DATA    0F7H
+ 0088                   148     TCON    DATA    088H
+ 008C                   149     TH0     DATA    08CH
+ 008D                   150     TH1     DATA    08DH
+ 008A                   151     TL0     DATA    08AH
+ 008B                   152     TL1     DATA    08BH
+ 0089                   153     TMOD    DATA    089H
+ 00C8                   154     TMR2CN0 DATA    0C8H
+ 00FD                   155     TMR2CN1 DATA    0FDH
+ 00CD                   156     TMR2H   DATA    0CDH
+ 00CC                   157     TMR2L   DATA    0CCH
+ 00CB                   158     TMR2RLH DATA    0CBH
+ 00CA                   159     TMR2RLL DATA    0CAH
+ 0091                   160     TMR3CN0 DATA    091H
+ 00FE                   161     TMR3CN1 DATA    0FEH
+ 0095                   162     TMR3H   DATA    095H
+ 0094                   163     TMR3L   DATA    094H
+ 0093                   164     TMR3RLH DATA    093H
+ 0092                   165     TMR3RLL DATA    092H
+ 0098                   166     TMR4CN0 DATA    098H
+ 00FF                   167     TMR4CN1 DATA    0FFH
+AX51 MACRO ASSEMBLER  EFM8UB1_BLINKY                                                        04/21/20 09:42:24 PAGE     4
 
- 00D8.6                 169     PCA0CN0_CR      BIT     0D8H.6
- 00A8.2                 170     IE_EX1  BIT     0A8H.2
- 00C8.7                 171     SCON1_OVR       BIT     0C8H.7
- 0098.7                 172     SCON0_SMODE     BIT     098H.7
- 00B5                   173     DEVICEID        DATA    0B5H
- 00A9                   174     CLKSEL  DATA    0A9H
- 00F8.0                 175     SPI0CN0_SPIEN   BIT     0F8H.0
- 00F0                   176     B       DATA    0F0H
- 00BE                   177     ADC0H   DATA    0BEH
- 00E8.6                 178     ADC0CN0_ADBMEN  BIT     0E8H.6
- 00CA                   179     TMR2RL  DATA    0CAH
- 00BD                   180     ADC0L   DATA    0BDH
- 0092                   181     TMR3RL  DATA    092H
- 00A2                   182     TMR4RL  DATA    0A2H
- 00D8                   183     PCA0CN0 DATA    0D8H
- 00E0                   184     ACC     DATA    0E0H
- 00FB                   185     PCA0CP0 DATA    0FBH
- 00E9                   186     PCA0CP1 DATA    0E9H
- 00EB                   187     PCA0CP2 DATA    0EBH
- 00BC                   188     I2C0DIN DATA    0BCH
- 00CE                   189     CRC0CN0 DATA    0CEH
- 008C                   190     TH0     DATA    08CH
- 0086                   191     CRC0CN1 DATA    086H
- 00B8.4                 192     IP_PS0  BIT     0B8H.4
- 00FA                   193     UART1FCT        DATA    0FAH
- 008D                   194     TH1     DATA    08DH
- 00FA                   195     PCA0H   DATA    0FAH
- 00F5                   196     I2C0FCT DATA    0F5H
- 00B8.1                 197     IP_PT0  BIT     0B8H.1
- 00B8.3                 198     IP_PT1  BIT     0B8H.3
- 00C0.2                 199     SMB0CN0_ARBLOST BIT     0C0H.2
- 00B8.5                 200     IP_PT2  BIT     0B8H.5
- 008A                   201     TL0     DATA    08AH
- 00D0.5                 202     PSW_F0  BIT     0D0H.5
- 00A8.6                 203     IE_ESPI0        BIT     0A8H.6
- 008B                   204     TL1     DATA    08BH
- 00F9                   205     PCA0L   DATA    0F9H
- 00C0.0                 206     SMB0CN0_SI      BIT     0C0H.0
- 00D0.1                 207     PSW_F1  BIT     0D0H.1
- 0080.0                 208     P0_B0   BIT     080H.0
- 00B8.0                 209     IP_PX0  BIT     0B8H.0
- 0090.0                 210     P1_B0   BIT     090H.0
- 0080.1                 211     P0_B1   BIT     080H.1
- 00B8.2                 212     IP_PX1  BIT     0B8H.2
- 009E                   213     UART1LIN        DATA    09EH
- 009B                   214     CMP0CN0 DATA    09BH
- 0088.1                 215     TCON_IE0        BIT     088H.1
- 00A0.0                 216     P2_B0   BIT     0A0H.0
- 0090.1                 217     P1_B1   BIT     090H.1
- 0080.2                 218     P0_B2   BIT     080H.2
- 00BF                   219     CMP1CN0 DATA    0BFH
- 0099                   220     CMP0CN1 DATA    099H
- 0088.3                 221     TCON_IE1        BIT     088H.3
- 00B0.0                 222     P3_B0   BIT     0B0H.0
- 00A0.1                 223     P2_B1   BIT     0A0H.1
- 0090.2                 224     P1_B2   BIT     090H.2
- 0080.3                 225     P0_B3   BIT     080H.3
- 00C0                   226     SMB0CN0 DATA    0C0H
- 00AC                   227     CMP1CN1 DATA    0ACH
- 00B0.1                 228     P3_B1   BIT     0B0H.1
- 00A0.2                 229     P2_B2   BIT     0A0H.2
- 0090.3                 230     P1_B3   BIT     090H.3
- 0080.4                 231     P0_B4   BIT     080H.4
-AX51 MACRO ASSEMBLER  EFM8UB1_BLINKY                                                        04/20/20 12:55:48 PAGE     5
+ 00A5                   168     TMR4H   DATA    0A5H
+ 00A4                   169     TMR4L   DATA    0A4H
+ 00A3                   170     TMR4RLH DATA    0A3H
+ 00A2                   171     TMR4RLL DATA    0A2H
+ 009D                   172     UART1FCN0       DATA    09DH
+ 00D8                   173     UART1FCN1       DATA    0D8H
+ 00FA                   174     UART1FCT        DATA    0FAH
+ 009E                   175     UART1LIN        DATA    09EH
+ 00AE                   176     USB0ADR DATA    0AEH
+ 00B2                   177     USB0AEC DATA    0B2H
+ 00B6                   178     USB0CDCF        DATA    0B6H
+ 00BE                   179     USB0CDCN        DATA    0BEH
+ 00BF                   180     USB0CDSTA       DATA    0BFH
+ 00B5                   181     USB0CF  DATA    0B5H
+ 00AF                   182     USB0DAT DATA    0AFH
+ 00B3                   183     USB0XCN DATA    0B3H
+ 00FF                   184     VDM0CN  DATA    0FFH
+ 0097                   185     WDTCN   DATA    097H
+ 00E1                   186     XBR0    DATA    0E1H
+ 00E2                   187     XBR1    DATA    0E2H
+ 00E3                   188     XBR2    DATA    0E3H
+ 00C3                   189     ADC0GT  DATA    0C3H
+ 00BD                   190     ADC0    DATA    0BDH
+ 00C5                   191     ADC0LT  DATA    0C5H
+ 0082                   192     DP      DATA    082H
+ 00FB                   193     PCA0CP0 DATA    0FBH
+ 00E9                   194     PCA0CP1 DATA    0E9H
+ 00EB                   195     PCA0CP2 DATA    0EBH
+ 00F9                   196     PCA0    DATA    0F9H
+ 0095                   197     SBRL1   DATA    095H
+ 00CC                   198     TMR2    DATA    0CCH
+ 00CA                   199     TMR2RL  DATA    0CAH
+ 0094                   200     TMR3    DATA    094H
+ 0092                   201     TMR3RL  DATA    092H
+ 00A4                   202     TMR4    DATA    0A4H
+ 00A2                   203     TMR4RL  DATA    0A2H
+ 00E0.0                 204     ACC_ACC0        BIT     0E0H.0
+ 00E0.1                 205     ACC_ACC1        BIT     0E0H.1
+ 00E0.2                 206     ACC_ACC2        BIT     0E0H.2
+ 00E0.3                 207     ACC_ACC3        BIT     0E0H.3
+ 00E0.4                 208     ACC_ACC4        BIT     0E0H.4
+ 00E0.5                 209     ACC_ACC5        BIT     0E0H.5
+ 00E0.6                 210     ACC_ACC6        BIT     0E0H.6
+ 00E0.7                 211     ACC_ACC7        BIT     0E0H.7
+ 00E8.0                 212     ADC0CN0_ADCM0   BIT     0E8H.0
+ 00E8.1                 213     ADC0CN0_ADCM1   BIT     0E8H.1
+ 00E8.2                 214     ADC0CN0_ADCM2   BIT     0E8H.2
+ 00E8.3                 215     ADC0CN0_ADWINT  BIT     0E8H.3
+ 00E8.4                 216     ADC0CN0_ADBUSY  BIT     0E8H.4
+ 00E8.5                 217     ADC0CN0_ADINT   BIT     0E8H.5
+ 00E8.6                 218     ADC0CN0_ADBMEN  BIT     0E8H.6
+ 00E8.7                 219     ADC0CN0_ADEN    BIT     0E8H.7
+ 00F0.0                 220     B_B0    BIT     0F0H.0
+ 00F0.1                 221     B_B1    BIT     0F0H.1
+ 00F0.2                 222     B_B2    BIT     0F0H.2
+ 00F0.3                 223     B_B3    BIT     0F0H.3
+ 00F0.4                 224     B_B4    BIT     0F0H.4
+ 00F0.5                 225     B_B5    BIT     0F0H.5
+ 00F0.6                 226     B_B6    BIT     0F0H.6
+ 00F0.7                 227     B_B7    BIT     0F0H.7
+ 00A8.0                 228     IE_EX0  BIT     0A8H.0
+ 00A8.1                 229     IE_ET0  BIT     0A8H.1
+ 00A8.2                 230     IE_EX1  BIT     0A8H.2
+AX51 MACRO ASSEMBLER  EFM8UB1_BLINKY                                                        04/21/20 09:42:24 PAGE     5
 
- 00A0.3                 232     P2_B3   BIT     0A0H.3
- 0090.4                 233     P1_B4   BIT     090H.4
- 0080.5                 234     P0_B5   BIT     080H.5
- 00D8.1                 235     UART1FCN1_RXTO0 BIT     0D8H.1
- 0090.5                 236     P1_B5   BIT     090H.5
- 0080.6                 237     P0_B6   BIT     080H.6
- 00F5                   238     EIP1H   DATA    0F5H
- 00D8.2                 239     UART1FCN1_RXTO1 BIT     0D8H.2
- 0090.6                 240     P1_B6   BIT     090H.6
- 0080.7                 241     P0_B7   BIT     080H.7
- 00C5                   242     SMB0RXLN        DATA    0C5H
- 00F6                   243     EIP2H   DATA    0F6H
- 0090.7                 244     P1_B7   BIT     090H.7
- 0083                   245     DPH     DATA    083H
- 00C4                   246     ADC0GTH DATA    0C4H
- 00C8.7                 247     TMR2CN0_TF2H    BIT     0C8H.7
- 00C8.3                 248     TMR2CN0_T2SPLIT BIT     0C8H.3
- 00D0.6                 249     PSW_AC  BIT     0D0H.6
- 00F8                   250     SPI0CN0 DATA    0F8H
- 00C7                   251     HFO0CAL DATA    0C7H
- 0088.5                 252     TCON_TF0        BIT     088H.5
- 0098.0                 253     SCON0_RI        BIT     098H.0
- 00D6                   254     HFO1CAL DATA    0D6H
- 0082                   255     DPL     DATA    082H
- 0088.7                 256     TCON_TF1        BIT     088H.7
- 00C8.0                 257     SCON1_RI        BIT     0C8H.0
- 0099                   258     SBUF0   DATA    099H
- 0087                   259     PCON0   DATA    087H
- 00F2                   260     IPH     DATA    0F2H
- 00C3                   261     ADC0GTL DATA    0C3H
- 0098.7                 262     TMR4CN0_TF4H    BIT     098H.7
- 0098.3                 263     TMR4CN0_T4SPLIT BIT     098H.3
- 00C8.6                 264     TMR2CN0_TF2L    BIT     0C8H.6
- 0098.1                 265     SCON0_TI        BIT     098H.1
- 00E8.0                 266     ADC0CN0_ADCM0   BIT     0E8H.0
- 0092                   267     SBUF1   DATA    092H
- 009A                   268     PCON1   DATA    09AH
- 00C6                   269     ADC0LTH DATA    0C6H
- 0088.0                 270     TCON_IT0        BIT     088H.0
- 00C8.1                 271     SCON1_TI        BIT     0C8H.1
- 00E8.1                 272     ADC0CN0_ADCM1   BIT     0E8H.1
- 00EF                   273     RSTSRC  DATA    0EFH
- 00FD                   274     P0MAT   DATA    0FDH
- 00DE                   275     CRC0DAT DATA    0DEH
- 0088.2                 276     TCON_IT1        BIT     088H.2
- 00E8.2                 277     ADC0CN0_ADCM2   BIT     0E8H.2
- 00D7                   278     SFRSTACK        DATA    0D7H
- 0098                   279     SCON0   DATA    098H
- 00F6                   280     PRTDRV  DATA    0F6H
- 00ED                   281     P1MAT   DATA    0EDH
- 00E8.3                 282     ADC0CN0_ADWINT  BIT     0E8H.3
- 0095                   283     SBRL1   DATA    095H
- 00B2                   284     USB0AEC DATA    0B2H
- 0093                   285     SMOD1   DATA    093H
- 00C8                   286     SCON1   DATA    0C8H
- 00FB                   287     P2MAT   DATA    0FBH
- 0098.6                 288     TMR4CN0_TF4L    BIT     098H.6
- 00E8.4                 289     ADC0CN0_ADBUSY  BIT     0E8H.4
- 00D6                   290     SMB0ADM DATA    0D6H
- 00C5                   291     ADC0LTL DATA    0C5H
- 00F8.5                 292     SPI0CN0_MODF    BIT     0F8H.5
- 00B8.6                 293     IP_PSPI0        BIT     0B8H.6
- 009C                   294     PCA0CLR DATA    09CH
-AX51 MACRO ASSEMBLER  EFM8UB1_BLINKY                                                        04/20/20 12:55:48 PAGE     6
+ 00A8.3                 231     IE_ET1  BIT     0A8H.3
+ 00A8.4                 232     IE_ES0  BIT     0A8H.4
+ 00A8.5                 233     IE_ET2  BIT     0A8H.5
+ 00A8.6                 234     IE_ESPI0        BIT     0A8H.6
+ 00A8.7                 235     IE_EA   BIT     0A8H.7
+ 00B8.0                 236     IP_PX0  BIT     0B8H.0
+ 00B8.1                 237     IP_PT0  BIT     0B8H.1
+ 00B8.2                 238     IP_PX1  BIT     0B8H.2
+ 00B8.3                 239     IP_PT1  BIT     0B8H.3
+ 00B8.4                 240     IP_PS0  BIT     0B8H.4
+ 00B8.5                 241     IP_PT2  BIT     0B8H.5
+ 00B8.6                 242     IP_PSPI0        BIT     0B8H.6
+ 0080.0                 243     P0_B0   BIT     080H.0
+ 0080.1                 244     P0_B1   BIT     080H.1
+ 0080.2                 245     P0_B2   BIT     080H.2
+ 0080.3                 246     P0_B3   BIT     080H.3
+ 0080.4                 247     P0_B4   BIT     080H.4
+ 0080.5                 248     P0_B5   BIT     080H.5
+ 0080.6                 249     P0_B6   BIT     080H.6
+ 0080.7                 250     P0_B7   BIT     080H.7
+ 0090.0                 251     P1_B0   BIT     090H.0
+ 0090.1                 252     P1_B1   BIT     090H.1
+ 0090.2                 253     P1_B2   BIT     090H.2
+ 0090.3                 254     P1_B3   BIT     090H.3
+ 0090.4                 255     P1_B4   BIT     090H.4
+ 0090.5                 256     P1_B5   BIT     090H.5
+ 0090.6                 257     P1_B6   BIT     090H.6
+ 0090.7                 258     P1_B7   BIT     090H.7
+ 00A0.0                 259     P2_B0   BIT     0A0H.0
+ 00A0.1                 260     P2_B1   BIT     0A0H.1
+ 00A0.2                 261     P2_B2   BIT     0A0H.2
+ 00A0.3                 262     P2_B3   BIT     0A0H.3
+ 00B0.0                 263     P3_B0   BIT     0B0H.0
+ 00B0.1                 264     P3_B1   BIT     0B0H.1
+ 00D8.0                 265     PCA0CN0_CCF0    BIT     0D8H.0
+ 00D8.1                 266     PCA0CN0_CCF1    BIT     0D8H.1
+ 00D8.2                 267     PCA0CN0_CCF2    BIT     0D8H.2
+ 00D8.6                 268     PCA0CN0_CR      BIT     0D8H.6
+ 00D8.7                 269     PCA0CN0_CF      BIT     0D8H.7
+ 00D0.0                 270     PSW_PARITY      BIT     0D0H.0
+ 00D0.1                 271     PSW_F1  BIT     0D0H.1
+ 00D0.2                 272     PSW_OV  BIT     0D0H.2
+ 00D0.3                 273     PSW_RS0 BIT     0D0H.3
+ 00D0.4                 274     PSW_RS1 BIT     0D0H.4
+ 00D0.5                 275     PSW_F0  BIT     0D0H.5
+ 00D0.6                 276     PSW_AC  BIT     0D0H.6
+ 00D0.7                 277     PSW_CY  BIT     0D0H.7
+ 0098.0                 278     SCON0_RI        BIT     098H.0
+ 0098.1                 279     SCON0_TI        BIT     098H.1
+ 0098.2                 280     SCON0_RB8       BIT     098H.2
+ 0098.3                 281     SCON0_TB8       BIT     098H.3
+ 0098.4                 282     SCON0_REN       BIT     098H.4
+ 0098.5                 283     SCON0_MCE       BIT     098H.5
+ 0098.7                 284     SCON0_SMODE     BIT     098H.7
+ 00C8.0                 285     SCON1_RI        BIT     0C8H.0
+ 00C8.1                 286     SCON1_TI        BIT     0C8H.1
+ 00C8.2                 287     SCON1_RBX       BIT     0C8H.2
+ 00C8.3                 288     SCON1_TBX       BIT     0C8H.3
+ 00C8.4                 289     SCON1_REN       BIT     0C8H.4
+ 00C8.6                 290     SCON1_PERR      BIT     0C8H.6
+ 00C8.7                 291     SCON1_OVR       BIT     0C8H.7
+ 00C0.0                 292     SMB0CN0_SI      BIT     0C0H.0
+ 00C0.1                 293     SMB0CN0_ACK     BIT     0C0H.1
+AX51 MACRO ASSEMBLER  EFM8UB1_BLINKY                                                        04/21/20 09:42:24 PAGE     6
 
- 00C8                   295     TMR2CN0 DATA    0C8H
- 0091                   296     TMR3CN0 DATA    091H
- 00FD                   297     TMR2CN1 DATA    0FDH
- 0098                   298     TMR4CN0 DATA    098H
- 00FE                   299     TMR3CN1 DATA    0FEH
- 00FF                   300     TMR4CN1 DATA    0FFH
- 00D7                   301     SMB0ADR DATA    0D7H
- 0088.4                 302     TCON_TR0        BIT     088H.4
- 00C8.4                 303     TMR2CN0_TF2CEN  BIT     0C8H.4
- 0088.6                 304     TCON_TR1        BIT     088H.6
- 00C2                   305     SMB0DAT DATA    0C2H
- 00CD                   306     TMR2H   DATA    0CDH
- 00A1                   307     SPI0CFG DATA    0A1H
- 0095                   308     TMR3H   DATA    095H
- 00EF                   309     HFOCN   DATA    0EFH
- 00D3                   310     CRC0CNT DATA    0D3H
- 00A5                   311     TMR4H   DATA    0A5H
- 0098.4                 312     TMR4CN0_TF4CEN  BIT     098H.4
- 00EF                   313     SMB0FCT DATA    0EFH
- 0096                   314     PCA0POL DATA    096H
- 00CC                   315     TMR2L   DATA    0CCH
- 00F8.7                 316     SPI0CN0_SPIF    BIT     0F8H.7
- 00AE                   317     USB0ADR DATA    0AEH
- 0094                   318     TMR3L   DATA    094H
- 00DF                   319     ADC0PWR DATA    0DFH
- 00A8.7                 320     IE_EA   BIT     0A8H.7
- 00A4                   321     TMR4L   DATA    0A4H
- 00AF                   322     USB0DAT DATA    0AFH
- 00C8.5                 323     TMR2CN0_TF2LEN  BIT     0C8H.5
- 00F8.6                 324     SPI0CN0_WCOL    BIT     0F8H.6
- 00F8.2                 325     SPI0CN0_NSSMD0  BIT     0F8H.2
- 00D0.7                 326     PSW_CY  BIT     0D0H.7
- 009D                   327     UART1FCN0       DATA    09DH
- 00A3                   328     SPI0DAT DATA    0A3H
- 00AD                   329     I2C0FCN0        DATA    0ADH
- 00F8.3                 330     SPI0CN0_NSSMD1  BIT     0F8H.3
- 00BD                   331     ADC0    DATA    0BDH
- 00D8                   332     UART1FCN1       DATA    0D8H
- 00AB                   333     I2C0FCN1        DATA    0ABH
- 0098.5                 334     TMR4CN0_TF4LEN  BIT     098H.5
- 00D0                   335     PSW     DATA    0D0H
- 00F7                   336     PCA0PWM DATA    0F7H
- 00F7                   337     SPI0FCT DATA    0F7H
- 00B6                   338     REVID   DATA    0B6H
- 00B7                   339     FLKEY   DATA    0B7H
- 00B3                   340     ADC0AC  DATA    0B3H
+ 00C0.2                 294     SMB0CN0_ARBLOST BIT     0C0H.2
+ 00C0.3                 295     SMB0CN0_ACKRQ   BIT     0C0H.3
+ 00C0.4                 296     SMB0CN0_STO     BIT     0C0H.4
+ 00C0.5                 297     SMB0CN0_STA     BIT     0C0H.5
+ 00C0.6                 298     SMB0CN0_TXMODE  BIT     0C0H.6
+ 00C0.7                 299     SMB0CN0_MASTER  BIT     0C0H.7
+ 00F8.0                 300     SPI0CN0_SPIEN   BIT     0F8H.0
+ 00F8.1                 301     SPI0CN0_TXNF    BIT     0F8H.1
+ 00F8.2                 302     SPI0CN0_NSSMD0  BIT     0F8H.2
+ 00F8.3                 303     SPI0CN0_NSSMD1  BIT     0F8H.3
+ 00F8.4                 304     SPI0CN0_RXOVRN  BIT     0F8H.4
+ 00F8.5                 305     SPI0CN0_MODF    BIT     0F8H.5
+ 00F8.6                 306     SPI0CN0_WCOL    BIT     0F8H.6
+ 00F8.7                 307     SPI0CN0_SPIF    BIT     0F8H.7
+ 0088.0                 308     TCON_IT0        BIT     088H.0
+ 0088.1                 309     TCON_IE0        BIT     088H.1
+ 0088.2                 310     TCON_IT1        BIT     088H.2
+ 0088.3                 311     TCON_IE1        BIT     088H.3
+ 0088.4                 312     TCON_TR0        BIT     088H.4
+ 0088.5                 313     TCON_TF0        BIT     088H.5
+ 0088.6                 314     TCON_TR1        BIT     088H.6
+ 0088.7                 315     TCON_TF1        BIT     088H.7
+ 00C8.0                 316     TMR2CN0_T2XCLK0 BIT     0C8H.0
+ 00C8.1                 317     TMR2CN0_T2XCLK1 BIT     0C8H.1
+ 00C8.2                 318     TMR2CN0_TR2     BIT     0C8H.2
+ 00C8.3                 319     TMR2CN0_T2SPLIT BIT     0C8H.3
+ 00C8.4                 320     TMR2CN0_TF2CEN  BIT     0C8H.4
+ 00C8.5                 321     TMR2CN0_TF2LEN  BIT     0C8H.5
+ 00C8.6                 322     TMR2CN0_TF2L    BIT     0C8H.6
+ 00C8.7                 323     TMR2CN0_TF2H    BIT     0C8H.7
+ 0098.0                 324     TMR4CN0_T4XCLK0 BIT     098H.0
+ 0098.1                 325     TMR4CN0_T4XCLK1 BIT     098H.1
+ 0098.2                 326     TMR4CN0_TR4     BIT     098H.2
+ 0098.3                 327     TMR4CN0_T4SPLIT BIT     098H.3
+ 0098.4                 328     TMR4CN0_TF4CEN  BIT     098H.4
+ 0098.5                 329     TMR4CN0_TF4LEN  BIT     098H.5
+ 0098.6                 330     TMR4CN0_TF4L    BIT     098H.6
+ 0098.7                 331     TMR4CN0_TF4H    BIT     098H.7
+ 00D8.0                 332     UART1FCN1_RIE   BIT     0D8H.0
+ 00D8.1                 333     UART1FCN1_RXTO0 BIT     0D8H.1
+ 00D8.2                 334     UART1FCN1_RXTO1 BIT     0D8H.2
+ 00D8.3                 335     UART1FCN1_RFRQ  BIT     0D8H.3
+ 00D8.4                 336     UART1FCN1_TIE   BIT     0D8H.4
+ 00D8.5                 337     UART1FCN1_TXHOLD        BIT     0D8H.5
+ 00D8.6                 338     UART1FCN1_TXNF  BIT     0D8H.6
+ 00D8.7                 339     UART1FCN1_TFRQ  BIT     0D8H.7
+ 00A0.3                 340     DISP_EN BIT     0A0H.3
 ------                  341     ?PR?SiLabs_Startup?EFM8UB1_BLINKY        SEGMENT CODE 
 ------                  342     ?PR?logicZero?EFM8UB1_BLINKY             SEGMENT CODE 
 ------                  343     ?PR?logicOne?EFM8UB1_BLINKY              SEGMENT CODE 
 ------                  344     ?PR?logicReseta?EFM8UB1_BLINKY           SEGMENT CODE 
 ------                  345     ?PR?main?EFM8UB1_BLINKY                  SEGMENT CODE 
                         346             EXTRN   CODE (enter_DefaultMode_from_RESET)
-                        347             EXTRN   CODE (?C_STARTUP)
-                        348             PUBLIC  main
-                        349             PUBLIC  logicReseta
-                        350             PUBLIC  logicOne
-                        351             PUBLIC  logicZero
-                        352             PUBLIC  SiLabs_Startup
-                        353     ; //-----------------------------------------------------------------------------
-                        354     ; // EFM8UB1_Blinky.c
-                        355     ; //-----------------------------------------------------------------------------
-                        356     ; // Copyright 2014 Silicon Laboratories, Inc.
-                        357     ; // http://developer.silabs.com/legal/version/v11/Silicon_Labs_Software_License_Agreeme
-AX51 MACRO ASSEMBLER  EFM8UB1_BLINKY                                                        04/20/20 12:55:48 PAGE     7
+                        347             EXTRN   CODE (LEDSLOOP)
+                        348             EXTRN   CODE (?C_STARTUP)
+                        349             PUBLIC  main
+                        350             PUBLIC  logicReseta
+                        351             PUBLIC  logicOne
+                        352             PUBLIC  logicZero
+                        353             PUBLIC  SiLabs_Startup
+                        354     ; //-----------------------------------------------------------------------------
+                        355     ; // EFM8UB1_Blinky.c
+                        356     ; //-----------------------------------------------------------------------------
+AX51 MACRO ASSEMBLER  EFM8UB1_BLINKY                                                        04/21/20 09:42:24 PAGE     7
 
+                        357     ; // Copyright 2014 Silicon Laboratories, Inc.
+                        358     ; // http://developer.silabs.com/legal/version/v11/Silicon_Labs_Software_License_Agreeme
                                nt.txt
-                        358     ; //
-                        359     ; // Program Description:
-                        360     ; //
-                        361     ; // This program flashes the red/green/blue LED on the EFM8UB1 STK board about
-                        362     ; // five times a second using the interrupt handler for Timer2.
-                        363     ; //
-                        364     ; // Resources:
-                        365     ; //   SYSCLK - 24.5 MHz HFOSC0 / 8
-                        366     ; //   Timer2 - 5 Hz interrupt
-                        367     ; //   P1.4   - LED green
-                        368     ; //   P1.5   - LED blue
-                        369     ; //   P1.6   - LED red
-                        370     ; //   P2.3   - Display enable
-                        371     ; //
-                        372     ; //-----------------------------------------------------------------------------
-                        373     ; // How To Test: EFM8UB1 STK
-                        374     ; //-----------------------------------------------------------------------------
-                        375     ; // 1) Place the switch in "AEM" mode.
-                        376     ; // 2) Connect the EFM8UB1 STK board to a PC using a mini USB cable.
-                        377     ; // 3) Compile and download code to the EFM8UB1 STK board.
-                        378     ; //    In Simplicity Studio IDE, select Run -> Debug from the menu bar,
-                        379     ; //    click the Debug button in the quick menu, or press F11.
-                        380     ; // 4) Run the code.
-                        381     ; //    In Simplicity Studio IDE, select Run -> Resume from the menu bar,
-                        382     ; //    click the Resume button in the quick menu, or press F8.
-                        383     ; // 5) The RGB LED should alternate colors at approximately 5 Hz.
-                        384     ; //
-                        385     ; // Target:         EFM8UB1
-                        386     ; // Tool chain:     Generic
-                        387     ; //
-                        388     ; // Release 0.1 (MW, ST)
-                        389     ; //    - Initial Revision
-                        390     ; //    - 10 OCT 2014
-                        391     ; //
-                        392     ; 
-                        393     ; //-----------------------------------------------------------------------------
-                        394     ; // Includes
-                        395     ; //-----------------------------------------------------------------------------
-                        396     ; #include <SI_EFM8UB1_Register_Enums.h>
-                        397     ; #include <InitDevice.h>
-                        398     ; 
-                        399     ; //-----------------------------------------------------------------------------
-                        400     ; // Pin Definitions
+                        359     ; //
+                        360     ; // Program Description:
+                        361     ; //
+                        362     ; // This program flashes the red/green/blue LED on the EFM8UB1 STK board about
+                        363     ; // five times a second using the interrupt handler for Timer2.
+                        364     ; //
+                        365     ; // Resources:
+                        366     ; //   SYSCLK - 24.5 MHz HFOSC0 / 8
+                        367     ; //   Timer2 - 5 Hz interrupt
+                        368     ; //   P1.4   - LED green
+                        369     ; //   P1.5   - LED blue
+                        370     ; //   P1.6   - LED red
+                        371     ; //   P2.3   - Display enable
+                        372     ; //
+                        373     ; //-----------------------------------------------------------------------------
+                        374     ; // How To Test: EFM8UB1 STK
+                        375     ; //-----------------------------------------------------------------------------
+                        376     ; // 1) Place the switch in "AEM" mode.
+                        377     ; // 2) Connect the EFM8UB1 STK board to a PC using a mini USB cable.
+                        378     ; // 3) Compile and download code to the EFM8UB1 STK board.
+                        379     ; //    In Simplicity Studio IDE, select Run -> Debug from the menu bar,
+                        380     ; //    click the Debug button in the quick menu, or press F11.
+                        381     ; // 4) Run the code.
+                        382     ; //    In Simplicity Studio IDE, select Run -> Resume from the menu bar,
+                        383     ; //    click the Resume button in the quick menu, or press F8.
+                        384     ; // 5) The RGB LED should alternate colors at approximately 5 Hz.
+                        385     ; //
+                        386     ; // Target:         EFM8UB1
+                        387     ; // Tool chain:     Generic
+                        388     ; //
+                        389     ; // Release 0.1 (MW, ST)
+                        390     ; //    - Initial Revision
+                        391     ; //    - 10 OCT 2014
+                        392     ; //
+                        393     ; 
+                        394     ; //-----------------------------------------------------------------------------
+                        395     ; // Includes
+                        396     ; //-----------------------------------------------------------------------------
+                        397     ; #include <SI_EFM8UB1_Register_Enums.h>
+                        398     ; #include <InitDevice.h>
+                        399     ; 
+                        400     ; 
                         401     ; //-----------------------------------------------------------------------------
-                        402     ; SI_SBIT (DISP_EN, SFR_P2, 3);          // Display Enable
-                        403     ; #define DISP_BC_DRIVEN   0             // 0 = Board Controller drives display
-                        404     ; #define DISP_EFM8_DRIVEN 1             // 1 = EFM8 drives display
-                        405     ; 
-                        406     ; //-----------------------------------------------------------------------------
-                        407     ; // SiLabs_Startup() Routine
-                        408     ; // ----------------------------------------------------------------------------
-                        409     ; // This function is called immediately after reset, before the initialization
-                        410     ; // code is run in SILABS_STARTUP.A51 (which runs before main() ). This is a
-                        411     ; // useful place to disable the watchdog timer, which is enable by default
-                        412     ; // and may trigger before main() in some instances.
-                        413     ; //-----------------------------------------------------------------------------
-                        414     ; void SiLabs_Startup (void)
-                        415     
-------                  416             RSEG  ?PR?SiLabs_Startup?EFM8UB1_BLINKY
-000000                  417     SiLabs_Startup:
-                        418             USING   0
-                        419                             ; SOURCE LINE # 62
-AX51 MACRO ASSEMBLER  EFM8UB1_BLINKY                                                        04/20/20 12:55:48 PAGE     8
+                        402     ; // Pin Definitions
+                        403     ; //-----------------------------------------------------------------------------
+                        404     ; SI_SBIT (DISP_EN, SFR_P2, 3);          // Display Enable
+                        405     ; #define DISP_BC_DRIVEN   0             // 0 = Board Controller drives display
+                        406     ; #define DISP_EFM8_DRIVEN 1             // 1 = EFM8 drives display
+                        407     ; 
+                        408     ; 
+                        409     ; void ANYCOLORS (void);
+                        410     ; void LEDSLOOP (void);
+                        411     ; //-----------------------------------------------------------------------------
+                        412     ; // SiLabs_Startup() Routine
+                        413     ; // ----------------------------------------------------------------------------
+                        414     ; // This function is called immediately after reset, before the initialization
+                        415     ; // code is run in SILABS_STARTUP.A51 (which runs before main() ). This is a
+                        416     ; // useful place to disable the watchdog timer, which is enable by default
+                        417     ; // and may trigger before main() in some instances.
+                        418     ; //-----------------------------------------------------------------------------
+AX51 MACRO ASSEMBLER  EFM8UB1_BLINKY                                                        04/21/20 09:42:24 PAGE     8
 
-                        420     ; {
-                        421                             ; SOURCE LINE # 63
-                        422     ;   // Disable the watchdog here
-                        423     ; }
-                        424                             ; SOURCE LINE # 65
-000000 22               425             RET     
-                        426     ; END OF SiLabs_Startup
-                        427     
-                        428     ; 
-                        429     ; void logicZero()
-                        430     
-------                  431             RSEG  ?PR?logicZero?EFM8UB1_BLINKY
-000000                  432     logicZero:
-                        433             USING   0
-                        434                             ; SOURCE LINE # 67
-                        435     ; {
-                        436                             ; SOURCE LINE # 68
-                        437     ;       #pragma asm
-                        438     ;          SETB P1.4;
-000000 D294             439               SETB P1.4;
-                        440     ;          NOP;
-000002 00               441               NOP ;
-                        442     ;          NOP;
-000003 00               443               NOP ;
-                        444     ;          NOP;
-000004 00               445               NOP ;
-                        446     ;          NOP;
-000005 00               447               NOP ;
-                        448     ;          NOP;
-000006 00               449               NOP ;
-                        450     ;          CLR P1.4;
-000007 C294             451               CLR P1.4;
-                        452     ;          NOP;
-000009 00               453               NOP ;
-                        454     ;          NOP;
-00000A 00               455               NOP ;
-                        456     ;          NOP;
-00000B 00               457               NOP ;
-                        458     ;          NOP;
-00000C 00               459               NOP ;
-                        460     ;          NOP;
-00000D 00               461               NOP ;
-                        462     ;          NOP;
-00000E 00               463               NOP ;
-                        464     ;          NOP;
-00000F 00               465               NOP ;
-                        466     ;          NOP;
-000010 00               467               NOP ;
-                        468     ;          NOP;
-000011 00               469               NOP ;
-                        470     ;       #pragma endasm
-                        471     ; }
-                        472                             ; SOURCE LINE # 87
-000012 22               473             RET     
-                        474     ; END OF logicZero
-                        475     
-                        476     ; 
-                        477     ; void logicOne()
-                        478     
-------                  479             RSEG  ?PR?logicOne?EFM8UB1_BLINKY
-000000                  480     logicOne:
-                        481             USING   0
-                        482                             ; SOURCE LINE # 89
-AX51 MACRO ASSEMBLER  EFM8UB1_BLINKY                                                        04/20/20 12:55:48 PAGE     9
+                        419     ; void SiLabs_Startup (void)
+                        420     
+------                  421             RSEG  ?PR?SiLabs_Startup?EFM8UB1_BLINKY
+000000                  422     SiLabs_Startup:
+                        423             USING   0
+                        424                             ; SOURCE LINE # 66
+                        425     ; {
+                        426                             ; SOURCE LINE # 67
+                        427     ;   // Disable the watchdog here
+                        428     ; }
+                        429                             ; SOURCE LINE # 69
+000000 22               430             RET     
+                        431     ; END OF SiLabs_Startup
+                        432     
+                        433     ; 
+                        434     ; void logicZero()
+                        435     
+------                  436             RSEG  ?PR?logicZero?EFM8UB1_BLINKY
+000000                  437     logicZero:
+                        438             USING   0
+                        439                             ; SOURCE LINE # 71
+                        440     ; {
+                        441                             ; SOURCE LINE # 72
+                        442     ;       #pragma asm
+                        443     ;          SETB P1.4;
+000000 D294             444               SETB P1.4;
+                        445     ;          NOP;
+000002 00               446               NOP ;
+                        447     ;          NOP;
+000003 00               448               NOP ;
+                        449     ;          NOP;
+000004 00               450               NOP ;
+                        451     ;          NOP;
+000005 00               452               NOP ;
+                        453     ;          NOP;
+000006 00               454               NOP ;
+                        455     ;          CLR P1.4;
+000007 C294             456               CLR P1.4;
+                        457     ;          NOP;
+000009 00               458               NOP ;
+                        459     ;          NOP;
+00000A 00               460               NOP ;
+                        461     ;          NOP;
+00000B 00               462               NOP ;
+                        463     ;          NOP;
+00000C 00               464               NOP ;
+                        465     ;          NOP;
+00000D 00               466               NOP ;
+                        467     ;          NOP;
+00000E 00               468               NOP ;
+                        469     ;          NOP;
+00000F 00               470               NOP ;
+                        471     ;          NOP;
+000010 00               472               NOP ;
+                        473     ;          NOP;
+000011 00               474               NOP ;
+                        475     ;       #pragma endasm
+                        476     ; }
+                        477                             ; SOURCE LINE # 91
+000012 22               478             RET     
+                        479     ; END OF logicZero
+                        480     
+                        481     ; 
+AX51 MACRO ASSEMBLER  EFM8UB1_BLINKY                                                        04/21/20 09:42:24 PAGE     9
 
-                        483     ; {
-                        484                             ; SOURCE LINE # 90
-                        485     ; 
-                        486     ; }
-                        487                             ; SOURCE LINE # 92
-000000 22               488             RET     
-                        489     ; END OF logicOne
-                        490     
-                        491     ; 
-                        492     ; void logicReseta()
-                        493     
-------                  494             RSEG  ?PR?logicReseta?EFM8UB1_BLINKY
-000000                  495     logicReseta:
-                        496             USING   0
-                        497                             ; SOURCE LINE # 94
-                        498     ; {
-                        499                             ; SOURCE LINE # 95
-                        500     ;       //static unsigned int counterLedReset;
-                        501     ; 
-                        502     ; 
-                        503     ;       //for(counterLedReset=0 ; counterLedReset<390; counterLedReset++)__asm__("NOP");
-                        504     ; 
-                        505     ; 
-                        506     ; }
-                        507                             ; SOURCE LINE # 102
-000000 22               508             RET     
-                        509     ; END OF logicReseta
-                        510     
-                        511     ;  
-                        512     ; //-----------------------------------------------------------------------------
-                        513     ; // Main Routine
-                        514     ; //-----------------------------------------------------------------------------
-                        515     ; void main (void)
-                        516     
-------                  517             RSEG  ?PR?main?EFM8UB1_BLINKY
-000000                  518     main:
-                        519             USING   0
-                        520                             ; SOURCE LINE # 107
-                        521     ; {
-                        522                             ; SOURCE LINE # 108
-                        523     ;    enter_DefaultMode_from_RESET();
-                        524                             ; SOURCE LINE # 109
-000000 120000     E     525             LCALL   enter_DefaultMode_from_RESET
-                        526     ; 
-                        527     ;    DISP_EN = DISP_BC_DRIVEN;           // Display not driven by EFM8
-                        528                             ; SOURCE LINE # 111
-000003 C2A3             529             CLR     DISP_EN
-                        530     ; 
-                        531     ;    IE_EA = 0;                          // Enable global interrupts
-                        532                             ; SOURCE LINE # 113
-000005 C2AF             533             CLR     IE_EA
-000007                  534     ?C0005:
+                        482     ; void logicOne()
+                        483     
+------                  484             RSEG  ?PR?logicOne?EFM8UB1_BLINKY
+000000                  485     logicOne:
+                        486             USING   0
+                        487                             ; SOURCE LINE # 93
+                        488     ; {
+                        489                             ; SOURCE LINE # 94
+                        490     ; 
+                        491     ; }
+                        492                             ; SOURCE LINE # 96
+000000 22               493             RET     
+                        494     ; END OF logicOne
+                        495     
+                        496     ; 
+                        497     ; void logicReseta()
+                        498     
+------                  499             RSEG  ?PR?logicReseta?EFM8UB1_BLINKY
+000000                  500     logicReseta:
+                        501             USING   0
+                        502                             ; SOURCE LINE # 98
+                        503     ; {
+                        504                             ; SOURCE LINE # 99
+                        505     ;       //static unsigned int counterLedReset;
+                        506     ; 
+                        507     ; 
+                        508     ;       //for(counterLedReset=0 ; counterLedReset<390; counterLedReset++)__asm__("NOP");
+                        509     ; 
+                        510     ; 
+                        511     ; }
+                        512                             ; SOURCE LINE # 106
+000000 22               513             RET     
+                        514     ; END OF logicReseta
+                        515     
+                        516     ;  
+                        517     ; //-----------------------------------------------------------------------------
+                        518     ; // Main Routine
+                        519     ; //-----------------------------------------------------------------------------
+                        520     ; void main (void)
+                        521     
+------                  522             RSEG  ?PR?main?EFM8UB1_BLINKY
+000000                  523     main:
+                        524             USING   0
+                        525                             ; SOURCE LINE # 111
+                        526     ; {
+                        527                             ; SOURCE LINE # 112
+                        528     ;    enter_DefaultMode_from_RESET();
+                        529                             ; SOURCE LINE # 113
+000000 120000     E     530             LCALL   enter_DefaultMode_from_RESET
+                        531     ; 
+                        532     ;    DISP_EN = DISP_BC_DRIVEN;           // Display not driven by EFM8
+                        533                             ; SOURCE LINE # 115
+000003 C2A3             534             CLR     DISP_EN
                         535     ; 
-                        536     ; 
-                        537     ; 
-                        538     ; 
-                        539     ;    while (1) {
-                        540                             ; SOURCE LINE # 118
-                        541     ;          //logicZero();
-                        542     ; #if 1
-                        543     ; #pragma asm
-                        544     ; 
-                        545               
-AX51 MACRO ASSEMBLER  EFM8UB1_BLINKY                                                        04/20/20 12:55:48 PAGE    10
+                        536     ;    IE_EA = 0;                          // Enable global interrupts
+                        537                             ; SOURCE LINE # 117
+000005 C2AF             538             CLR     IE_EA
+                        539     ; 
+                        540     ;    LEDSLOOP();
+                        541                             ; SOURCE LINE # 119
+000007 120000     E     542             LCALL   LEDSLOOP
+                        543     ; 
+                        544     ; #if 0
+AX51 MACRO ASSEMBLER  EFM8UB1_BLINKY                                                        04/21/20 09:42:24 PAGE    10
 
-                        546     ; DELAY MACRO CNT;
-                        547               DELAY MACRO CNT;
+                        545     ; #pragma asm
+                        546     ; 
+                        547     ; DELAY MACRO CNT;
                         548     ;         REPT  CNT;
-                        549               REPT  CNT;
-                        550     ;          NOP;
-                        551               NOP ;
-                        552     ;          ENDM
-                        553               ENDM
-                        554     ;         ENDM
-                        555               ENDM
-                        556     ; 
-                        557               
-                        558     ; LOGICAZERO MACRO;
-                        559               LOGICAZERO MACRO;
-                        560     ; SETB P1.4;
-                        561               SETB P1.4;
-                        562     ; REPT  13;
-                        563               REPT  13;
-                        564     ;       NOP;
-                        565               NOP ;
-                        566     ;       ENDM
-                        567               ENDM
-                        568     ; CLR P1.4;
-                        569               CLR P1.4;
-                        570     ; REPT  40;
-                        571               REPT  40;
+                        549     ;          NOP;
+                        550     ;          ENDM
+                        551     ;         ENDM
+                        552     ; 
+                        553     ; LOGICAZERO MACRO;
+                        554     ; SETB P1.4;
+                        555     ; REPT  13;
+                        556     ;       NOP;
+                        557     ;       ENDM
+                        558     ; CLR P1.4;
+                        559     ; REPT  40;
+                        560     ;       NOP;
+                        561     ;       ENDM
+                        562     ; SETB P1.4;
+                        563     ; ENDM
+                        564     ; 
+                        565     ; LOGICAONE MACRO;
+                        566     ; SETB P1.4;
+                        567     ; REPT  22;
+                        568     ;       NOP;
+                        569     ;       ENDM
+                        570     ; CLR P1.4;
+                        571     ; REPT  27;
                         572     ;       NOP;
-                        573               NOP ;
-                        574     ;       ENDM
-                        575               ENDM
-                        576     ; SETB P1.4;
-                        577               SETB P1.4;
-                        578     ; ENDM
-                        579               ENDM
-                        580     ; 
-                        581               
-                        582     ; LOGICAONE MACRO;
-                        583               LOGICAONE MACRO;
-                        584     ; SETB P1.4;
-                        585               SETB P1.4;
-                        586     ; REPT  22;
-                        587               REPT  22;
-                        588     ;       NOP;
-                        589               NOP ;
-                        590     ;       ENDM
-                        591               ENDM
-                        592     ; CLR P1.4;
-                        593               CLR P1.4;
-                        594     ; REPT  27;
-                        595               REPT  27;
+                        573     ;       ENDM
+                        574     ; SETB P1.4;
+                        575     ; ENDM
+                        576     ; 
+                        577     ; LOGICBZERO MACRO;
+                        578     ; SETB P1.4;
+                        579     ; REPT  8;
+                        580     ;       NOP;
+                        581     ;       ENDM
+                        582     ; CLR P1.4;
+                        583     ; REPT  40;
+                        584     ;       NOP;
+                        585     ;       ENDM
+                        586     ; SETB P1.4;
+                        587     ; ENDM
+                        588     ; 
+                        589     ; LOGICBONE MACRO;
+                        590     ; SETB P1.4;
+                        591     ; REPT  22;
+                        592     ;       NOP;
+                        593     ;       ENDM
+                        594     ; CLR P1.4;
+                        595     ; REPT  15;
                         596     ;       NOP;
-                        597               NOP ;
-                        598     ;       ENDM
-                        599               ENDM
-                        600     ; SETB P1.4;
-                        601               SETB P1.4;
-                        602     ; ENDM
-                        603               ENDM
-                        604     ; 
-                        605               
-                        606     ; DELAY1US MACRO;
-                        607               DELAY1US MACRO;
-                        608     ; REPT  48;
-AX51 MACRO ASSEMBLER  EFM8UB1_BLINKY                                                        04/20/20 12:55:48 PAGE    11
+                        597     ;       ENDM
+                        598     ; SETB P1.4;
+                        599     ; ENDM
+                        600     ; 
+                        601     ; 
+                        602     ; DELAY1US MACRO;
+                        603     ; REPT  48;
+                        604     ;       NOP;
+                        605     ;       ENDM
+                        606     ; ENDM
+                        607     ; 
+AX51 MACRO ASSEMBLER  EFM8UB1_BLINKY                                                        04/21/20 09:42:24 PAGE    11
 
-                        609               REPT  48;
-                        610     ;       NOP;
-                        611               NOP ;
-                        612     ;       ENDM
-                        613               ENDM
-                        614     ; ENDM
-                        615               ENDM
+                        608     ; 
+                        609     ; LOGICARESET MACRO;
+                        610     ; CLR P1.4;
+                        611     ; REPT  80;
+                        612     ;       DELAY1US;
+                        613     ;       ENDM
+                        614     ; SETB P1.4;
+                        615     ; ENDM
                         616     ; 
-                        617               
+                        617     ; COLORRED Macro;
                         618     ; 
-                        619               
-                        620     ; LOGICARESET MACRO;
-                        621               LOGICARESET MACRO;
-                        622     ; CLR P1.4;
-                        623               CLR P1.4;
-                        624     ; REPT  80;
-                        625               REPT  80;
-                        626     ;       DELAY1US;
-                        627               DELAY1US;
-                        628     ;       ENDM
-                        629               ENDM
-                        630     ; SETB P1.4;
-                        631               SETB P1.4;
-                        632     ; ENDM
-                        633               ENDM
-                        634     ; 
-                        635               
-                        636     ; COLORRED Macro;
-                        637               COLORRED Macro;
-                        638     ; 
-                        639               
-                        640     ; ;GREEN
-                        641               ;GREEN
-                        642     ; 
-                        643               
+                        619     ; ;GREEN
+                        620     ; 
+                        621     ;       LOGICAZERO;
+                        622     ;       LOGICAZERO;
+                        623     ;       LOGICAZERO;
+                        624     ;       LOGICAZERO;
+                        625     ;       LOGICAZERO;
+                        626     ;       LOGICAZERO;
+                        627     ;       LOGICAZERO;
+                        628     ;       LOGICAZERO;
+                        629     ; 
+                        630     ; ;RED
+                        631     ; 
+                        632     ;       LOGICAONE;
+                        633     ;       LOGICAONE;
+                        634     ;       LOGICAONE;
+                        635     ;       LOGICAONE;
+                        636     ;       LOGICAONE;
+                        637     ;       LOGICAONE;
+                        638     ;       LOGICAONE;
+                        639     ;       LOGICAONE;
+                        640     ; 
+                        641     ; ;BLUE
+                        642     ;       LOGICAZERO;
+                        643     ;       LOGICAZERO;
                         644     ;       LOGICAZERO;
-                        645               LOGICAZERO;
+                        645     ;       LOGICAZERO;
                         646     ;       LOGICAZERO;
-                        647               LOGICAZERO;
+                        647     ;       LOGICAZERO;
                         648     ;       LOGICAZERO;
-                        649               LOGICAZERO;
-                        650     ;       LOGICAZERO;
-                        651               LOGICAZERO;
-                        652     ;       LOGICAZERO;
-                        653               LOGICAZERO;
-                        654     ;       LOGICAZERO;
-                        655               LOGICAZERO;
-                        656     ;       LOGICAZERO;
-                        657               LOGICAZERO;
-                        658     ;       LOGICAZERO;
-                        659               LOGICAZERO;
-                        660     ; 
-                        661               
-                        662     ; ;RED
-                        663               ;RED
-                        664     ; 
-                        665               
-                        666     ;       LOGICAONE;
-                        667               LOGICAONE;
-                        668     ;       LOGICAONE;
-                        669               LOGICAONE;
-                        670     ;       LOGICAONE;
-                        671               LOGICAONE;
-AX51 MACRO ASSEMBLER  EFM8UB1_BLINKY                                                        04/20/20 12:55:48 PAGE    12
+                        649     ;       LOGICAZERO;
+                        650     ; 
+                        651     ; 
+                        652     ; 
+                        653     ;       ENDM
+                        654     ; 
+                        655     ; BMOVE   MACRO   cnt
+                        656     ; LOCAL   lab
+                        657     ;               MOV     R2,#cnt
+                        658     ; 
+                        659     ; lab:    MOV     A,@R1
+                        660     ;               MOV     @R0,A
+                        661     ;               INC     R0
+                        662     ;               INC     R1
+                        663     ;               DJNZ    R2,lab
+                        664     ;               ENDM
+                        665     ; 
+                        666     ; 
+                        667     ; COLORBLUE Macro;
+                        668     ; 
+                        669     ;       ;GREEN
+                        670     ;               LOGICAZERO;
+AX51 MACRO ASSEMBLER  EFM8UB1_BLINKY                                                        04/21/20 09:42:24 PAGE    12
 
-                        672     ;       LOGICAONE;
-                        673               LOGICAONE;
-                        674     ;       LOGICAONE;
-                        675               LOGICAONE;
-                        676     ;       LOGICAONE;
-                        677               LOGICAONE;
-                        678     ;       LOGICAONE;
-                        679               LOGICAONE;
-                        680     ;       LOGICAONE;
-                        681               LOGICAONE;
-                        682     ; 
-                        683               
-                        684     ; ;BLUE
-                        685               ;BLUE
-                        686     ;       LOGICAZERO;
-                        687               LOGICAZERO;
-                        688     ;       LOGICAZERO;
-                        689               LOGICAZERO;
-                        690     ;       LOGICAZERO;
-                        691               LOGICAZERO;
-                        692     ;       LOGICAZERO;
-                        693               LOGICAZERO;
-                        694     ;       LOGICAZERO;
-                        695               LOGICAZERO;
-                        696     ;       LOGICAZERO;
-                        697               LOGICAZERO;
-                        698     ;       LOGICAZERO;
-                        699               LOGICAZERO;
-                        700     ;       LOGICAZERO;
-                        701               LOGICAZERO;
+                        671     ;               LOGICAZERO;
+                        672     ;               LOGICAZERO;
+                        673     ;               LOGICAZERO;
+                        674     ;               LOGICAZERO;
+                        675     ;               LOGICAZERO;
+                        676     ;               LOGICAZERO;
+                        677     ;               LOGICAZERO;
+                        678     ; 
+                        679     ; 
+                        680     ;       ;RED
+                        681     ;               LOGICAZERO;
+                        682     ;               LOGICAZERO;
+                        683     ;               LOGICAZERO;
+                        684     ;               LOGICAZERO;
+                        685     ;               LOGICAZERO;
+                        686     ;               LOGICAZERO;
+                        687     ;               LOGICAZERO;
+                        688     ;               LOGICAZERO;
+                        689     ; 
+                        690     ;       ;BLUE
+                        691     ; 
+                        692     ;               LOGICAONE;
+                        693     ;               LOGICAONE;
+                        694     ;               LOGICAONE;
+                        695     ;               LOGICAONE;
+                        696     ;               LOGICAONE;
+                        697     ;               LOGICAONE;
+                        698     ;               LOGICAONE;
+                        699     ;               LOGICAONE;
+                        700     ; 
+                        701     ;               ENDM
                         702     ; 
-                        703               
+                        703     ; COLORGREEN Macro;
                         704     ; 
-                        705               
-                        706     ; 
-                        707               
-                        708     ;       ENDM
-                        709               ENDM
-                        710     ; 
-                        711               
-                        712     ; COLORBLUE Macro;
-                        713               COLORBLUE Macro;
+                        705     ;       ;GREEN
+                        706     ;               LOGICAONE;
+                        707     ;               LOGICAONE;
+                        708     ;               LOGICAONE;
+                        709     ;               LOGICAONE;
+                        710     ;               LOGICAONE;
+                        711     ;               LOGICAONE;
+                        712     ;               LOGICAONE;
+                        713     ;               LOGICAONE;
                         714     ; 
-                        715               
-                        716     ;       ;GREEN
-                        717               ;GREEN
+                        715     ; 
+                        716     ;       ;RED
+                        717     ;               LOGICAZERO;
                         718     ;               LOGICAZERO;
-                        719               LOGICAZERO;
+                        719     ;               LOGICAZERO;
                         720     ;               LOGICAZERO;
-                        721               LOGICAZERO;
+                        721     ;               LOGICAZERO;
                         722     ;               LOGICAZERO;
-                        723               LOGICAZERO;
+                        723     ;               LOGICAZERO;
                         724     ;               LOGICAZERO;
-                        725               LOGICAZERO;
-                        726     ;               LOGICAZERO;
-                        727               LOGICAZERO;
+                        725     ; 
+                        726     ;       ;BLUE
+                        727     ;               LOGICAZERO;
                         728     ;               LOGICAZERO;
-                        729               LOGICAZERO;
+                        729     ;               LOGICAZERO;
                         730     ;               LOGICAZERO;
-                        731               LOGICAZERO;
+                        731     ;               LOGICAZERO;
                         732     ;               LOGICAZERO;
-                        733               LOGICAZERO;
-                        734     ; 
-AX51 MACRO ASSEMBLER  EFM8UB1_BLINKY                                                        04/20/20 12:55:48 PAGE    13
+                        733     ;               LOGICAZERO;
+AX51 MACRO ASSEMBLER  EFM8UB1_BLINKY                                                        04/21/20 09:42:24 PAGE    13
 
-                        735               
+                        734     ;               LOGICAZERO;
+                        735     ;               ENDM
                         736     ; 
-                        737               
-                        738     ;       ;RED
-                        739               ;RED
-                        740     ;               LOGICAZERO;
-                        741               LOGICAZERO;
-                        742     ;               LOGICAZERO;
-                        743               LOGICAZERO;
+                        737     ; 
+                        738     ; 
+                        739     ; 
+                        740     ; 
+                        741     ; COLORTEST Macro;
+                        742     ; 
+                        743     ;               LOGICAZERO;
                         744     ;               LOGICAZERO;
-                        745               LOGICAZERO;
+                        745     ;               LOGICAZERO;
                         746     ;               LOGICAZERO;
-                        747               LOGICAZERO;
+                        747     ;               LOGICAZERO;
                         748     ;               LOGICAZERO;
-                        749               LOGICAZERO;
+                        749     ;               LOGICAZERO;
                         750     ;               LOGICAZERO;
-                        751               LOGICAZERO;
-                        752     ;               LOGICAZERO;
-                        753               LOGICAZERO;
-                        754     ;               LOGICAZERO;
-                        755               LOGICAZERO;
-                        756     ; 
-                        757               
-                        758     ;       ;BLUE
-                        759               ;BLUE
-                        760     ; 
-                        761               
-                        762     ;               LOGICAONE;
-                        763               LOGICAONE;
-                        764     ;               LOGICAONE;
-                        765               LOGICAONE;
-                        766     ;               LOGICAONE;
-                        767               LOGICAONE;
-                        768     ;               LOGICAONE;
-                        769               LOGICAONE;
-                        770     ;               LOGICAONE;
-                        771               LOGICAONE;
-                        772     ;               LOGICAONE;
-                        773               LOGICAONE;
-                        774     ;               LOGICAONE;
-                        775               LOGICAONE;
-                        776     ;               LOGICAONE;
-                        777               LOGICAONE;
-                        778     ; 
-                        779               
-                        780     ;               ENDM
-                        781               ENDM
-                        782     ; 
-                        783               
-                        784     ; COLORGREEN Macro;
-                        785               COLORGREEN Macro;
-                        786     ; 
-                        787               
-                        788     ;       ;GREEN
-                        789               ;GREEN
-                        790     ;               LOGICAONE;
-                        791               LOGICAONE;
-                        792     ;               LOGICAONE;
-                        793               LOGICAONE;
-                        794     ;               LOGICAONE;
-                        795               LOGICAONE;
-                        796     ;               LOGICAONE;
-                        797               LOGICAONE;
-AX51 MACRO ASSEMBLER  EFM8UB1_BLINKY                                                        04/20/20 12:55:48 PAGE    14
-
-                        798     ;               LOGICAONE;
-                        799               LOGICAONE;
-                        800     ;               LOGICAONE;
-                        801               LOGICAONE;
-                        802     ;               LOGICAONE;
-                        803               LOGICAONE;
-                        804     ;               LOGICAONE;
-                        805               LOGICAONE;
-                        806     ; 
-                        807               
-                        808     ; 
-                        809               
-                        810     ;       ;RED
-                        811               ;RED
-                        812     ;               LOGICAZERO;
-                        813               LOGICAZERO;
-                        814     ;               LOGICAZERO;
-                        815               LOGICAZERO;
-                        816     ;               LOGICAZERO;
-                        817               LOGICAZERO;
-                        818     ;               LOGICAZERO;
-                        819               LOGICAZERO;
-                        820     ;               LOGICAZERO;
-                        821               LOGICAZERO;
-                        822     ;               LOGICAZERO;
-                        823               LOGICAZERO;
-                        824     ;               LOGICAZERO;
-                        825               LOGICAZERO;
-                        826     ;               LOGICAZERO;
-                        827               LOGICAZERO;
-                        828     ; 
-                        829               
-                        830     ;       ;BLUE
-                        831               ;BLUE
-                        832     ;               LOGICAZERO;
-                        833               LOGICAZERO;
-                        834     ;               LOGICAZERO;
-                        835               LOGICAZERO;
-                        836     ;               LOGICAZERO;
-                        837               LOGICAZERO;
-                        838     ;               LOGICAZERO;
-                        839               LOGICAZERO;
-                        840     ;               LOGICAZERO;
-                        841               LOGICAZERO;
-                        842     ;               LOGICAZERO;
-                        843               LOGICAZERO;
-                        844     ;               LOGICAZERO;
-                        845               LOGICAZERO;
-                        846     ;               LOGICAZERO;
-                        847               LOGICAZERO;
-                        848     ; 
-                        849               
-                        850     ; 
-                        851               
-                        852     ; 
-                        853               
-                        854     ;               ENDM
-                        855               ENDM
-                        856     ; 
-                        857               
-                        858     ; SETB P1.4;
-000007 D294             859               SETB P1.4;
-                        860     ;  LOOP:
-AX51 MACRO ASSEMBLER  EFM8UB1_BLINKY                                                        04/20/20 12:55:48 PAGE    15
-
-000009                  861               LOOP:
-                        862     ; 
-                        863               
-                        864     ; 
-                        865               
-                        866     ; 
-                        867               
-                        868     ; 
-                        869               
-                        870     ;  COLORGREEN;
-                        871+1             COLORGREEN;
-                       5117     ;  COLORBLUE;
-                       5118+1             COLORBLUE;
-                       9362     ;  COLORRED;
-                       9363+1             COLORRED;
-                      13611     ;  ;LOGICARESET;
-                      13612               ;LOGICARESET;
-                      13613     ; 
-                      13614               
-                      13615     ; 
-                      13616               
-                      13617     ;    JMP LOOP;
-001041 020000     F   13618               JMP LOOP;
-                      13619     ; #pragma endasm
-                      13620     ; 
-                      13621     ; #else
-                      13622     ; 
-                      13623     ; 
-                      13624     ; 
-                      13625     ; 
-                      13626     ;       P1 = 0xFF;
-                      13627     ;       _nop_ ();    // delay
-                      13628     ;       _nop_ ();    // delay
-                      13629     ;       _nop_ ();    // delay
-                      13630     ;       _nop_ ();    // delay
-                      13631     ;       _nop_ ();    // delay
-                      13632     ;       _nop_ ();    // delay
-                      13633     ;      P1 = 0x00;
-                      13634     ;       _nop_ ();    // delay
-                      13635     ;       _nop_ ();    // delay
-                      13636     ;       _nop_ ();    // delay
-                      13637     ;       _nop_ ();    // delay
-                      13638     ;       _nop_ ();    // delay
-                      13639     ;       _nop_ ();    // delay
-                      13640     ;       _nop_ ();    // delay
-                      13641     ;       _nop_ ();    // delay
-                      13642     ;       _nop_ ();    // delay
-                      13643     ;       _nop_ ();    // delay
-                      13644     ;       _nop_ ();    // delay
-                      13645     ;       _nop_ ();    // delay
-                      13646     ;       _nop_ ();    // delay
-                      13647     ;       _nop_ ();    // delay
-                      13648     ;       _nop_ ();    // delay
-                      13649     ;       P1 = 0xFF;
-                      13650     ;       _nop_ ();    // delay
-                      13651     ;       _nop_ ();    // delay
-                      13652     ;       _nop_ ();    // delay
-                      13653     ;       _nop_ ();    // delay
-                      13654     ;       _nop_ ();    // delay
-                      13655     ;       _nop_ ();    // delay
-                      13656     ;      P1 = 0x00;
-                      13657     ;       _nop_ ();    // delay
-                      13658     ;       _nop_ ();    // delay
-AX51 MACRO ASSEMBLER  EFM8UB1_BLINKY                                                        04/20/20 12:55:48 PAGE    16
-
-                      13659     ;       _nop_ ();    // delay
-                      13660     ;       _nop_ ();    // delay
-                      13661     ;       _nop_ ();    // delay
-                      13662     ;       _nop_ ();    // delay
-                      13663     ;       _nop_ ();    // delay
-                      13664     ;       _nop_ ();    // delay
-                      13665     ;       _nop_ ();    // delay
-                      13666     ;       _nop_ ();    // delay
-                      13667     ;       _nop_ ();    // delay
-                      13668     ;       _nop_ ();    // delay
-                      13669     ;       _nop_ ();    // delay
-                      13670     ;       _nop_ ();    // delay
-                      13671     ;       _nop_ ();    // delay
-                      13672     ;       //P1 = 0xFF;
-                      13673     ; 
-                      13674     ; #endif
-                      13675     ; 
-                      13676     ;    }                        // Spin forever
-                      13677                             ; SOURCE LINE # 349
-001044 020000     F   13678             LJMP    ?C0005
-001047 22             13679             RET     
-                      13680     ; END OF main
-                      13681     
-                      13682             END
-AX51 MACRO ASSEMBLER  EFM8UB1_BLINKY                                                        04/20/20 12:55:48 PAGE    17
+                        751     ;               ENDM
+                        752     ; 
+                        753     ; 
+                        754     ; 
+                        755     ; 
+                        756     ; SETB P1.4;
+                        757     ; 
+                        758     ;  COLORTEST
+                        759     ;  ANYCOLORS:   MOV B,#08h;
+                        760     ;                       MOV A, #0Fh;
+                        761     ;  BBSTART:     CLR C;
+                        762     ;                       RLC A;
+                        763     ;                       JC CASELONE;
+                        764     ;  CASELONE:    LOGICBONE;
+                        765     ;                       JMP BBEND;
+                        766     ;  CASELZERO:   LOGICBZERO;
+                        767     ;  BBEND:               DJNZ B, BBSTART;
+                        768     ;  COLORTEST;
+                        769     ; 
+                        770     ;  LOGICARESET;
+                        771     ;  END
+                        772     ; 
+                        773     ; #pragma endasm
+                        774     ; 
+                        775     ; #endif
+                        776     ; 
+                        777     ; }
+                        778                             ; SOURCE LINE # 354
+00000A 22               779             RET     
+                        780     ; END OF main
+                        781     
+                        782             END
+AX51 MACRO ASSEMBLER  EFM8UB1_BLINKY                                                        04/21/20 09:42:24 PAGE    14
 
 SYMBOL TABLE LISTING
 ------ ----- -------
@@ -1006,12 +836,11 @@ SYMBOL TABLE LISTING
 
 N A M E                                    T Y P E  V A L U E     ATTRIBUTES
 
-?C0005. . . . . . . . . . . . . . . . .    C  ADDR  0007H     R   SEG=?PR?MAIN?EFM8UB1_BLINKY
 ?C_STARTUP. . . . . . . . . . . . . . .    C  ADDR  -------       EXT
 ?PR?LOGICONE?EFM8UB1_BLINKY . . . . . .    C  SEG   000001H       REL=UNIT, ALN=BYTE
 ?PR?LOGICRESETA?EFM8UB1_BLINKY. . . . .    C  SEG   000001H       REL=UNIT, ALN=BYTE
 ?PR?LOGICZERO?EFM8UB1_BLINKY. . . . . .    C  SEG   000013H       REL=UNIT, ALN=BYTE
-?PR?MAIN?EFM8UB1_BLINKY . . . . . . . .    C  SEG   001048H       REL=UNIT, ALN=BYTE
+?PR?MAIN?EFM8UB1_BLINKY . . . . . . . .    C  SEG   00000BH       REL=UNIT, ALN=BYTE
 ?PR?SILABS_STARTUP?EFM8UB1_BLINKY . . .    C  SEG   000001H       REL=UNIT, ALN=BYTE
 ACC . . . . . . . . . . . . . . . . . .    D  ADDR  00E0H     A   
 ACC_ACC0. . . . . . . . . . . . . . . .    B  ADDR  00E0H.0   A   
@@ -1063,9 +892,9 @@ CMP0CN1 . . . . . . . . . . . . . . . .    D  ADDR  0099H     A
 CMP0MD. . . . . . . . . . . . . . . . .    D  ADDR  009DH     A   
 CMP0MX. . . . . . . . . . . . . . . . .    D  ADDR  009FH     A   
 CMP1CN0 . . . . . . . . . . . . . . . .    D  ADDR  00BFH     A   
-AX51 MACRO ASSEMBLER  EFM8UB1_BLINKY                                                        04/20/20 12:55:48 PAGE    18
-
 CMP1CN1 . . . . . . . . . . . . . . . .    D  ADDR  00ACH     A   
+AX51 MACRO ASSEMBLER  EFM8UB1_BLINKY                                                        04/21/20 09:42:24 PAGE    15
+
 CMP1MD. . . . . . . . . . . . . . . . .    D  ADDR  00ABH     A   
 CMP1MX. . . . . . . . . . . . . . . . .    D  ADDR  00AAH     A   
 CRC0CN0 . . . . . . . . . . . . . . . .    D  ADDR  00CEH     A   
@@ -1121,16 +950,16 @@ IP_PX0. . . . . . . . . . . . . . . . .    B  ADDR  00B8H.0   A
 IP_PX1. . . . . . . . . . . . . . . . .    B  ADDR  00B8H.2   A   
 IPH . . . . . . . . . . . . . . . . . .    D  ADDR  00F2H     A   
 IT01CF. . . . . . . . . . . . . . . . .    D  ADDR  00E4H     A   
+LEDSLOOP. . . . . . . . . . . . . . . .    C  ADDR  -------       EXT
 LFO0CN. . . . . . . . . . . . . . . . .    D  ADDR  00B1H     A   
 LOGICONE. . . . . . . . . . . . . . . .    C  ADDR  0000H     R   SEG=?PR?LOGICONE?EFM8UB1_BLINKY
 LOGICRESETA . . . . . . . . . . . . . .    C  ADDR  0000H     R   SEG=?PR?LOGICRESETA?EFM8UB1_BLINKY
 LOGICZERO . . . . . . . . . . . . . . .    C  ADDR  0000H     R   SEG=?PR?LOGICZERO?EFM8UB1_BLINKY
-LOOP. . . . . . . . . . . . . . . . . .    C  ADDR  0009H     R   SEG=?PR?MAIN?EFM8UB1_BLINKY
 MAIN. . . . . . . . . . . . . . . . . .    C  ADDR  0000H     R   SEG=?PR?MAIN?EFM8UB1_BLINKY
 P0. . . . . . . . . . . . . . . . . . .    D  ADDR  0080H     A   
-AX51 MACRO ASSEMBLER  EFM8UB1_BLINKY                                                        04/20/20 12:55:48 PAGE    19
-
 P0_B0 . . . . . . . . . . . . . . . . .    B  ADDR  0080H.0   A   
+AX51 MACRO ASSEMBLER  EFM8UB1_BLINKY                                                        04/21/20 09:42:24 PAGE    16
+
 P0_B1 . . . . . . . . . . . . . . . . .    B  ADDR  0080H.1   A   
 P0_B2 . . . . . . . . . . . . . . . . .    B  ADDR  0080H.2   A   
 P0_B3 . . . . . . . . . . . . . . . . .    B  ADDR  0080H.3   A   
@@ -1193,9 +1022,9 @@ PCA0CPL2. . . . . . . . . . . . . . . .    D  ADDR  00EBH     A
 PCA0CPM0. . . . . . . . . . . . . . . .    D  ADDR  00DAH     A   
 PCA0CPM1. . . . . . . . . . . . . . . .    D  ADDR  00DBH     A   
 PCA0CPM2. . . . . . . . . . . . . . . .    D  ADDR  00DCH     A   
-AX51 MACRO ASSEMBLER  EFM8UB1_BLINKY                                                        04/20/20 12:55:48 PAGE    20
-
 PCA0H . . . . . . . . . . . . . . . . .    D  ADDR  00FAH     A   
+AX51 MACRO ASSEMBLER  EFM8UB1_BLINKY                                                        04/21/20 09:42:24 PAGE    17
+
 PCA0L . . . . . . . . . . . . . . . . .    D  ADDR  00F9H     A   
 PCA0MD. . . . . . . . . . . . . . . . .    D  ADDR  00D9H     A   
 PCA0POL . . . . . . . . . . . . . . . .    D  ADDR  0096H     A   
@@ -1258,9 +1087,9 @@ SMB0CN0_STA . . . . . . . . . . . . . .    B  ADDR  00C0H.5   A
 SMB0CN0_STO . . . . . . . . . . . . . .    B  ADDR  00C0H.4   A   
 SMB0CN0_TXMODE. . . . . . . . . . . . .    B  ADDR  00C0H.6   A   
 SMB0DAT . . . . . . . . . . . . . . . .    D  ADDR  00C2H     A   
-AX51 MACRO ASSEMBLER  EFM8UB1_BLINKY                                                        04/20/20 12:55:48 PAGE    21
-
 SMB0FCN0. . . . . . . . . . . . . . . .    D  ADDR  00C3H     A   
+AX51 MACRO ASSEMBLER  EFM8UB1_BLINKY                                                        04/21/20 09:42:24 PAGE    18
+
 SMB0FCN1. . . . . . . . . . . . . . . .    D  ADDR  00C4H     A   
 SMB0FCT . . . . . . . . . . . . . . . .    D  ADDR  00EFH     A   
 SMB0RXLN. . . . . . . . . . . . . . . .    D  ADDR  00C5H     A   
@@ -1323,9 +1152,9 @@ TMR3RLL . . . . . . . . . . . . . . . .    D  ADDR  0092H     A
 TMR4. . . . . . . . . . . . . . . . . .    D  ADDR  00A4H     A   
 TMR4CN0 . . . . . . . . . . . . . . . .    D  ADDR  0098H     A   
 TMR4CN0_T4SPLIT . . . . . . . . . . . .    B  ADDR  0098H.3   A   
-AX51 MACRO ASSEMBLER  EFM8UB1_BLINKY                                                        04/20/20 12:55:48 PAGE    22
-
 TMR4CN0_T4XCLK0 . . . . . . . . . . . .    B  ADDR  0098H.0   A   
+AX51 MACRO ASSEMBLER  EFM8UB1_BLINKY                                                        04/21/20 09:42:24 PAGE    19
+
 TMR4CN0_T4XCLK1 . . . . . . . . . . . .    B  ADDR  0098H.1   A   
 TMR4CN0_TF4CEN. . . . . . . . . . . . .    B  ADDR  0098H.4   A   
 TMR4CN0_TF4H. . . . . . . . . . . . . .    B  ADDR  0098H.7   A   

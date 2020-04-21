@@ -44,6 +44,7 @@
 #include <SI_EFM8UB1_Register_Enums.h>
 #include <InitDevice.h>
 
+
 //-----------------------------------------------------------------------------
 // Pin Definitions
 //-----------------------------------------------------------------------------
@@ -51,6 +52,9 @@ SI_SBIT (DISP_EN, SFR_P2, 3);          // Display Enable
 #define DISP_BC_DRIVEN   0             // 0 = Board Controller drives display
 #define DISP_EFM8_DRIVEN 1             // 1 = EFM8 drives display
 
+
+void ANYCOLORS (void);
+void LEDSLOOP (void);
 //-----------------------------------------------------------------------------
 // SiLabs_Startup() Routine
 // ----------------------------------------------------------------------------
@@ -112,12 +116,9 @@ void main (void)
 
    IE_EA = 0;                          // Enable global interrupts
 
+   LEDSLOOP();
 
-
-
-   while (1) {
-	   //logicZero();
-#if 1
+#if 0
 #pragma asm
 
 DELAY MACRO CNT;
@@ -149,6 +150,31 @@ REPT  27;
 	ENDM
 SETB P1.4;
 ENDM
+
+LOGICBZERO MACRO;
+SETB P1.4;
+REPT  8;
+	NOP;
+	ENDM
+CLR P1.4;
+REPT  40;
+	NOP;
+	ENDM
+SETB P1.4;
+ENDM
+
+LOGICBONE MACRO;
+SETB P1.4;
+REPT  22;
+	NOP;
+	ENDM
+CLR P1.4;
+REPT  15;
+	NOP;
+	ENDM
+SETB P1.4;
+ENDM
+
 
 DELAY1US MACRO;
 REPT  48;
@@ -202,6 +228,18 @@ COLORRED Macro;
 
 
 	ENDM
+
+BMOVE   MACRO   cnt
+LOCAL   lab
+		MOV     R2,#cnt
+
+lab:    MOV     A,@R1
+		MOV     @R0,A
+		INC     R0
+		INC     R1
+		DJNZ    R2,lab
+		ENDM
+
 
 COLORBLUE Macro;
 
@@ -271,80 +309,46 @@ COLORGREEN Macro;
 		LOGICAZERO;
 		LOGICAZERO;
 		LOGICAZERO;
-
-
-
 		ENDM
 
+
+
+
+
+COLORTEST Macro;
+
+		LOGICAZERO;
+		LOGICAZERO;
+		LOGICAZERO;
+		LOGICAZERO;
+		LOGICAZERO;
+		LOGICAZERO;
+		LOGICAZERO;
+		LOGICAZERO;
+		ENDM
+
+
+
+
 SETB P1.4;
- LOOP:
 
+ COLORTEST
+ ANYCOLORS:	MOV B,#08h;
+ 			MOV A, #0Fh;
+ BBSTART:	CLR C;
+ 			RLC A;
+ 			JC CASELONE;
+ CASELONE:	LOGICBONE;
+ 			JMP BBEND;
+ CASELZERO: 	LOGICBZERO;
+ BBEND: 		DJNZ B, BBSTART;
+ COLORTEST;
 
+ LOGICARESET;
+ END
 
-
- COLORGREEN;
- COLORBLUE;
- COLORRED;
- ;LOGICARESET;
-
-
-   JMP LOOP;
 #pragma endasm
-
-#else
-
-
-
-
-   	P1 = 0xFF;
-   	_nop_ ();    // delay
-   	_nop_ ();    // delay
-   	_nop_ ();    // delay
-   	_nop_ ();    // delay
-   	_nop_ ();    // delay
-   	_nop_ ();    // delay
-     P1 = 0x00;
-	_nop_ ();    // delay
-	_nop_ ();    // delay
-	_nop_ ();    // delay
-   	_nop_ ();    // delay
-   	_nop_ ();    // delay
-   	_nop_ ();    // delay
-   	_nop_ ();    // delay
-   	_nop_ ();    // delay
-   	_nop_ ();    // delay
-   	_nop_ ();    // delay
-   	_nop_ ();    // delay
-   	_nop_ ();    // delay
-   	_nop_ ();    // delay
-   	_nop_ ();    // delay
-   	_nop_ ();    // delay
-	P1 = 0xFF;
-   	_nop_ ();    // delay
-   	_nop_ ();    // delay
-   	_nop_ ();    // delay
-   	_nop_ ();    // delay
-   	_nop_ ();    // delay
-   	_nop_ ();    // delay
-     P1 = 0x00;
-	_nop_ ();    // delay
-	_nop_ ();    // delay
-	_nop_ ();    // delay
-   	_nop_ ();    // delay
-   	_nop_ ();    // delay
-   	_nop_ ();    // delay
-   	_nop_ ();    // delay
-   	_nop_ ();    // delay
-   	_nop_ ();    // delay
-   	_nop_ ();    // delay
-   	_nop_ ();    // delay
-   	_nop_ ();    // delay
-   	_nop_ ();    // delay
-   	_nop_ ();    // delay
-   	_nop_ ();    // delay
-   	//P1 = 0xFF;
 
 #endif
 
-   }                        // Spin forever
 }
