@@ -6201,7 +6201,14 @@
  
  
  void ANYCOLORS (void);
- void LEDSLOOP (uint8_t count);
+ void LEDSLOOPG (uint8_t count);
+ void LEDSLOOPR (uint8_t count);
+ void LEDSLOOPB (uint8_t count);
+ void LEDSLOOPW (uint8_t count);
+ void _ChangeBlue(void);
+ void _ChangeRed(void);
+ void _ChangeGreen(void);
+ void _ChangeWhite(void);
  
  
  
@@ -6215,7 +6222,7 @@
  
  }
  
- 
+ uint8_t num = 0;
  
  
  
@@ -6227,6 +6234,31 @@
  
  IE_EA = 0;                           
  
- LEDSLOOP(10);
+ 
+ 
+ 
+ 
+ _ChangeRed();
+ _ChangeGreen();
+ _ChangeBlue();
+ _ChangeWhite();
+ 
+ 
+ for(num =0; num<10; num++)
+ {
+ _ChangeWhite();
+ }
+ for(num =0; num<10; num++)
+ {
+ _ChangeBlue();
+ }
+ for(num =0; num<10; num++)
+ {
+ _ChangeGreen();
+ }
+ for(num =0; num<10; num++)
+ {
+ _ChangeRed();
+ }
  
  }

@@ -39,6 +39,8 @@
 									<listOptionValue builtIn="false" value="&quot;${StudioSdkPath}/Device/EFM8UB1/inc&quot;"/>
 								</option>
 								<option id="com.silabs.ide.si8051.keil.compiler.category.optimization.aregs.60395919" name="Don't use absolute register accesses" superClass="com.silabs.ide.si8051.keil.compiler.category.optimization.aregs" value="true" valueType="boolean"/>
+								<option id="com.silabs.ide.si8051.keil.compiler.category.general.code.1230795329" name="Code size" superClass="com.silabs.ide.si8051.keil.compiler.category.general.code" value="com.silabs.ide.si8051.keil.compiler.category.general.code.large" valueType="enumerated"/>
+								<option id="com.silabs.ide.si8051.keil.compiler.category.general.warning_level.1840317029" name="Warning level" superClass="com.silabs.ide.si8051.keil.compiler.category.general.warning_level" value="com.silabs.ide.si8051.keil.compiler.category.general.warning_level.0" valueType="enumerated"/>
 								<inputType id="com.silabs.ide.si8051.keil.compiler.inputType.617206609" superClass="com.silabs.ide.si8051.keil.compiler.inputType"/>
 							</tool>
 							<tool command="AX51" id="com.silabs.ide.si8051.keil.toolchain.assembler.1582149825" name="Keil 8051 Assembler" superClass="com.silabs.ide.si8051.keil.toolchain.assembler">
@@ -52,6 +54,7 @@
 								<inputType id="com.silabs.ide.si8051.keil.assembler.inputType.348564601" superClass="com.silabs.ide.si8051.keil.assembler.inputType"/>
 							</tool>
 							<tool command="LX51" id="com.silabs.ide.si8051.keil.toolchain.linker.1147887710" name="Keil 8051 Linker" superClass="com.silabs.ide.si8051.keil.toolchain.linker">
+								<option id="com.silabs.ide.si8051.keil.linker.category.ordering.selection.360207393" name="Linker input ordering" superClass="com.silabs.ide.si8051.keil.linker.category.ordering.selection" value="./src/EFM8UB1_Blinky.OBJ;./src/InitDevice.OBJ;./src/Interrupts.OBJ;./src/LEDStrip.OBJ;./src/SILABS_STARTUP.OBJ" valueType="string"/>
 								<inputType id="com.silabs.ide.si8051.keil.linker.inputType.1200347856" superClass="com.silabs.ide.si8051.keil.linker.inputType"/>
 							</tool>
 							<tool id="com.silabs.ide.si8051.keil.toolchain.librarian.1455360177" name="Keil 8051 Library Manager" superClass="com.silabs.ide.si8051.keil.toolchain.librarian"/>

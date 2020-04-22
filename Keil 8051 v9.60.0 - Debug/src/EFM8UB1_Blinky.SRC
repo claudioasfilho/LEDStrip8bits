@@ -1,6 +1,6 @@
 ; src/EFM8UB1_Blinky.SRC generated from: /Users/clfilho/SimplicityStudio/March20/LEDStrip_UB1/src/EFM8UB1_Blinky.c
 ; COMPILER INVOKED BY:
-;        Z:\Applications\Simplicity Studio.app\Contents\Eclipse\developer\toolchains\keil_8051\9.60\BIN\C51.exe /Users/clfilho/SimplicityStudio/March20/LEDStrip_UB1/src/EFM8UB1_Blinky.c OMF2 SMALL DEBUG OBJECTEXTEND ROM(LARGE) WARNINGLEVEL(2) FLOATFUZZY(3) OPTIMIZE(0,SPEED) INTVECTOR(0X0000) BROWSE ORDER INTPROMOTE SRC(src/EFM8UB1_Blinky.SRC) INCDIR(/Users/clfilho/SimplicityStudio/March20/LEDStrip_UB1/inc;/Applications/Simplicity Studio.app/Contents/Eclipse/developer/sdks/8051/v4.1.7//Device/shared/si8051Base;/Applications/Simplicity Studio.app/Contents/Eclipse/developer/sdks/8051/v4.1.7//Device/EFM8UB1/inc) NOAREGS PREPRINT(.\src/EFM8UB1_Blinky.I) PRINT(.\src/EFM8UB1_Blinky.lst) COND SYMBOLS LISTINCLUDE CODE PAGEWIDTH(120) PAGELENGTH(65)
+;        Z:\Applications\Simplicity Studio.app\Contents\Eclipse\developer\toolchains\keil_8051\9.60\BIN\C51.exe /Users/clfilho/SimplicityStudio/March20/LEDStrip_UB1/src/EFM8UB1_Blinky.c OMF2 SMALL DEBUG OBJECTEXTEND ROM(LARGE) WARNINGLEVEL(0) FLOATFUZZY(3) OPTIMIZE(0,SPEED) INTVECTOR(0X0000) BROWSE ORDER INTPROMOTE SRC(src/EFM8UB1_Blinky.SRC) INCDIR(/Users/clfilho/SimplicityStudio/March20/LEDStrip_UB1/inc;/Applications/Simplicity Studio.app/Contents/Eclipse/developer/sdks/8051/v4.1.7//Device/shared/si8051Base;/Applications/Simplicity Studio.app/Contents/Eclipse/developer/sdks/8051/v4.1.7//Device/EFM8UB1/inc) NOAREGS PREPRINT(.\src/EFM8UB1_Blinky.I) PRINT(.\src/EFM8UB1_Blinky.lst) COND SYMBOLS LISTINCLUDE CODE PAGEWIDTH(120) PAGELENGTH(65)
 
 $NOMOD51
 
@@ -340,11 +340,26 @@ UART1FCN1_TFRQ	BIT	0D8H.7
 DISP_EN	BIT	0A0H.3
 ?PR?SiLabs_Startup?EFM8UB1_BLINKY        SEGMENT CODE 
 ?PR?main?EFM8UB1_BLINKY                  SEGMENT CODE 
+?C_INITSEG           SEGMENT CODE 
+?DT?EFM8UB1_BLINKY   SEGMENT DATA 
 	EXTRN	CODE (enter_DefaultMode_from_RESET)
-	EXTRN	CODE (_LEDSLOOP)
+	EXTRN	CODE (_ChangeBlue)
+	EXTRN	CODE (_ChangeRed)
+	EXTRN	CODE (_ChangeGreen)
+	EXTRN	CODE (_ChangeWhite)
 	EXTRN	CODE (?C_STARTUP)
+	PUBLIC	num
 	PUBLIC	main
 	PUBLIC	SiLabs_Startup
+
+	RSEG  ?DT?EFM8UB1_BLINKY
+            num:   DS   1
+
+	RSEG  ?C_INITSEG
+	DB	001H
+	DB	num
+	DB	000H
+
 ; //-----------------------------------------------------------------------------
 ; // EFM8UB1_Blinky.c
 ; //-----------------------------------------------------------------------------
@@ -401,7 +416,14 @@ DISP_EN	BIT	0A0H.3
 ; 
 ; 
 ; void ANYCOLORS (void);
-; void LEDSLOOP (uint8_t count);
+; void LEDSLOOPG (uint8_t count);
+; void LEDSLOOPR (uint8_t count);
+; void LEDSLOOPB (uint8_t count);
+; void LEDSLOOPW (uint8_t count);
+; void _ChangeBlue(void);
+; void _ChangeRed(void);
+; void _ChangeGreen(void);
+; void _ChangeWhite(void);
 ; //-----------------------------------------------------------------------------
 ; // SiLabs_Startup() Routine
 ; // ----------------------------------------------------------------------------
@@ -415,17 +437,17 @@ DISP_EN	BIT	0A0H.3
 	RSEG  ?PR?SiLabs_Startup?EFM8UB1_BLINKY
 SiLabs_Startup:
 	USING	0
-			; SOURCE LINE # 66
+			; SOURCE LINE # 73
 ; {
-			; SOURCE LINE # 67
+			; SOURCE LINE # 74
 ;   // Disable the watchdog here
 ; }
-			; SOURCE LINE # 69
+			; SOURCE LINE # 76
 	RET  	
 ; END OF SiLabs_Startup
 
 ; 
-;  
+;  uint8_t num = 0;
 ; //-----------------------------------------------------------------------------
 ; // Main Routine
 ; //-----------------------------------------------------------------------------
@@ -434,28 +456,134 @@ SiLabs_Startup:
 	RSEG  ?PR?main?EFM8UB1_BLINKY
 main:
 	USING	0
-			; SOURCE LINE # 75
+			; SOURCE LINE # 82
 ; {
-			; SOURCE LINE # 76
+			; SOURCE LINE # 83
 ;    enter_DefaultMode_from_RESET();
-			; SOURCE LINE # 77
+			; SOURCE LINE # 84
 	LCALL	enter_DefaultMode_from_RESET
 ; 
 ;    DISP_EN = DISP_BC_DRIVEN;           // Display not driven by EFM8
-			; SOURCE LINE # 79
+			; SOURCE LINE # 86
 	CLR  	DISP_EN
 ; 
 ;    IE_EA = 0;                          // Enable global interrupts
-			; SOURCE LINE # 81
+			; SOURCE LINE # 88
 	CLR  	IE_EA
 ; 
-;    LEDSLOOP(10);
-			; SOURCE LINE # 83
-	MOV  	R7,#0AH
-	LCALL	_LEDSLOOP
+;    //LEDSLOOPG(15);
+;    //LEDSLOOPB(3);
+;    //LEDSLOOPR(3);
+; 
+;    _ChangeRed();
+			; SOURCE LINE # 94
+	LCALL	_ChangeRed
+;    _ChangeGreen();
+			; SOURCE LINE # 95
+	LCALL	_ChangeGreen
+;    _ChangeBlue();
+			; SOURCE LINE # 96
+	LCALL	_ChangeBlue
+;    _ChangeWhite();
+			; SOURCE LINE # 97
+	LCALL	_ChangeWhite
+; 
+; 
+;    for(num =0; num<10; num++)
+			; SOURCE LINE # 100
+	MOV  	num,#00H
+?C0002:
+	MOV  	R7,num
+	MOV  	R6,#00H
+	CLR  	C
+	MOV  	A,R7
+	SUBB 	A,#0AH
+	MOV  	A,R6
+	XRL  	A,#080H
+	SUBB 	A,#080H
+	JNC  	?C0003
+;    {
+			; SOURCE LINE # 101
+; 	   _ChangeWhite();
+			; SOURCE LINE # 102
+	LCALL	_ChangeWhite
+;    }
+			; SOURCE LINE # 103
+	INC  	num
+	SJMP 	?C0002
+?C0003:
+;    for(num =0; num<10; num++)
+			; SOURCE LINE # 104
+	MOV  	num,#00H
+?C0005:
+	MOV  	R7,num
+	MOV  	R6,#00H
+	CLR  	C
+	MOV  	A,R7
+	SUBB 	A,#0AH
+	MOV  	A,R6
+	XRL  	A,#080H
+	SUBB 	A,#080H
+	JNC  	?C0006
+;    {
+			; SOURCE LINE # 105
+; 	   _ChangeBlue();
+			; SOURCE LINE # 106
+	LCALL	_ChangeBlue
+;    }
+			; SOURCE LINE # 107
+	INC  	num
+	SJMP 	?C0005
+?C0006:
+;    for(num =0; num<10; num++)
+			; SOURCE LINE # 108
+	MOV  	num,#00H
+?C0008:
+	MOV  	R7,num
+	MOV  	R6,#00H
+	CLR  	C
+	MOV  	A,R7
+	SUBB 	A,#0AH
+	MOV  	A,R6
+	XRL  	A,#080H
+	SUBB 	A,#080H
+	JNC  	?C0009
+;    {
+			; SOURCE LINE # 109
+; 	   _ChangeGreen();
+			; SOURCE LINE # 110
+	LCALL	_ChangeGreen
+;    }
+			; SOURCE LINE # 111
+	INC  	num
+	SJMP 	?C0008
+?C0009:
+;    for(num =0; num<10; num++)
+			; SOURCE LINE # 112
+	MOV  	num,#00H
+?C0011:
+	MOV  	R7,num
+	MOV  	R6,#00H
+	CLR  	C
+	MOV  	A,R7
+	SUBB 	A,#0AH
+	MOV  	A,R6
+	XRL  	A,#080H
+	SUBB 	A,#080H
+	JNC  	?C0014
+;    {
+			; SOURCE LINE # 113
+; 	   _ChangeRed();
+			; SOURCE LINE # 114
+	LCALL	_ChangeRed
+;    }
+			; SOURCE LINE # 115
+	INC  	num
+	SJMP 	?C0011
 ; 
 ; }
-			; SOURCE LINE # 85
+			; SOURCE LINE # 117
+?C0014:
 	RET  	
 ; END OF main
 

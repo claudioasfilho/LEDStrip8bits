@@ -54,7 +54,14 @@ SI_SBIT (DISP_EN, SFR_P2, 3);          // Display Enable
 
 
 void ANYCOLORS (void);
-void LEDSLOOP (uint8_t count);
+void LEDSLOOPG (uint8_t count);
+void LEDSLOOPR (uint8_t count);
+void LEDSLOOPB (uint8_t count);
+void LEDSLOOPW (uint8_t count);
+void _ChangeBlue(void);
+void _ChangeRed(void);
+void _ChangeGreen(void);
+void _ChangeWhite(void);
 //-----------------------------------------------------------------------------
 // SiLabs_Startup() Routine
 // ----------------------------------------------------------------------------
@@ -68,7 +75,7 @@ void SiLabs_Startup (void)
   // Disable the watchdog here
 }
 
- 
+ uint8_t num = 0;
 //-----------------------------------------------------------------------------
 // Main Routine
 //-----------------------------------------------------------------------------
@@ -80,6 +87,31 @@ void main (void)
 
    IE_EA = 0;                          // Enable global interrupts
 
-   LEDSLOOP(10);
+   //LEDSLOOPG(15);
+   //LEDSLOOPB(3);
+   //LEDSLOOPR(3);
+
+   _ChangeRed();
+   _ChangeGreen();
+   _ChangeBlue();
+   _ChangeWhite();
+
+
+   for(num =0; num<10; num++)
+   {
+	   _ChangeWhite();
+   }
+   for(num =0; num<10; num++)
+   {
+	   _ChangeBlue();
+   }
+   for(num =0; num<10; num++)
+   {
+	   _ChangeGreen();
+   }
+   for(num =0; num<10; num++)
+   {
+	   _ChangeRed();
+   }
 
 }

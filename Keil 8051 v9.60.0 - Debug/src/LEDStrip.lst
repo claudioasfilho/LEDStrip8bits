@@ -1,4 +1,4 @@
-AX51 MACRO ASSEMBLER  LEDSTRIP                                                              04/21/20 14:50:40 PAGE     1
+AX51 MACRO ASSEMBLER  LEDSTRIP                                                              04/22/20 09:48:45 PAGE     1
 
 
 MACRO ASSEMBLER AX51 V3.15.3.0
@@ -62,7 +62,7 @@ LOC    OBJ             LINE     SOURCE
  00AB               +1   47     CMP1MD    DATA 0ABH; Comparator 1 Mode                      
  00AA               +1   48     CMP1MX    DATA 0AAH; Comparator 1 Multiplexer Selection     
  00CE               +1   49     CRC0CN0   DATA 0CEH; CRC0 Control 0                         
-AX51 MACRO ASSEMBLER  LEDSTRIP                                                              04/21/20 14:50:40 PAGE     2
+AX51 MACRO ASSEMBLER  LEDSTRIP                                                              04/22/20 09:48:45 PAGE     2
 
  0086               +1   50     CRC0CN1   DATA 086H; CRC0 Control 1                         
  00D3               +1   51     CRC0CNT   DATA 0D3H; CRC0 Automatic Flash Sector Count      
@@ -127,7 +127,7 @@ LOC    OBJ             LINE     SOURCE
  00EC               +1  110     PCA0CPH2  DATA 0ECH; PCA Channel 2 Capture Module High Byte 
  00FB               +1  111     PCA0CPL0  DATA 0FBH; PCA Channel 0 Capture Module Low Byte  
  00E9               +1  112     PCA0CPL1  DATA 0E9H; PCA Channel 1 Capture Module Low Byte  
-AX51 MACRO ASSEMBLER  LEDSTRIP                                                              04/21/20 14:50:40 PAGE     3
+AX51 MACRO ASSEMBLER  LEDSTRIP                                                              04/22/20 09:48:45 PAGE     3
 
  00EB               +1  113     PCA0CPL2  DATA 0EBH; PCA Channel 2 Capture Module Low Byte  
  00DA               +1  114     PCA0CPM0  DATA 0DAH; PCA Channel 0 Capture/Compare Mode     
@@ -192,7 +192,7 @@ LOC    OBJ             LINE     SOURCE
  00CA               +1  173     TMR2RLL   DATA 0CAH; Timer 2 Reload Low Byte                
  0091               +1  174     TMR3CN0   DATA 091H; Timer 3 Control 0                      
  00FE               +1  175     TMR3CN1   DATA 0FEH; Timer 3 Control 1                      
-AX51 MACRO ASSEMBLER  LEDSTRIP                                                              04/21/20 14:50:40 PAGE     4
+AX51 MACRO ASSEMBLER  LEDSTRIP                                                              04/22/20 09:48:45 PAGE     4
 
  0095               +1  176     TMR3H     DATA 095H; Timer 3 High Byte                      
  0094               +1  177     TMR3L     DATA 094H; Timer 3 Low Byte                       
@@ -257,7 +257,7 @@ LOC    OBJ             LINE     SOURCE
  0015               +1  236     EOUTCSRH  EQU 015H ; USB0 OUT Endpoint Control High    
  0014               +1  237     EOUTCSRL  EQU 014H ; USB0 OUT Endpoint Control         
  0000               +1  238     FADDR     EQU 000H ; USB0 Function Address             
-AX51 MACRO ASSEMBLER  LEDSTRIP                                                              04/21/20 14:50:40 PAGE     5
+AX51 MACRO ASSEMBLER  LEDSTRIP                                                              04/22/20 09:48:45 PAGE     5
 
  0020               +1  239     FIFO0     EQU 020H ; USB0 Endpoint 0 FIFO Access       
  0021               +1  240     FIFO1     EQU 021H ; USB0 Endpoint 1 FIFO Access       
@@ -322,7 +322,7 @@ LOC    OBJ             LINE     SOURCE
  00B8.2             +1  299     IP_PX1   BIT IP.2 ; External Interrupt 1 Priority Control LSB                        
  00B8.3             +1  300     IP_PT1   BIT IP.3 ; Timer 1 Interrupt Priority Control LSB                           
  00B8.4             +1  301     IP_PS0   BIT IP.4 ; UART0 Interrupt Priority Control LSB                             
-AX51 MACRO ASSEMBLER  LEDSTRIP                                                              04/21/20 14:50:40 PAGE     6
+AX51 MACRO ASSEMBLER  LEDSTRIP                                                              04/22/20 09:48:45 PAGE     6
 
  00B8.5             +1  302     IP_PT2   BIT IP.5 ; Timer 2 Interrupt Priority Control LSB                           
  00B8.6             +1  303     IP_PSPI0 BIT IP.6 ; Serial Peripheral Interface (SPI0) Interrupt Priority Control LSB
@@ -387,7 +387,7 @@ LOC    OBJ             LINE     SOURCE
  00C8.0             +1  362     SCON1_RI   BIT SCON1.0 ; Receive Interrupt Flag   
  00C8.1             +1  363     SCON1_TI   BIT SCON1.1 ; Transmit Interrupt Flag  
  00C8.2             +1  364     SCON1_RBX  BIT SCON1.2 ; Extra Receive Bit        
-AX51 MACRO ASSEMBLER  LEDSTRIP                                                              04/21/20 14:50:40 PAGE     7
+AX51 MACRO ASSEMBLER  LEDSTRIP                                                              04/22/20 09:48:45 PAGE     7
 
  00C8.3             +1  365     SCON1_TBX  BIT SCON1.3 ; Extra Transmission Bit   
  00C8.4             +1  366     SCON1_REN  BIT SCON1.4 ; Receive Enable           
@@ -452,7 +452,7 @@ LOC    OBJ             LINE     SOURCE
  00D8.4             +1  425     UART1FCN1_TIE    BIT UART1FCN1.4 ; Transmit Interrupt Enable
  00D8.5             +1  426     UART1FCN1_TXHOLD BIT UART1FCN1.5 ; Transmit Hold            
  00D8.6             +1  427     UART1FCN1_TXNF   BIT UART1FCN1.6 ; TX FIFO Not Full         
-AX51 MACRO ASSEMBLER  LEDSTRIP                                                              04/21/20 14:50:40 PAGE     8
+AX51 MACRO ASSEMBLER  LEDSTRIP                                                              04/22/20 09:48:45 PAGE     8
 
  00D8.7             +1  428     UART1FCN1_TFRQ   BIT UART1FCN1.7 ; Transmit FIFO Request    
                     +1  429     
@@ -500,164 +500,164 @@ LOC    OBJ             LINE     SOURCE
                         471     
                         472     
                         473     
-------                  474     ?PR?ANYCOLORS?LEDStrip         SEGMENT CODE
-------                  475     ?PR?LEDSLOOP?LEDStrip       SEGMENT CODE
-                        476     PUBLIC  ANYCOLORS
-                        477     PUBLIC  _LEDSLOOP
-                        478     
-                        479     
-                        480     DELAY MACRO CNT;
-                        481               REPT  CNT;
-                        482                NOP;
-                        483                ENDM
-                        484               ENDM
-                        485     
-                        486     LOGICAZERO MACRO;
-                        487     SETB P1.4;
-                        488     REPT  13;
-                        489             NOP;
-                        490             ENDM
-AX51 MACRO ASSEMBLER  LEDSTRIP                                                              04/21/20 14:50:40 PAGE     9
+------                  474     ?PR?ANYCOLORS?LEDStrip       SEGMENT CODE
+------                  475     ?PR?LEDSLOOPG?LEDStrip       SEGMENT CODE
+------                  476     ?PR?LEDSLOOPR?LEDStrip       SEGMENT CODE
+------                  477     ?PR?LEDSLOOPB?LEDStrip       SEGMENT CODE
+------                  478     ?PR?LEDSLOOPW?LEDStrip       SEGMENT CODE
+------                  479     ?PR?ChangeBlue?LEDStrip      SEGMENT CODE
+------                  480     ?PR?ChangeWhite?LEDStrip      SEGMENT CODE
+------                  481     ?PR?ChangeGreen?LEDStrip      SEGMENT CODE
+------                  482     ?PR?ChangeRed?LEDStrip      SEGMENT CODE
+                        483     
+                        484     PUBLIC  ANYCOLORS
+                        485     PUBLIC  _LEDSLOOPG
+                        486     PUBLIC  _LEDSLOOPR
+                        487     PUBLIC  _LEDSLOOPB
+                        488     PUBLIC  _LEDSLOOPW
+                        489     PUBLIC  _ChangeBlue
+                        490     PUBLIC  _ChangeWhite
+AX51 MACRO ASSEMBLER  LEDSTRIP                                                              04/22/20 09:48:45 PAGE     9
 
-                        491     CLR P1.4;
-                        492     REPT  40;
-                        493             NOP;
-                        494             ENDM
-                        495     SETB P1.4;
-                        496     ENDM
-                        497     
-                        498     LOGICAONE MACRO;
-                        499     SETB P1.4;
-                        500     REPT  22;
-                        501             NOP;
-                        502             ENDM
-                        503     CLR P1.4;
-                        504     REPT  27;
-                        505             NOP;
-                        506             ENDM
-                        507     SETB P1.4;
-                        508     ENDM
-                        509     
-                        510     LOGICBZERO MACRO;
-                        511     SETB P1.4;
-                        512     REPT  8;
-                        513             NOP;
-                        514             ENDM
-                        515     CLR P1.4;
-                        516     REPT  40;
-                        517             NOP;
-                        518             ENDM
-                        519     SETB P1.4;
-                        520     ENDM
-                        521     
-                        522     LOGICBONE MACRO;
-                        523     SETB P1.4;
-                        524     REPT  22;
-                        525             NOP;
-                        526             ENDM
-                        527     CLR P1.4;
-                        528     REPT  15;
-                        529             NOP;
-                        530             ENDM
-                        531     SETB P1.4;
-                        532     ENDM
-                        533     
-                        534     
-                        535     DELAY1US MACRO;
-                        536     REPT  48;
-                        537             NOP;
-                        538             ENDM
-                        539     ENDM
-                        540     
-                        541     
-                        542     LOGICARESET MACRO;
-                        543     CLR P1.4;
-                        544     REPT  80;
-                        545             DELAY1US;
-                        546             ENDM
-                        547     SETB P1.4;
-                        548     ENDM
+                        491     PUBLIC  _ChangeGreen
+                        492     PUBLIC  _ChangeRed
+                        493     
+                        494     
+                        495     DELAY MACRO CNT;
+                        496               REPT  CNT;
+                        497                NOP;
+                        498                ENDM
+                        499               ENDM
+                        500     
+                        501     LOGICAZERO MACRO;
+                        502     SETB P1.4;
+                        503     REPT  13;
+                        504             NOP;
+                        505             ENDM
+                        506     CLR P1.4;
+                        507     REPT  40;
+                        508             NOP;
+                        509             ENDM
+                        510     SETB P1.4;
+                        511     ENDM
+                        512     
+                        513     LOGICAONE MACRO;
+                        514     SETB P1.4;
+                        515     REPT  22;
+                        516             NOP;
+                        517             ENDM
+                        518     CLR P1.4;
+                        519     REPT  27;
+                        520             NOP;
+                        521             ENDM
+                        522     SETB P1.4;
+                        523     ENDM
+                        524     
+                        525     LOGICBZERO MACRO;
+                        526     SETB P1.4;
+                        527     REPT  8;
+                        528             NOP;
+                        529             ENDM
+                        530     CLR P1.4;
+                        531     REPT  40;
+                        532             NOP;
+                        533             ENDM
+                        534     SETB P1.4;
+                        535     ENDM
+                        536     
+                        537     LOGICBONE MACRO;
+                        538     SETB P1.4;
+                        539     REPT  22;
+                        540             NOP;
+                        541             ENDM
+                        542     CLR P1.4;
+                        543     REPT  15;
+                        544             NOP;
+                        545             ENDM
+                        546     SETB P1.4;
+                        547     ENDM
+                        548     
                         549     
-                        550     COLORRED Macro;
-                        551     
-                        552     ;GREEN
-                        553     
-AX51 MACRO ASSEMBLER  LEDSTRIP                                                              04/21/20 14:50:40 PAGE    10
+                        550     DELAY1US MACRO;
+                        551     REPT  48;
+                        552             NOP;
+                        553             ENDM
+AX51 MACRO ASSEMBLER  LEDSTRIP                                                              04/22/20 09:48:45 PAGE    10
 
-                        554             LOGICAZERO;
-                        555             LOGICAZERO;
-                        556             LOGICAZERO;
-                        557             LOGICAZERO;
-                        558             LOGICAZERO;
-                        559             LOGICAZERO;
-                        560             LOGICAZERO;
-                        561             LOGICAZERO;
-                        562     
-                        563     ;RED
+                        554     ENDM
+                        555     
+                        556     
+                        557     LOGICARESET MACRO;
+                        558     CLR P1.4;
+                        559     REPT  80;
+                        560             DELAY1US;
+                        561             ENDM
+                        562     SETB P1.4;
+                        563     ENDM
                         564     
-                        565             LOGICAONE;
-                        566             LOGICAONE;
-                        567             LOGICAONE;
-                        568             LOGICAONE;
-                        569             LOGICAONE;
-                        570             LOGICAONE;
-                        571             LOGICAONE;
-                        572             LOGICAONE;
-                        573     
-                        574     ;BLUE
+                        565     COLORRED Macro;
+                        566     
+                        567     ;GREEN
+                        568     
+                        569             LOGICAZERO;
+                        570             LOGICAZERO;
+                        571             LOGICAZERO;
+                        572             LOGICAZERO;
+                        573             LOGICAZERO;
+                        574             LOGICAZERO;
                         575             LOGICAZERO;
                         576             LOGICAZERO;
-                        577             LOGICAZERO;
-                        578             LOGICAZERO;
-                        579             LOGICAZERO;
-                        580             LOGICAZERO;
-                        581             LOGICAZERO;
-                        582             LOGICAZERO;
-                        583             ENDM
-                        584     
-                        585     
-                        586     COLORBLUE Macro;
-                        587     
-                        588             ;GREEN
-                        589                     LOGICAZERO;
-                        590                     LOGICAZERO;
-                        591                     LOGICAZERO;
-                        592                     LOGICAZERO;
-                        593                     LOGICAZERO;
-                        594                     LOGICAZERO;
-                        595                     LOGICAZERO;
-                        596                     LOGICAZERO;
-                        597     
-                        598     
-                        599             ;RED
-                        600                     LOGICAZERO;
-                        601                     LOGICAZERO;
-                        602                     LOGICAZERO;
-                        603                     LOGICAZERO;
+                        577     
+                        578     ;RED
+                        579     
+                        580             LOGICAONE;
+                        581             LOGICAONE;
+                        582             LOGICAONE;
+                        583             LOGICAONE;
+                        584             LOGICAONE;
+                        585             LOGICAONE;
+                        586             LOGICAONE;
+                        587             LOGICAONE;
+                        588     
+                        589     ;BLUE
+                        590             LOGICAZERO;
+                        591             LOGICAZERO;
+                        592             LOGICAZERO;
+                        593             LOGICAZERO;
+                        594             LOGICAZERO;
+                        595             LOGICAZERO;
+                        596             LOGICAZERO;
+                        597             LOGICAZERO;
+                        598             ENDM
+                        599     
+                        600     
+                        601     COLORBLUE Macro;
+                        602     
+                        603             ;GREEN
                         604                     LOGICAZERO;
                         605                     LOGICAZERO;
                         606                     LOGICAZERO;
                         607                     LOGICAZERO;
-                        608     
-                        609             ;BLUE
-                        610     
-                        611                     LOGICAONE;
-                        612                     LOGICAONE;
-                        613                     LOGICAONE;
-                        614                     LOGICAONE;
-                        615                     LOGICAONE;
-                        616                     LOGICAONE;
-AX51 MACRO ASSEMBLER  LEDSTRIP                                                              04/21/20 14:50:40 PAGE    11
+                        608                     LOGICAZERO;
+                        609                     LOGICAZERO;
+                        610                     LOGICAZERO;
+                        611                     LOGICAZERO;
+                        612     
+                        613     
+                        614             ;RED
+                        615                     LOGICAZERO;
+                        616                     LOGICAZERO;
+AX51 MACRO ASSEMBLER  LEDSTRIP                                                              04/22/20 09:48:45 PAGE    11
 
-                        617                     LOGICAONE;
-                        618                     LOGICAONE;
-                        619     
-                        620                     ENDM
-                        621     
-                        622     COLORGREEN Macro;
+                        617                     LOGICAZERO;
+                        618                     LOGICAZERO;
+                        619                     LOGICAZERO;
+                        620                     LOGICAZERO;
+                        621                     LOGICAZERO;
+                        622                     LOGICAZERO;
                         623     
-                        624             ;GREEN
-                        625                     LOGICAONE;
+                        624             ;BLUE
+                        625     
                         626                     LOGICAONE;
                         627                     LOGICAONE;
                         628                     LOGICAONE;
@@ -665,527 +665,758 @@ LOC    OBJ             LINE     SOURCE
                         630                     LOGICAONE;
                         631                     LOGICAONE;
                         632                     LOGICAONE;
-                        633     
+                        633                     LOGICAONE;
                         634     
-                        635             ;RED
-                        636                     LOGICAZERO;
-                        637                     LOGICAZERO;
-                        638                     LOGICAZERO;
-                        639                     LOGICAZERO;
-                        640                     LOGICAZERO;
-                        641                     LOGICAZERO;
-                        642                     LOGICAZERO;
-                        643                     LOGICAZERO;
-                        644     
-                        645             ;BLUE
-                        646                     LOGICAZERO;
-                        647                     LOGICAZERO;
-                        648                     LOGICAZERO;
-                        649                     LOGICAZERO;
-                        650                     LOGICAZERO;
+                        635                     ENDM
+                        636     
+                        637     COLORGREEN Macro;
+                        638     
+                        639             ;GREEN
+                        640                     LOGICAONE;
+                        641                     LOGICAONE;
+                        642                     LOGICAONE;
+                        643                     LOGICAONE;
+                        644                     LOGICAONE;
+                        645                     LOGICAONE;
+                        646                     LOGICAONE;
+                        647                     LOGICAONE;
+                        648     
+                        649     
+                        650             ;RED
                         651                     LOGICAZERO;
                         652                     LOGICAZERO;
                         653                     LOGICAZERO;
-                        654                     ENDM
-                        655     
-                        656     COLORWHITE Macro;
-                        657     
-                        658             ;GREEN
-                        659                     LOGICAONE;
-                        660                     LOGICAONE;
-                        661                     LOGICAONE;
-                        662                     LOGICAONE;
-                        663                     LOGICAONE;
-                        664                     LOGICAONE;
-                        665                     LOGICAONE;
-                        666                     LOGICAONE;
-                        667     
-                        668     
-                        669             ;RED
-                        670                     LOGICAONE;
-                        671                     LOGICAONE;
-                        672                     LOGICAONE;
-                        673                     LOGICAONE;
+                        654                     LOGICAZERO;
+                        655                     LOGICAZERO;
+                        656                     LOGICAZERO;
+                        657                     LOGICAZERO;
+                        658                     LOGICAZERO;
+                        659     
+                        660             ;BLUE
+                        661                     LOGICAZERO;
+                        662                     LOGICAZERO;
+                        663                     LOGICAZERO;
+                        664                     LOGICAZERO;
+                        665                     LOGICAZERO;
+                        666                     LOGICAZERO;
+                        667                     LOGICAZERO;
+                        668                     LOGICAZERO;
+                        669                     ENDM
+                        670     
+                        671     COLORWHITE Macro;
+                        672     
+                        673             ;GREEN
                         674                     LOGICAONE;
                         675                     LOGICAONE;
                         676                     LOGICAONE;
                         677                     LOGICAONE;
-                        678     
-                        679             ;BLUE
-AX51 MACRO ASSEMBLER  LEDSTRIP                                                              04/21/20 14:50:40 PAGE    12
+                        678                     LOGICAONE;
+                        679                     LOGICAONE;
+AX51 MACRO ASSEMBLER  LEDSTRIP                                                              04/22/20 09:48:45 PAGE    12
 
                         680                     LOGICAONE;
                         681                     LOGICAONE;
-                        682                     LOGICAONE;
-                        683                     LOGICAONE;
-                        684                     LOGICAONE;
+                        682     
+                        683     
+                        684             ;RED
                         685                     LOGICAONE;
                         686                     LOGICAONE;
                         687                     LOGICAONE;
-                        688                     ENDM
-                        689     
-                        690     
-                        691     COLORTEST Macro;
-                        692     
-                        693                     LOGICAZERO;
-                        694                     LOGICAZERO;
-                        695                     LOGICAZERO;
-                        696                     LOGICAZERO;
-                        697                     LOGICAZERO;
-                        698                     LOGICAZERO;
-                        699                     LOGICAZERO;
-                        700                     LOGICAZERO;
-                        701                     ENDM
-                        702     
-------                  703     RSEG  ?PR?ANYCOLORS?LEDStrip
-000000                  704     ANYCOLORS:
-000000 75F008           705                     MOV B,#08h;
-000003 740F             706                     MOV A, #0Fh;
-000005 C3               707     BBSTART:        CLR C;
-000006 33               708                     RLC A;
-000007 4000             709                     JC CASELONE;
-000009                  710+1   CASELONE:       LOGICBONE;
-000034 8036             757                     JMP BBEND;
-000036                  758+1   CASELZERO:      LOGICBZERO;
-00006C D5F096           816     BBEND:          DJNZ B, BBSTART;
-                        817     
-00006F 22               818     RET
-                        819     
-------                  820     RSEG  ?PR?LEDSLOOP?LEDStrip
-                        821     
-000000                  822     _LEDSLOOP:
-000000 D294             823             SETB P1.4;
-000002 EF               824             MOV A, R7
-000003                  825+1   LOP: COLORWHITE
-00052B 14              2249              DEC A
-00052C 6003            2250              JZ ENDB
-00052E 020000     F    2251     ENDA: JMP LOP
-000531                 2252+1   ENDB:LOGICARESET
-001435 22              6418      RET
-                       6419     
-                       6420      END
-AX51 MACRO ASSEMBLER  LEDSTRIP                                                              04/21/20 14:50:40 PAGE    13
+                        688                     LOGICAONE;
+                        689                     LOGICAONE;
+                        690                     LOGICAONE;
+                        691                     LOGICAONE;
+                        692                     LOGICAONE;
+                        693     
+                        694             ;BLUE
+                        695                     LOGICAONE;
+                        696                     LOGICAONE;
+                        697                     LOGICAONE;
+                        698                     LOGICAONE;
+                        699                     LOGICAONE;
+                        700                     LOGICAONE;
+                        701                     LOGICAONE;
+                        702                     LOGICAONE;
+                        703                     ENDM
+                        704     
+                        705     
+                        706     COLORTEST Macro
+                        707     
+                        708     WHITEC: CJNE B, #0h, #3h
+                        709                     COLORWHITE
+                        710                     JMP ENDCOLORTEST
+                        711     GREENC: CJNE B, #1h, #3h
+                        712                     COLORGREEN
+                        713                     JMP ENDCOLORTEST
+                        714     BLUEC:  CJNE B, #2h, #3h
+                        715                     COLORBLUE
+                        716                     JMP ENDCOLORTEST
+                        717     REDC:   COLORRED
+                        718     
+                        719     ENDCOLORTEST:
+                        720     ENDM
+                        721     
+------                  722      RSEG  ?PR?ChangeBlue?LEDStrip
+000000                  723     _ChangeBlue:
+                        724             ;GREEN
+                        725+1                   LOGICAZERO;
+                        788+1                   LOGICAZERO;
+                        851+1                   LOGICAZERO;
+                        914+1                   LOGICAZERO;
+                        977+1                   LOGICAZERO;
+                       1040+1                   LOGICAZERO;
+                       1103+1                   LOGICAZERO;
+                       1166+1                   LOGICAZERO;
+                       1229     
+                       1230     
+                       1231             ;RED
+                       1232+1                   LOGICAZERO;
+                       1295+1                   LOGICAZERO;
+                       1358+1                   LOGICAZERO;
+                       1421+1                   LOGICAZERO;
+                       1484+1                   LOGICAZERO;
+                       1547+1                   LOGICAZERO;
+                       1610+1                   LOGICAZERO;
+AX51 MACRO ASSEMBLER  LEDSTRIP                                                              04/22/20 09:48:45 PAGE    13
+
+                       1673+1                   LOGICAZERO;
+                       1736     
+                       1737             ;BLUE
+                       1738     
+                       1739+1                   LOGICAONE;
+                       1798+1                   LOGICAONE;
+                       1857+1                   LOGICAONE;
+                       1916+1                   LOGICAONE;
+                       1975+1                   LOGICAONE;
+                       2034+1                   LOGICAONE;
+                       2093+1                   LOGICAONE;
+                       2152+1                   LOGICAONE;
+                       2211     
+000568 22              2212     RET
+                       2213     
+------                 2214      RSEG  ?PR?ChangeWhite?LEDStrip
+000000                 2215     _ChangeWhite:
+                       2216     
+                       2217             ;GREEN
+                       2218+1                   LOGICAONE;
+                       2277+1                   LOGICAONE;
+                       2336+1                   LOGICAONE;
+                       2395+1                   LOGICAONE;
+                       2454+1                   LOGICAONE;
+                       2513+1                   LOGICAONE;
+                       2572+1                   LOGICAONE;
+                       2631+1                   LOGICAONE;
+                       2690     
+                       2691     
+                       2692             ;RED
+                       2693+1                   LOGICAONE;
+                       2752+1                   LOGICAONE;
+                       2811+1                   LOGICAONE;
+                       2870+1                   LOGICAONE;
+                       2929+1                   LOGICAONE;
+                       2988+1                   LOGICAONE;
+                       3047+1                   LOGICAONE;
+                       3106+1                   LOGICAONE;
+                       3165     
+                       3166             ;BLUE
+                       3167+1                   LOGICAONE;
+                       3226+1                   LOGICAONE;
+                       3285+1                   LOGICAONE;
+                       3344+1                   LOGICAONE;
+                       3403+1                   LOGICAONE;
+                       3462+1                   LOGICAONE;
+                       3521+1                   LOGICAONE;
+                       3580+1                   LOGICAONE;
+000528 22              3639     RET
+                       3640     
+------                 3641      RSEG  ?PR?ChangeGreen?LEDStrip
+000000                 3642     _ChangeGreen:
+                       3643     
+                       3644             ;GREEN
+                       3645+1                   LOGICAONE;
+                       3704+1                   LOGICAONE;
+                       3763+1                   LOGICAONE;
+                       3822+1                   LOGICAONE;
+                       3881+1                   LOGICAONE;
+                       3940+1                   LOGICAONE;
+                       3999+1                   LOGICAONE;
+                       4058+1                   LOGICAONE;
+                       4117     
+AX51 MACRO ASSEMBLER  LEDSTRIP                                                              04/22/20 09:48:45 PAGE    14
+
+                       4118     
+                       4119             ;RED
+                       4120+1                   LOGICAZERO;
+                       4183+1                   LOGICAZERO;
+                       4246+1                   LOGICAZERO;
+                       4309+1                   LOGICAZERO;
+                       4372+1                   LOGICAZERO;
+                       4435+1                   LOGICAZERO;
+                       4498+1                   LOGICAZERO;
+                       4561+1                   LOGICAZERO;
+                       4624     
+                       4625             ;BLUE
+                       4626+1                   LOGICAZERO;
+                       4689+1                   LOGICAZERO;
+                       4752+1                   LOGICAZERO;
+                       4815+1                   LOGICAZERO;
+                       4878+1                   LOGICAZERO;
+                       4941+1                   LOGICAZERO;
+                       5004+1                   LOGICAZERO;
+                       5067+1                   LOGICAZERO;
+000568 22              5130     RET
+                       5131     
+------                 5132      RSEG  ?PR?ChangeRed?LEDStrip
+000000                 5133     _ChangeRed:
+                       5134     
+                       5135             ;GREEN
+                       5136     
+                       5137+1           LOGICAZERO;
+                       5200+1           LOGICAZERO;
+                       5263+1           LOGICAZERO;
+                       5326+1           LOGICAZERO;
+                       5389+1           LOGICAZERO;
+                       5452+1           LOGICAZERO;
+                       5515+1           LOGICAZERO;
+                       5578+1           LOGICAZERO;
+                       5641     
+                       5642             ;RED
+                       5643     
+                       5644+1           LOGICAONE;
+                       5703+1           LOGICAONE;
+                       5762+1           LOGICAONE;
+                       5821+1           LOGICAONE;
+                       5880+1           LOGICAONE;
+                       5939+1           LOGICAONE;
+                       5998+1           LOGICAONE;
+                       6057+1           LOGICAONE;
+                       6116     
+                       6117             ;BLUE
+                       6118+1           LOGICAZERO;
+                       6181+1           LOGICAZERO;
+                       6244+1           LOGICAZERO;
+                       6307+1           LOGICAZERO;
+                       6370+1           LOGICAZERO;
+                       6433+1           LOGICAZERO;
+                       6496+1           LOGICAZERO;
+                       6559+1           LOGICAZERO;
+000568 22              6622     RET
+                       6623     
+                       6624     
+                       6625     
+------                 6626     RSEG  ?PR?ANYCOLORS?LEDStrip
+000000                 6627     ANYCOLORS:
+000000 75F008          6628                     MOV B,#08h;
+AX51 MACRO ASSEMBLER  LEDSTRIP                                                              04/22/20 09:48:45 PAGE    15
+
+000003 740F            6629                     MOV A, #0Fh;
+000005 C3              6630     BBSTART:        CLR C;
+000006 33              6631                     RLC A;
+000007 4000            6632                     JC CASELONE;
+000009                 6633+1   CASELONE:       LOGICBONE;
+000034 8036            6680                     JMP BBEND;
+000036                 6681+1   CASELZERO:      LOGICBZERO;
+00006C D5F096          6739     BBEND:          DJNZ B, BBSTART;
+                       6740     
+00006F 22              6741     RET
+                       6742     
+------                 6743     RSEG  ?PR?LEDSLOOPG?LEDStrip
+000000                 6744     _LEDSLOOPG:
+000000 D294            6745             SETB P1.4;
+000002 EF              6746             MOV A, R7
+000003 8EF0            6747             MOV B, R6
+                       6748     
+000005                 6749+1   LOP: COLORGREEN
+00056D 14              8237              DEC A
+00056E 6003            8238              JZ ENDB
+000570 020000     F    8239     ENDA: JMP LOP
+000573                 8240+1   ENDB:LOGICARESET
+001477 22             12406      RET
+                      12407     
+------                12408      RSEG  ?PR?LEDSLOOPR?LEDStrip
+000000                12409     _LEDSLOOPR:
+000000 D294           12410             SETB P1.4;
+000002 EF             12411             MOV A, R7
+000003 8EF0           12412             MOV B, R6
+                      12413     
+000005                12414+1   LOPR: COLORRED
+00056D 14             13903              DEC A
+00056E 6003           13904              JZ ENDBR
+000570 020000     F   13905     ENDAR: JMP LOP
+000573                13906+1   ENDBR:LOGICARESET
+001477 22             18072      RET
+                      18073     
+------                18074      RSEG  ?PR?LEDSLOOPB?LEDStrip
+000000                18075     _LEDSLOOPB:
+000000 D294           18076             SETB P1.4;
+000002 EF             18077             MOV A, R7
+000003 8EF0           18078             MOV B, R6
+                      18079     
+000005                18080+1   LOPB: COLORBLUE
+00056D 14             19570              DEC A
+00056E 6003           19571              JZ ENDBB
+000570 020000     F   19572     ENDAB: JMP LOP
+000573                19573+1   ENDBB:LOGICARESET
+001477 22             23739      RET
+                      23740     
+------                23741      RSEG  ?PR?LEDSLOOPW?LEDStrip
+000000                23742     _LEDSLOOPW:
+000000 D294           23743             SETB P1.4;
+000002 EF             23744             MOV A, R7
+000003 8EF0           23745             MOV B, R6
+000005                23746+1   LOPW: COLORWHITE
+00052D 14             25170              DEC A
+00052E 6003           25171              JZ ENDBW
+000530 020000     F   25172     ENDAW: JMP LOP
+000533                25173+1   ENDBW:LOGICARESET
+001437 22             29339      RET
+                      29340     
+                      29341      END
+AX51 MACRO ASSEMBLER  LEDSTRIP                                                              04/22/20 09:48:45 PAGE    16
 
 SYMBOL TABLE LISTING
 ------ ----- -------
 
 
-N A M E                                 T Y P E  V A L U E     ATTRIBUTES
+N A M E                                   T Y P E  V A L U E     ATTRIBUTES
 
-?PR?ANYCOLORS?LEDSTRIP . . . . . . . .  C  SEG   000070H       REL=UNIT, ALN=BYTE
-?PR?LEDSLOOP?LEDSTRIP. . . . . . . . .  C  SEG   001436H       REL=UNIT, ALN=BYTE
-_LEDSLOOP. . . . . . . . . . . . . . .  C  ADDR  0000H     R   SEG=?PR?LEDSLOOP?LEDSTRIP
-ACC. . . . . . . . . . . . . . . . . .  D  ADDR  00E0H     A   
-ACC_ACC0 . . . . . . . . . . . . . . .  B  ADDR  00E0H.0   A   
-ACC_ACC1 . . . . . . . . . . . . . . .  B  ADDR  00E0H.1   A   
-ACC_ACC2 . . . . . . . . . . . . . . .  B  ADDR  00E0H.2   A   
-ACC_ACC3 . . . . . . . . . . . . . . .  B  ADDR  00E0H.3   A   
-ACC_ACC4 . . . . . . . . . . . . . . .  B  ADDR  00E0H.4   A   
-ACC_ACC5 . . . . . . . . . . . . . . .  B  ADDR  00E0H.5   A   
-ACC_ACC6 . . . . . . . . . . . . . . .  B  ADDR  00E0H.6   A   
-ACC_ACC7 . . . . . . . . . . . . . . .  B  ADDR  00E0H.7   A   
-ADC0 . . . . . . . . . . . . . . . . .  D  ADDR  00BDH     A   
-ADC0AC . . . . . . . . . . . . . . . .  D  ADDR  00B3H     A   
-ADC0CF . . . . . . . . . . . . . . . .  D  ADDR  00BCH     A   
-ADC0CN0. . . . . . . . . . . . . . . .  D  ADDR  00E8H     A   
-ADC0CN0_ADBMEN . . . . . . . . . . . .  B  ADDR  00E8H.6   A   
-ADC0CN0_ADBUSY . . . . . . . . . . . .  B  ADDR  00E8H.4   A   
-ADC0CN0_ADCM0. . . . . . . . . . . . .  B  ADDR  00E8H.0   A   
-ADC0CN0_ADCM1. . . . . . . . . . . . .  B  ADDR  00E8H.1   A   
-ADC0CN0_ADCM2. . . . . . . . . . . . .  B  ADDR  00E8H.2   A   
-ADC0CN0_ADEN . . . . . . . . . . . . .  B  ADDR  00E8H.7   A   
-ADC0CN0_ADINT. . . . . . . . . . . . .  B  ADDR  00E8H.5   A   
-ADC0CN0_ADWINT . . . . . . . . . . . .  B  ADDR  00E8H.3   A   
-ADC0CN1. . . . . . . . . . . . . . . .  D  ADDR  00B2H     A   
-ADC0EOC_IRQN . . . . . . . . . . . . .  N  NUMB  000AH     A   
-ADC0GT . . . . . . . . . . . . . . . .  D  ADDR  00C3H     A   
-ADC0GTH. . . . . . . . . . . . . . . .  D  ADDR  00C4H     A   
-ADC0GTL. . . . . . . . . . . . . . . .  D  ADDR  00C3H     A   
-ADC0H. . . . . . . . . . . . . . . . .  D  ADDR  00BEH     A   
-ADC0L. . . . . . . . . . . . . . . . .  D  ADDR  00BDH     A   
-ADC0LT . . . . . . . . . . . . . . . .  D  ADDR  00C5H     A   
-ADC0LTH. . . . . . . . . . . . . . . .  D  ADDR  00C6H     A   
-ADC0LTL. . . . . . . . . . . . . . . .  D  ADDR  00C5H     A   
-ADC0MX . . . . . . . . . . . . . . . .  D  ADDR  00BBH     A   
-ADC0PWR. . . . . . . . . . . . . . . .  D  ADDR  00DFH     A   
-ADC0TK . . . . . . . . . . . . . . . .  D  ADDR  00B9H     A   
-ADC0WC_IRQN. . . . . . . . . . . . . .  N  NUMB  0009H     A   
-ANYCOLORS. . . . . . . . . . . . . . .  C  ADDR  0000H     R   SEG=?PR?ANYCOLORS?LEDSTRIP
-B. . . . . . . . . . . . . . . . . . .  D  ADDR  00F0H     A   
-B_B0 . . . . . . . . . . . . . . . . .  B  ADDR  00F0H.0   A   
-B_B1 . . . . . . . . . . . . . . . . .  B  ADDR  00F0H.1   A   
-B_B2 . . . . . . . . . . . . . . . . .  B  ADDR  00F0H.2   A   
-B_B3 . . . . . . . . . . . . . . . . .  B  ADDR  00F0H.3   A   
-B_B4 . . . . . . . . . . . . . . . . .  B  ADDR  00F0H.4   A   
-B_B5 . . . . . . . . . . . . . . . . .  B  ADDR  00F0H.5   A   
-B_B6 . . . . . . . . . . . . . . . . .  B  ADDR  00F0H.6   A   
-B_B7 . . . . . . . . . . . . . . . . .  B  ADDR  00F0H.7   A   
-BBEND. . . . . . . . . . . . . . . . .  C  ADDR  006CH     R   SEG=?PR?ANYCOLORS?LEDSTRIP
-BBSTART. . . . . . . . . . . . . . . .  C  ADDR  0005H     R   SEG=?PR?ANYCOLORS?LEDSTRIP
-CASELONE . . . . . . . . . . . . . . .  C  ADDR  0009H     R   SEG=?PR?ANYCOLORS?LEDSTRIP
-CASELZERO. . . . . . . . . . . . . . .  C  ADDR  0036H     R   SEG=?PR?ANYCOLORS?LEDSTRIP
-CKCON0 . . . . . . . . . . . . . . . .  D  ADDR  008EH     A   
-CKCON1 . . . . . . . . . . . . . . . .  D  ADDR  00A6H     A   
-CLKREC . . . . . . . . . . . . . . . .  N  NUMB  000FH     A   
-CLKSEL . . . . . . . . . . . . . . . .  D  ADDR  00A9H     A   
-CMIE . . . . . . . . . . . . . . . . .  N  NUMB  000BH     A   
-AX51 MACRO ASSEMBLER  LEDSTRIP                                                              04/21/20 14:50:40 PAGE    14
+?PR?ANYCOLORS?LEDSTRIP . . . . . . . .    C  SEG   000070H       REL=UNIT, ALN=BYTE
+?PR?CHANGEBLUE?LEDSTRIP. . . . . . . .    C  SEG   000569H       REL=UNIT, ALN=BYTE
+?PR?CHANGEGREEN?LEDSTRIP . . . . . . .    C  SEG   000569H       REL=UNIT, ALN=BYTE
+?PR?CHANGERED?LEDSTRIP . . . . . . . .    C  SEG   000569H       REL=UNIT, ALN=BYTE
+?PR?CHANGEWHITE?LEDSTRIP . . . . . . .    C  SEG   000529H       REL=UNIT, ALN=BYTE
+?PR?LEDSLOOPB?LEDSTRIP . . . . . . . .    C  SEG   001478H       REL=UNIT, ALN=BYTE
+?PR?LEDSLOOPG?LEDSTRIP . . . . . . . .    C  SEG   001478H       REL=UNIT, ALN=BYTE
+?PR?LEDSLOOPR?LEDSTRIP . . . . . . . .    C  SEG   001478H       REL=UNIT, ALN=BYTE
+?PR?LEDSLOOPW?LEDSTRIP . . . . . . . .    C  SEG   001438H       REL=UNIT, ALN=BYTE
+_CHANGEBLUE. . . . . . . . . . . . . .    C  ADDR  0000H     R   SEG=?PR?CHANGEBLUE?LEDSTRIP
+_CHANGEGREEN . . . . . . . . . . . . .    C  ADDR  0000H     R   SEG=?PR?CHANGEGREEN?LEDSTRIP
+_CHANGERED . . . . . . . . . . . . . .    C  ADDR  0000H     R   SEG=?PR?CHANGERED?LEDSTRIP
+_CHANGEWHITE . . . . . . . . . . . . .    C  ADDR  0000H     R   SEG=?PR?CHANGEWHITE?LEDSTRIP
+_LEDSLOOPB . . . . . . . . . . . . . .    C  ADDR  0000H     R   SEG=?PR?LEDSLOOPB?LEDSTRIP
+_LEDSLOOPG . . . . . . . . . . . . . .    C  ADDR  0000H     R   SEG=?PR?LEDSLOOPG?LEDSTRIP
+_LEDSLOOPR . . . . . . . . . . . . . .    C  ADDR  0000H     R   SEG=?PR?LEDSLOOPR?LEDSTRIP
+_LEDSLOOPW . . . . . . . . . . . . . .    C  ADDR  0000H     R   SEG=?PR?LEDSLOOPW?LEDSTRIP
+ACC. . . . . . . . . . . . . . . . . .    D  ADDR  00E0H     A   
+ACC_ACC0 . . . . . . . . . . . . . . .    B  ADDR  00E0H.0   A   
+ACC_ACC1 . . . . . . . . . . . . . . .    B  ADDR  00E0H.1   A   
+ACC_ACC2 . . . . . . . . . . . . . . .    B  ADDR  00E0H.2   A   
+ACC_ACC3 . . . . . . . . . . . . . . .    B  ADDR  00E0H.3   A   
+ACC_ACC4 . . . . . . . . . . . . . . .    B  ADDR  00E0H.4   A   
+ACC_ACC5 . . . . . . . . . . . . . . .    B  ADDR  00E0H.5   A   
+ACC_ACC6 . . . . . . . . . . . . . . .    B  ADDR  00E0H.6   A   
+ACC_ACC7 . . . . . . . . . . . . . . .    B  ADDR  00E0H.7   A   
+ADC0 . . . . . . . . . . . . . . . . .    D  ADDR  00BDH     A   
+ADC0AC . . . . . . . . . . . . . . . .    D  ADDR  00B3H     A   
+ADC0CF . . . . . . . . . . . . . . . .    D  ADDR  00BCH     A   
+ADC0CN0. . . . . . . . . . . . . . . .    D  ADDR  00E8H     A   
+ADC0CN0_ADBMEN . . . . . . . . . . . .    B  ADDR  00E8H.6   A   
+ADC0CN0_ADBUSY . . . . . . . . . . . .    B  ADDR  00E8H.4   A   
+ADC0CN0_ADCM0. . . . . . . . . . . . .    B  ADDR  00E8H.0   A   
+ADC0CN0_ADCM1. . . . . . . . . . . . .    B  ADDR  00E8H.1   A   
+ADC0CN0_ADCM2. . . . . . . . . . . . .    B  ADDR  00E8H.2   A   
+ADC0CN0_ADEN . . . . . . . . . . . . .    B  ADDR  00E8H.7   A   
+ADC0CN0_ADINT. . . . . . . . . . . . .    B  ADDR  00E8H.5   A   
+ADC0CN0_ADWINT . . . . . . . . . . . .    B  ADDR  00E8H.3   A   
+ADC0CN1. . . . . . . . . . . . . . . .    D  ADDR  00B2H     A   
+ADC0EOC_IRQN . . . . . . . . . . . . .    N  NUMB  000AH     A   
+ADC0GT . . . . . . . . . . . . . . . .    D  ADDR  00C3H     A   
+ADC0GTH. . . . . . . . . . . . . . . .    D  ADDR  00C4H     A   
+ADC0GTL. . . . . . . . . . . . . . . .    D  ADDR  00C3H     A   
+ADC0H. . . . . . . . . . . . . . . . .    D  ADDR  00BEH     A   
+ADC0L. . . . . . . . . . . . . . . . .    D  ADDR  00BDH     A   
+ADC0LT . . . . . . . . . . . . . . . .    D  ADDR  00C5H     A   
+ADC0LTH. . . . . . . . . . . . . . . .    D  ADDR  00C6H     A   
+ADC0LTL. . . . . . . . . . . . . . . .    D  ADDR  00C5H     A   
+ADC0MX . . . . . . . . . . . . . . . .    D  ADDR  00BBH     A   
+ADC0PWR. . . . . . . . . . . . . . . .    D  ADDR  00DFH     A   
+ADC0TK . . . . . . . . . . . . . . . .    D  ADDR  00B9H     A   
+ADC0WC_IRQN. . . . . . . . . . . . . .    N  NUMB  0009H     A   
+ANYCOLORS. . . . . . . . . . . . . . .    C  ADDR  0000H     R   SEG=?PR?ANYCOLORS?LEDSTRIP
+B. . . . . . . . . . . . . . . . . . .    D  ADDR  00F0H     A   
+B_B0 . . . . . . . . . . . . . . . . .    B  ADDR  00F0H.0   A   
+B_B1 . . . . . . . . . . . . . . . . .    B  ADDR  00F0H.1   A   
+B_B2 . . . . . . . . . . . . . . . . .    B  ADDR  00F0H.2   A   
+AX51 MACRO ASSEMBLER  LEDSTRIP                                                              04/22/20 09:48:45 PAGE    17
 
-CMINT. . . . . . . . . . . . . . . . .  N  NUMB  0006H     A   
-CMP0_IRQN. . . . . . . . . . . . . . .  N  NUMB  000CH     A   
-CMP0CN0. . . . . . . . . . . . . . . .  D  ADDR  009BH     A   
-CMP0CN1. . . . . . . . . . . . . . . .  D  ADDR  0099H     A   
-CMP0MD . . . . . . . . . . . . . . . .  D  ADDR  009DH     A   
-CMP0MX . . . . . . . . . . . . . . . .  D  ADDR  009FH     A   
-CMP1_IRQN. . . . . . . . . . . . . . .  N  NUMB  000DH     A   
-CMP1CN0. . . . . . . . . . . . . . . .  D  ADDR  00BFH     A   
-CMP1CN1. . . . . . . . . . . . . . . .  D  ADDR  00ACH     A   
-CMP1MD . . . . . . . . . . . . . . . .  D  ADDR  00ABH     A   
-CMP1MX . . . . . . . . . . . . . . . .  D  ADDR  00AAH     A   
-CRC0_PAGE. . . . . . . . . . . . . . .  N  NUMB  0000H     A   
-CRC0CN0. . . . . . . . . . . . . . . .  D  ADDR  00CEH     A   
-CRC0CN1. . . . . . . . . . . . . . . .  D  ADDR  0086H     A   
-CRC0CNT. . . . . . . . . . . . . . . .  D  ADDR  00D3H     A   
-CRC0DAT. . . . . . . . . . . . . . . .  D  ADDR  00DEH     A   
-CRC0FLIP . . . . . . . . . . . . . . .  D  ADDR  00CFH     A   
-CRC0IN . . . . . . . . . . . . . . . .  D  ADDR  00DDH     A   
-CRC0ST . . . . . . . . . . . . . . . .  D  ADDR  00D2H     A   
-DERIVID. . . . . . . . . . . . . . . .  D  ADDR  00ADH     A   
-DEVICEID . . . . . . . . . . . . . . .  D  ADDR  00B5H     A   
-DP . . . . . . . . . . . . . . . . . .  D  ADDR  0082H     A   
-DPH. . . . . . . . . . . . . . . . . .  D  ADDR  0083H     A   
-DPL. . . . . . . . . . . . . . . . . .  D  ADDR  0082H     A   
-E0CNT. . . . . . . . . . . . . . . . .  N  NUMB  0016H     A   
-E0CSR. . . . . . . . . . . . . . . . .  N  NUMB  0011H     A   
-EENABLE. . . . . . . . . . . . . . . .  N  NUMB  001EH     A   
-EIE1 . . . . . . . . . . . . . . . . .  D  ADDR  00E6H     A   
-EIE2 . . . . . . . . . . . . . . . . .  D  ADDR  00CEH     A   
-EINCSRH. . . . . . . . . . . . . . . .  N  NUMB  0012H     A   
-EINCSRL. . . . . . . . . . . . . . . .  N  NUMB  0011H     A   
-EIP1 . . . . . . . . . . . . . . . . .  D  ADDR  00F3H     A   
-EIP1H. . . . . . . . . . . . . . . . .  D  ADDR  00F5H     A   
-EIP2 . . . . . . . . . . . . . . . . .  D  ADDR  00F4H     A   
-EIP2H. . . . . . . . . . . . . . . . .  D  ADDR  00F6H     A   
-EMI0CN . . . . . . . . . . . . . . . .  D  ADDR  00E7H     A   
-ENDA . . . . . . . . . . . . . . . . .  C  ADDR  052EH     R   SEG=?PR?LEDSLOOP?LEDSTRIP
-ENDB . . . . . . . . . . . . . . . . .  C  ADDR  0531H     R   SEG=?PR?LEDSLOOP?LEDSTRIP
-EOUTCNTH . . . . . . . . . . . . . . .  N  NUMB  0017H     A   
-EOUTCNTL . . . . . . . . . . . . . . .  N  NUMB  0016H     A   
-EOUTCSRH . . . . . . . . . . . . . . .  N  NUMB  0015H     A   
-EOUTCSRL . . . . . . . . . . . . . . .  N  NUMB  0014H     A   
-FADDR. . . . . . . . . . . . . . . . .  N  NUMB  0000H     A   
-FIFO0. . . . . . . . . . . . . . . . .  N  NUMB  0020H     A   
-FIFO1. . . . . . . . . . . . . . . . .  N  NUMB  0021H     A   
-FIFO2. . . . . . . . . . . . . . . . .  N  NUMB  0022H     A   
-FIFO3. . . . . . . . . . . . . . . . .  N  NUMB  0023H     A   
-FLKEY. . . . . . . . . . . . . . . . .  D  ADDR  00B7H     A   
-FRAMEH . . . . . . . . . . . . . . . .  N  NUMB  000DH     A   
-FRAMEL . . . . . . . . . . . . . . . .  N  NUMB  000CH     A   
-HFO0CAL. . . . . . . . . . . . . . . .  D  ADDR  00C7H     A   
-HFO1CAL. . . . . . . . . . . . . . . .  D  ADDR  00D6H     A   
-HFOCN. . . . . . . . . . . . . . . . .  D  ADDR  00EFH     A   
-I2C0_IRQN. . . . . . . . . . . . . . .  N  NUMB  0012H     A   
-I2C0CN0. . . . . . . . . . . . . . . .  D  ADDR  00BAH     A   
-I2C0DIN. . . . . . . . . . . . . . . .  D  ADDR  00BCH     A   
-I2C0DOUT . . . . . . . . . . . . . . .  D  ADDR  00BBH     A   
-I2C0FCN0 . . . . . . . . . . . . . . .  D  ADDR  00ADH     A   
-I2C0FCN1 . . . . . . . . . . . . . . .  D  ADDR  00ABH     A   
-I2C0FCT. . . . . . . . . . . . . . . .  D  ADDR  00F5H     A   
-I2C0SLAD . . . . . . . . . . . . . . .  D  ADDR  00BDH     A   
-I2C0STAT . . . . . . . . . . . . . . .  D  ADDR  00B9H     A   
-I2CSLAVE0_PAGE . . . . . . . . . . . .  N  NUMB  0020H     A   
-AX51 MACRO ASSEMBLER  LEDSTRIP                                                              04/21/20 14:50:40 PAGE    15
+B_B3 . . . . . . . . . . . . . . . . .    B  ADDR  00F0H.3   A   
+B_B4 . . . . . . . . . . . . . . . . .    B  ADDR  00F0H.4   A   
+B_B5 . . . . . . . . . . . . . . . . .    B  ADDR  00F0H.5   A   
+B_B6 . . . . . . . . . . . . . . . . .    B  ADDR  00F0H.6   A   
+B_B7 . . . . . . . . . . . . . . . . .    B  ADDR  00F0H.7   A   
+BBEND. . . . . . . . . . . . . . . . .    C  ADDR  006CH     R   SEG=?PR?ANYCOLORS?LEDSTRIP
+BBSTART. . . . . . . . . . . . . . . .    C  ADDR  0005H     R   SEG=?PR?ANYCOLORS?LEDSTRIP
+CASELONE . . . . . . . . . . . . . . .    C  ADDR  0009H     R   SEG=?PR?ANYCOLORS?LEDSTRIP
+CASELZERO. . . . . . . . . . . . . . .    C  ADDR  0036H     R   SEG=?PR?ANYCOLORS?LEDSTRIP
+CKCON0 . . . . . . . . . . . . . . . .    D  ADDR  008EH     A   
+CKCON1 . . . . . . . . . . . . . . . .    D  ADDR  00A6H     A   
+CLKREC . . . . . . . . . . . . . . . .    N  NUMB  000FH     A   
+CLKSEL . . . . . . . . . . . . . . . .    D  ADDR  00A9H     A   
+CMIE . . . . . . . . . . . . . . . . .    N  NUMB  000BH     A   
+CMINT. . . . . . . . . . . . . . . . .    N  NUMB  0006H     A   
+CMP0_IRQN. . . . . . . . . . . . . . .    N  NUMB  000CH     A   
+CMP0CN0. . . . . . . . . . . . . . . .    D  ADDR  009BH     A   
+CMP0CN1. . . . . . . . . . . . . . . .    D  ADDR  0099H     A   
+CMP0MD . . . . . . . . . . . . . . . .    D  ADDR  009DH     A   
+CMP0MX . . . . . . . . . . . . . . . .    D  ADDR  009FH     A   
+CMP1_IRQN. . . . . . . . . . . . . . .    N  NUMB  000DH     A   
+CMP1CN0. . . . . . . . . . . . . . . .    D  ADDR  00BFH     A   
+CMP1CN1. . . . . . . . . . . . . . . .    D  ADDR  00ACH     A   
+CMP1MD . . . . . . . . . . . . . . . .    D  ADDR  00ABH     A   
+CMP1MX . . . . . . . . . . . . . . . .    D  ADDR  00AAH     A   
+CRC0_PAGE. . . . . . . . . . . . . . .    N  NUMB  0000H     A   
+CRC0CN0. . . . . . . . . . . . . . . .    D  ADDR  00CEH     A   
+CRC0CN1. . . . . . . . . . . . . . . .    D  ADDR  0086H     A   
+CRC0CNT. . . . . . . . . . . . . . . .    D  ADDR  00D3H     A   
+CRC0DAT. . . . . . . . . . . . . . . .    D  ADDR  00DEH     A   
+CRC0FLIP . . . . . . . . . . . . . . .    D  ADDR  00CFH     A   
+CRC0IN . . . . . . . . . . . . . . . .    D  ADDR  00DDH     A   
+CRC0ST . . . . . . . . . . . . . . . .    D  ADDR  00D2H     A   
+DERIVID. . . . . . . . . . . . . . . .    D  ADDR  00ADH     A   
+DEVICEID . . . . . . . . . . . . . . .    D  ADDR  00B5H     A   
+DP . . . . . . . . . . . . . . . . . .    D  ADDR  0082H     A   
+DPH. . . . . . . . . . . . . . . . . .    D  ADDR  0083H     A   
+DPL. . . . . . . . . . . . . . . . . .    D  ADDR  0082H     A   
+E0CNT. . . . . . . . . . . . . . . . .    N  NUMB  0016H     A   
+E0CSR. . . . . . . . . . . . . . . . .    N  NUMB  0011H     A   
+EENABLE. . . . . . . . . . . . . . . .    N  NUMB  001EH     A   
+EIE1 . . . . . . . . . . . . . . . . .    D  ADDR  00E6H     A   
+EIE2 . . . . . . . . . . . . . . . . .    D  ADDR  00CEH     A   
+EINCSRH. . . . . . . . . . . . . . . .    N  NUMB  0012H     A   
+EINCSRL. . . . . . . . . . . . . . . .    N  NUMB  0011H     A   
+EIP1 . . . . . . . . . . . . . . . . .    D  ADDR  00F3H     A   
+EIP1H. . . . . . . . . . . . . . . . .    D  ADDR  00F5H     A   
+EIP2 . . . . . . . . . . . . . . . . .    D  ADDR  00F4H     A   
+EIP2H. . . . . . . . . . . . . . . . .    D  ADDR  00F6H     A   
+EMI0CN . . . . . . . . . . . . . . . .    D  ADDR  00E7H     A   
+ENDA . . . . . . . . . . . . . . . . .    C  ADDR  0570H     R   SEG=?PR?LEDSLOOPG?LEDSTRIP
+ENDAB. . . . . . . . . . . . . . . . .    C  ADDR  0570H     R   SEG=?PR?LEDSLOOPB?LEDSTRIP
+ENDAR. . . . . . . . . . . . . . . . .    C  ADDR  0570H     R   SEG=?PR?LEDSLOOPR?LEDSTRIP
+ENDAW. . . . . . . . . . . . . . . . .    C  ADDR  0530H     R   SEG=?PR?LEDSLOOPW?LEDSTRIP
+ENDB . . . . . . . . . . . . . . . . .    C  ADDR  0573H     R   SEG=?PR?LEDSLOOPG?LEDSTRIP
+ENDBB. . . . . . . . . . . . . . . . .    C  ADDR  0573H     R   SEG=?PR?LEDSLOOPB?LEDSTRIP
+ENDBR. . . . . . . . . . . . . . . . .    C  ADDR  0573H     R   SEG=?PR?LEDSLOOPR?LEDSTRIP
+ENDBW. . . . . . . . . . . . . . . . .    C  ADDR  0533H     R   SEG=?PR?LEDSLOOPW?LEDSTRIP
+EOUTCNTH . . . . . . . . . . . . . . .    N  NUMB  0017H     A   
+EOUTCNTL . . . . . . . . . . . . . . .    N  NUMB  0016H     A   
+EOUTCSRH . . . . . . . . . . . . . . .    N  NUMB  0015H     A   
+EOUTCSRL . . . . . . . . . . . . . . .    N  NUMB  0014H     A   
+FADDR. . . . . . . . . . . . . . . . .    N  NUMB  0000H     A   
+AX51 MACRO ASSEMBLER  LEDSTRIP                                                              04/22/20 09:48:45 PAGE    18
 
-IE . . . . . . . . . . . . . . . . . .  D  ADDR  00A8H     A   
-IE_EA. . . . . . . . . . . . . . . . .  B  ADDR  00A8H.7   A   
-IE_ES0 . . . . . . . . . . . . . . . .  B  ADDR  00A8H.4   A   
-IE_ESPI0 . . . . . . . . . . . . . . .  B  ADDR  00A8H.6   A   
-IE_ET0 . . . . . . . . . . . . . . . .  B  ADDR  00A8H.1   A   
-IE_ET1 . . . . . . . . . . . . . . . .  B  ADDR  00A8H.3   A   
-IE_ET2 . . . . . . . . . . . . . . . .  B  ADDR  00A8H.5   A   
-IE_EX0 . . . . . . . . . . . . . . . .  B  ADDR  00A8H.0   A   
-IE_EX1 . . . . . . . . . . . . . . . .  B  ADDR  00A8H.2   A   
-IN1IE. . . . . . . . . . . . . . . . .  N  NUMB  0007H     A   
-IN1INT . . . . . . . . . . . . . . . .  N  NUMB  0002H     A   
-INDEX. . . . . . . . . . . . . . . . .  N  NUMB  000EH     A   
-INT0_IRQN. . . . . . . . . . . . . . .  N  NUMB  0000H     A   
-INT1_IRQN. . . . . . . . . . . . . . .  N  NUMB  0002H     A   
-IP . . . . . . . . . . . . . . . . . .  D  ADDR  00B8H     A   
-IP_PS0 . . . . . . . . . . . . . . . .  B  ADDR  00B8H.4   A   
-IP_PSPI0 . . . . . . . . . . . . . . .  B  ADDR  00B8H.6   A   
-IP_PT0 . . . . . . . . . . . . . . . .  B  ADDR  00B8H.1   A   
-IP_PT1 . . . . . . . . . . . . . . . .  B  ADDR  00B8H.3   A   
-IP_PT2 . . . . . . . . . . . . . . . .  B  ADDR  00B8H.5   A   
-IP_PX0 . . . . . . . . . . . . . . . .  B  ADDR  00B8H.0   A   
-IP_PX1 . . . . . . . . . . . . . . . .  B  ADDR  00B8H.2   A   
-IPH. . . . . . . . . . . . . . . . . .  D  ADDR  00F2H     A   
-IT01CF . . . . . . . . . . . . . . . .  D  ADDR  00E4H     A   
-LEDSTRIP . . . . . . . . . . . . . . .  -- ----  -------       
-LEGACY_PAGE. . . . . . . . . . . . . .  N  NUMB  0000H     A   
-LFO0CN . . . . . . . . . . . . . . . .  D  ADDR  00B1H     A   
-LOP. . . . . . . . . . . . . . . . . .  C  ADDR  0003H     R   SEG=?PR?LEDSLOOP?LEDSTRIP
-OUT1IE . . . . . . . . . . . . . . . .  N  NUMB  0009H     A   
-OUT1INT. . . . . . . . . . . . . . . .  N  NUMB  0004H     A   
-P0 . . . . . . . . . . . . . . . . . .  D  ADDR  0080H     A   
-P0_B0. . . . . . . . . . . . . . . . .  B  ADDR  0080H.0   A   
-P0_B1. . . . . . . . . . . . . . . . .  B  ADDR  0080H.1   A   
-P0_B2. . . . . . . . . . . . . . . . .  B  ADDR  0080H.2   A   
-P0_B3. . . . . . . . . . . . . . . . .  B  ADDR  0080H.3   A   
-P0_B4. . . . . . . . . . . . . . . . .  B  ADDR  0080H.4   A   
-P0_B5. . . . . . . . . . . . . . . . .  B  ADDR  0080H.5   A   
-P0_B6. . . . . . . . . . . . . . . . .  B  ADDR  0080H.6   A   
-P0_B7. . . . . . . . . . . . . . . . .  B  ADDR  0080H.7   A   
-P0MASK . . . . . . . . . . . . . . . .  D  ADDR  00FEH     A   
-P0MAT. . . . . . . . . . . . . . . . .  D  ADDR  00FDH     A   
-P0MDIN . . . . . . . . . . . . . . . .  D  ADDR  00F1H     A   
-P0MDOUT. . . . . . . . . . . . . . . .  D  ADDR  00A4H     A   
-P0SKIP . . . . . . . . . . . . . . . .  D  ADDR  00D4H     A   
-P1 . . . . . . . . . . . . . . . . . .  D  ADDR  0090H     A   
-P1_B0. . . . . . . . . . . . . . . . .  B  ADDR  0090H.0   A   
-P1_B1. . . . . . . . . . . . . . . . .  B  ADDR  0090H.1   A   
-P1_B2. . . . . . . . . . . . . . . . .  B  ADDR  0090H.2   A   
-P1_B3. . . . . . . . . . . . . . . . .  B  ADDR  0090H.3   A   
-P1_B4. . . . . . . . . . . . . . . . .  B  ADDR  0090H.4   A   
-P1_B5. . . . . . . . . . . . . . . . .  B  ADDR  0090H.5   A   
-P1_B6. . . . . . . . . . . . . . . . .  B  ADDR  0090H.6   A   
-P1_B7. . . . . . . . . . . . . . . . .  B  ADDR  0090H.7   A   
-P1MASK . . . . . . . . . . . . . . . .  D  ADDR  00EEH     A   
-P1MAT. . . . . . . . . . . . . . . . .  D  ADDR  00EDH     A   
-P1MDIN . . . . . . . . . . . . . . . .  D  ADDR  00F2H     A   
-P1MDOUT. . . . . . . . . . . . . . . .  D  ADDR  00A5H     A   
-P1SKIP . . . . . . . . . . . . . . . .  D  ADDR  00D5H     A   
-P2 . . . . . . . . . . . . . . . . . .  D  ADDR  00A0H     A   
-P2_B0. . . . . . . . . . . . . . . . .  B  ADDR  00A0H.0   A   
-P2_B1. . . . . . . . . . . . . . . . .  B  ADDR  00A0H.1   A   
-P2_B2. . . . . . . . . . . . . . . . .  B  ADDR  00A0H.2   A   
-P2_B3. . . . . . . . . . . . . . . . .  B  ADDR  00A0H.3   A   
-AX51 MACRO ASSEMBLER  LEDSTRIP                                                              04/21/20 14:50:40 PAGE    16
+FIFO0. . . . . . . . . . . . . . . . .    N  NUMB  0020H     A   
+FIFO1. . . . . . . . . . . . . . . . .    N  NUMB  0021H     A   
+FIFO2. . . . . . . . . . . . . . . . .    N  NUMB  0022H     A   
+FIFO3. . . . . . . . . . . . . . . . .    N  NUMB  0023H     A   
+FLKEY. . . . . . . . . . . . . . . . .    D  ADDR  00B7H     A   
+FRAMEH . . . . . . . . . . . . . . . .    N  NUMB  000DH     A   
+FRAMEL . . . . . . . . . . . . . . . .    N  NUMB  000CH     A   
+HFO0CAL. . . . . . . . . . . . . . . .    D  ADDR  00C7H     A   
+HFO1CAL. . . . . . . . . . . . . . . .    D  ADDR  00D6H     A   
+HFOCN. . . . . . . . . . . . . . . . .    D  ADDR  00EFH     A   
+I2C0_IRQN. . . . . . . . . . . . . . .    N  NUMB  0012H     A   
+I2C0CN0. . . . . . . . . . . . . . . .    D  ADDR  00BAH     A   
+I2C0DIN. . . . . . . . . . . . . . . .    D  ADDR  00BCH     A   
+I2C0DOUT . . . . . . . . . . . . . . .    D  ADDR  00BBH     A   
+I2C0FCN0 . . . . . . . . . . . . . . .    D  ADDR  00ADH     A   
+I2C0FCN1 . . . . . . . . . . . . . . .    D  ADDR  00ABH     A   
+I2C0FCT. . . . . . . . . . . . . . . .    D  ADDR  00F5H     A   
+I2C0SLAD . . . . . . . . . . . . . . .    D  ADDR  00BDH     A   
+I2C0STAT . . . . . . . . . . . . . . .    D  ADDR  00B9H     A   
+I2CSLAVE0_PAGE . . . . . . . . . . . .    N  NUMB  0020H     A   
+IE . . . . . . . . . . . . . . . . . .    D  ADDR  00A8H     A   
+IE_EA. . . . . . . . . . . . . . . . .    B  ADDR  00A8H.7   A   
+IE_ES0 . . . . . . . . . . . . . . . .    B  ADDR  00A8H.4   A   
+IE_ESPI0 . . . . . . . . . . . . . . .    B  ADDR  00A8H.6   A   
+IE_ET0 . . . . . . . . . . . . . . . .    B  ADDR  00A8H.1   A   
+IE_ET1 . . . . . . . . . . . . . . . .    B  ADDR  00A8H.3   A   
+IE_ET2 . . . . . . . . . . . . . . . .    B  ADDR  00A8H.5   A   
+IE_EX0 . . . . . . . . . . . . . . . .    B  ADDR  00A8H.0   A   
+IE_EX1 . . . . . . . . . . . . . . . .    B  ADDR  00A8H.2   A   
+IN1IE. . . . . . . . . . . . . . . . .    N  NUMB  0007H     A   
+IN1INT . . . . . . . . . . . . . . . .    N  NUMB  0002H     A   
+INDEX. . . . . . . . . . . . . . . . .    N  NUMB  000EH     A   
+INT0_IRQN. . . . . . . . . . . . . . .    N  NUMB  0000H     A   
+INT1_IRQN. . . . . . . . . . . . . . .    N  NUMB  0002H     A   
+IP . . . . . . . . . . . . . . . . . .    D  ADDR  00B8H     A   
+IP_PS0 . . . . . . . . . . . . . . . .    B  ADDR  00B8H.4   A   
+IP_PSPI0 . . . . . . . . . . . . . . .    B  ADDR  00B8H.6   A   
+IP_PT0 . . . . . . . . . . . . . . . .    B  ADDR  00B8H.1   A   
+IP_PT1 . . . . . . . . . . . . . . . .    B  ADDR  00B8H.3   A   
+IP_PT2 . . . . . . . . . . . . . . . .    B  ADDR  00B8H.5   A   
+IP_PX0 . . . . . . . . . . . . . . . .    B  ADDR  00B8H.0   A   
+IP_PX1 . . . . . . . . . . . . . . . .    B  ADDR  00B8H.2   A   
+IPH. . . . . . . . . . . . . . . . . .    D  ADDR  00F2H     A   
+IT01CF . . . . . . . . . . . . . . . .    D  ADDR  00E4H     A   
+LEDSTRIP . . . . . . . . . . . . . . .    -- ----  -------       
+LEGACY_PAGE. . . . . . . . . . . . . .    N  NUMB  0000H     A   
+LFO0CN . . . . . . . . . . . . . . . .    D  ADDR  00B1H     A   
+LOP. . . . . . . . . . . . . . . . . .    C  ADDR  0005H     R   SEG=?PR?LEDSLOOPG?LEDSTRIP
+LOPB . . . . . . . . . . . . . . . . .    C  ADDR  0005H     R   SEG=?PR?LEDSLOOPB?LEDSTRIP
+LOPR . . . . . . . . . . . . . . . . .    C  ADDR  0005H     R   SEG=?PR?LEDSLOOPR?LEDSTRIP
+LOPW . . . . . . . . . . . . . . . . .    C  ADDR  0005H     R   SEG=?PR?LEDSLOOPW?LEDSTRIP
+OUT1IE . . . . . . . . . . . . . . . .    N  NUMB  0009H     A   
+OUT1INT. . . . . . . . . . . . . . . .    N  NUMB  0004H     A   
+P0 . . . . . . . . . . . . . . . . . .    D  ADDR  0080H     A   
+P0_B0. . . . . . . . . . . . . . . . .    B  ADDR  0080H.0   A   
+P0_B1. . . . . . . . . . . . . . . . .    B  ADDR  0080H.1   A   
+P0_B2. . . . . . . . . . . . . . . . .    B  ADDR  0080H.2   A   
+P0_B3. . . . . . . . . . . . . . . . .    B  ADDR  0080H.3   A   
+P0_B4. . . . . . . . . . . . . . . . .    B  ADDR  0080H.4   A   
+P0_B5. . . . . . . . . . . . . . . . .    B  ADDR  0080H.5   A   
+P0_B6. . . . . . . . . . . . . . . . .    B  ADDR  0080H.6   A   
+P0_B7. . . . . . . . . . . . . . . . .    B  ADDR  0080H.7   A   
+P0MASK . . . . . . . . . . . . . . . .    D  ADDR  00FEH     A   
+AX51 MACRO ASSEMBLER  LEDSTRIP                                                              04/22/20 09:48:45 PAGE    19
 
-P2MASK . . . . . . . . . . . . . . . .  D  ADDR  00FCH     A   
-P2MAT. . . . . . . . . . . . . . . . .  D  ADDR  00FBH     A   
-P2MDIN . . . . . . . . . . . . . . . .  D  ADDR  00F3H     A   
-P2MDOUT. . . . . . . . . . . . . . . .  D  ADDR  00A6H     A   
-P2SKIP . . . . . . . . . . . . . . . .  D  ADDR  00CCH     A   
-P3 . . . . . . . . . . . . . . . . . .  D  ADDR  00B0H     A   
-P3_B0. . . . . . . . . . . . . . . . .  B  ADDR  00B0H.0   A   
-P3_B1. . . . . . . . . . . . . . . . .  B  ADDR  00B0H.1   A   
-P3MDIN . . . . . . . . . . . . . . . .  D  ADDR  00F4H     A   
-P3MDOUT. . . . . . . . . . . . . . . .  D  ADDR  009CH     A   
-PCA0 . . . . . . . . . . . . . . . . .  D  ADDR  00F9H     A   
-PCA0_IRQN. . . . . . . . . . . . . . .  N  NUMB  000BH     A   
-PCA0_PAGE. . . . . . . . . . . . . . .  N  NUMB  0000H     A   
-PCA0CENT . . . . . . . . . . . . . . .  D  ADDR  009EH     A   
-PCA0CLR. . . . . . . . . . . . . . . .  D  ADDR  009CH     A   
-PCA0CN0. . . . . . . . . . . . . . . .  D  ADDR  00D8H     A   
-PCA0CN0_CCF0 . . . . . . . . . . . . .  B  ADDR  00D8H.0   A   
-PCA0CN0_CCF1 . . . . . . . . . . . . .  B  ADDR  00D8H.1   A   
-PCA0CN0_CCF2 . . . . . . . . . . . . .  B  ADDR  00D8H.2   A   
-PCA0CN0_CF . . . . . . . . . . . . . .  B  ADDR  00D8H.7   A   
-PCA0CN0_CR . . . . . . . . . . . . . .  B  ADDR  00D8H.6   A   
-PCA0CP0. . . . . . . . . . . . . . . .  D  ADDR  00FBH     A   
-PCA0CP1. . . . . . . . . . . . . . . .  D  ADDR  00E9H     A   
-PCA0CP2. . . . . . . . . . . . . . . .  D  ADDR  00EBH     A   
-PCA0CPH0 . . . . . . . . . . . . . . .  D  ADDR  00FCH     A   
-PCA0CPH1 . . . . . . . . . . . . . . .  D  ADDR  00EAH     A   
-PCA0CPH2 . . . . . . . . . . . . . . .  D  ADDR  00ECH     A   
-PCA0CPL0 . . . . . . . . . . . . . . .  D  ADDR  00FBH     A   
-PCA0CPL1 . . . . . . . . . . . . . . .  D  ADDR  00E9H     A   
-PCA0CPL2 . . . . . . . . . . . . . . .  D  ADDR  00EBH     A   
-PCA0CPM0 . . . . . . . . . . . . . . .  D  ADDR  00DAH     A   
-PCA0CPM1 . . . . . . . . . . . . . . .  D  ADDR  00DBH     A   
-PCA0CPM2 . . . . . . . . . . . . . . .  D  ADDR  00DCH     A   
-PCA0H. . . . . . . . . . . . . . . . .  D  ADDR  00FAH     A   
-PCA0L. . . . . . . . . . . . . . . . .  D  ADDR  00F9H     A   
-PCA0MD . . . . . . . . . . . . . . . .  D  ADDR  00D9H     A   
-PCA0POL. . . . . . . . . . . . . . . .  D  ADDR  0096H     A   
-PCA0PWM. . . . . . . . . . . . . . . .  D  ADDR  00F7H     A   
-PCON0. . . . . . . . . . . . . . . . .  D  ADDR  0087H     A   
-PCON1. . . . . . . . . . . . . . . . .  D  ADDR  009AH     A   
-PFE0CN . . . . . . . . . . . . . . . .  D  ADDR  00C1H     A   
-PG2_PAGE . . . . . . . . . . . . . . .  N  NUMB  0010H     A   
-PG3_PAGE . . . . . . . . . . . . . . .  N  NUMB  0020H     A   
-PMATCH_IRQN. . . . . . . . . . . . . .  N  NUMB  0008H     A   
-POWER. . . . . . . . . . . . . . . . .  N  NUMB  0001H     A   
-PRTDRV . . . . . . . . . . . . . . . .  D  ADDR  00F6H     A   
-PSCTL. . . . . . . . . . . . . . . . .  D  ADDR  008FH     A   
-PSW. . . . . . . . . . . . . . . . . .  D  ADDR  00D0H     A   
-PSW_AC . . . . . . . . . . . . . . . .  B  ADDR  00D0H.6   A   
-PSW_CY . . . . . . . . . . . . . . . .  B  ADDR  00D0H.7   A   
-PSW_F0 . . . . . . . . . . . . . . . .  B  ADDR  00D0H.5   A   
-PSW_F1 . . . . . . . . . . . . . . . .  B  ADDR  00D0H.1   A   
-PSW_OV . . . . . . . . . . . . . . . .  B  ADDR  00D0H.2   A   
-PSW_PARITY . . . . . . . . . . . . . .  B  ADDR  00D0H.0   A   
-PSW_RS0. . . . . . . . . . . . . . . .  B  ADDR  00D0H.3   A   
-PSW_RS1. . . . . . . . . . . . . . . .  B  ADDR  00D0H.4   A   
-REF0CN . . . . . . . . . . . . . . . .  D  ADDR  00D1H     A   
-REG0CN . . . . . . . . . . . . . . . .  D  ADDR  00C9H     A   
-REG1CN . . . . . . . . . . . . . . . .  D  ADDR  00C6H     A   
-REVID. . . . . . . . . . . . . . . . .  D  ADDR  00B6H     A   
-RSTSRC . . . . . . . . . . . . . . . .  D  ADDR  00EFH     A   
-SBCON1 . . . . . . . . . . . . . . . .  D  ADDR  0094H     A   
-SBRL1. . . . . . . . . . . . . . . . .  D  ADDR  0095H     A   
-AX51 MACRO ASSEMBLER  LEDSTRIP                                                              04/21/20 14:50:40 PAGE    17
+P0MAT. . . . . . . . . . . . . . . . .    D  ADDR  00FDH     A   
+P0MDIN . . . . . . . . . . . . . . . .    D  ADDR  00F1H     A   
+P0MDOUT. . . . . . . . . . . . . . . .    D  ADDR  00A4H     A   
+P0SKIP . . . . . . . . . . . . . . . .    D  ADDR  00D4H     A   
+P1 . . . . . . . . . . . . . . . . . .    D  ADDR  0090H     A   
+P1_B0. . . . . . . . . . . . . . . . .    B  ADDR  0090H.0   A   
+P1_B1. . . . . . . . . . . . . . . . .    B  ADDR  0090H.1   A   
+P1_B2. . . . . . . . . . . . . . . . .    B  ADDR  0090H.2   A   
+P1_B3. . . . . . . . . . . . . . . . .    B  ADDR  0090H.3   A   
+P1_B4. . . . . . . . . . . . . . . . .    B  ADDR  0090H.4   A   
+P1_B5. . . . . . . . . . . . . . . . .    B  ADDR  0090H.5   A   
+P1_B6. . . . . . . . . . . . . . . . .    B  ADDR  0090H.6   A   
+P1_B7. . . . . . . . . . . . . . . . .    B  ADDR  0090H.7   A   
+P1MASK . . . . . . . . . . . . . . . .    D  ADDR  00EEH     A   
+P1MAT. . . . . . . . . . . . . . . . .    D  ADDR  00EDH     A   
+P1MDIN . . . . . . . . . . . . . . . .    D  ADDR  00F2H     A   
+P1MDOUT. . . . . . . . . . . . . . . .    D  ADDR  00A5H     A   
+P1SKIP . . . . . . . . . . . . . . . .    D  ADDR  00D5H     A   
+P2 . . . . . . . . . . . . . . . . . .    D  ADDR  00A0H     A   
+P2_B0. . . . . . . . . . . . . . . . .    B  ADDR  00A0H.0   A   
+P2_B1. . . . . . . . . . . . . . . . .    B  ADDR  00A0H.1   A   
+P2_B2. . . . . . . . . . . . . . . . .    B  ADDR  00A0H.2   A   
+P2_B3. . . . . . . . . . . . . . . . .    B  ADDR  00A0H.3   A   
+P2MASK . . . . . . . . . . . . . . . .    D  ADDR  00FCH     A   
+P2MAT. . . . . . . . . . . . . . . . .    D  ADDR  00FBH     A   
+P2MDIN . . . . . . . . . . . . . . . .    D  ADDR  00F3H     A   
+P2MDOUT. . . . . . . . . . . . . . . .    D  ADDR  00A6H     A   
+P2SKIP . . . . . . . . . . . . . . . .    D  ADDR  00CCH     A   
+P3 . . . . . . . . . . . . . . . . . .    D  ADDR  00B0H     A   
+P3_B0. . . . . . . . . . . . . . . . .    B  ADDR  00B0H.0   A   
+P3_B1. . . . . . . . . . . . . . . . .    B  ADDR  00B0H.1   A   
+P3MDIN . . . . . . . . . . . . . . . .    D  ADDR  00F4H     A   
+P3MDOUT. . . . . . . . . . . . . . . .    D  ADDR  009CH     A   
+PCA0 . . . . . . . . . . . . . . . . .    D  ADDR  00F9H     A   
+PCA0_IRQN. . . . . . . . . . . . . . .    N  NUMB  000BH     A   
+PCA0_PAGE. . . . . . . . . . . . . . .    N  NUMB  0000H     A   
+PCA0CENT . . . . . . . . . . . . . . .    D  ADDR  009EH     A   
+PCA0CLR. . . . . . . . . . . . . . . .    D  ADDR  009CH     A   
+PCA0CN0. . . . . . . . . . . . . . . .    D  ADDR  00D8H     A   
+PCA0CN0_CCF0 . . . . . . . . . . . . .    B  ADDR  00D8H.0   A   
+PCA0CN0_CCF1 . . . . . . . . . . . . .    B  ADDR  00D8H.1   A   
+PCA0CN0_CCF2 . . . . . . . . . . . . .    B  ADDR  00D8H.2   A   
+PCA0CN0_CF . . . . . . . . . . . . . .    B  ADDR  00D8H.7   A   
+PCA0CN0_CR . . . . . . . . . . . . . .    B  ADDR  00D8H.6   A   
+PCA0CP0. . . . . . . . . . . . . . . .    D  ADDR  00FBH     A   
+PCA0CP1. . . . . . . . . . . . . . . .    D  ADDR  00E9H     A   
+PCA0CP2. . . . . . . . . . . . . . . .    D  ADDR  00EBH     A   
+PCA0CPH0 . . . . . . . . . . . . . . .    D  ADDR  00FCH     A   
+PCA0CPH1 . . . . . . . . . . . . . . .    D  ADDR  00EAH     A   
+PCA0CPH2 . . . . . . . . . . . . . . .    D  ADDR  00ECH     A   
+PCA0CPL0 . . . . . . . . . . . . . . .    D  ADDR  00FBH     A   
+PCA0CPL1 . . . . . . . . . . . . . . .    D  ADDR  00E9H     A   
+PCA0CPL2 . . . . . . . . . . . . . . .    D  ADDR  00EBH     A   
+PCA0CPM0 . . . . . . . . . . . . . . .    D  ADDR  00DAH     A   
+PCA0CPM1 . . . . . . . . . . . . . . .    D  ADDR  00DBH     A   
+PCA0CPM2 . . . . . . . . . . . . . . .    D  ADDR  00DCH     A   
+PCA0H. . . . . . . . . . . . . . . . .    D  ADDR  00FAH     A   
+PCA0L. . . . . . . . . . . . . . . . .    D  ADDR  00F9H     A   
+PCA0MD . . . . . . . . . . . . . . . .    D  ADDR  00D9H     A   
+PCA0POL. . . . . . . . . . . . . . . .    D  ADDR  0096H     A   
+PCA0PWM. . . . . . . . . . . . . . . .    D  ADDR  00F7H     A   
+PCON0. . . . . . . . . . . . . . . . .    D  ADDR  0087H     A   
+PCON1. . . . . . . . . . . . . . . . .    D  ADDR  009AH     A   
+AX51 MACRO ASSEMBLER  LEDSTRIP                                                              04/22/20 09:48:45 PAGE    20
 
-SBRLH1 . . . . . . . . . . . . . . . .  D  ADDR  0096H     A   
-SBRLL1 . . . . . . . . . . . . . . . .  D  ADDR  0095H     A   
-SBUF0. . . . . . . . . . . . . . . . .  D  ADDR  0099H     A   
-SBUF1. . . . . . . . . . . . . . . . .  D  ADDR  0092H     A   
-SCON0. . . . . . . . . . . . . . . . .  D  ADDR  0098H     A   
-SCON0_MCE. . . . . . . . . . . . . . .  B  ADDR  0098H.5   A   
-SCON0_RB8. . . . . . . . . . . . . . .  B  ADDR  0098H.2   A   
-SCON0_REN. . . . . . . . . . . . . . .  B  ADDR  0098H.4   A   
-SCON0_RI . . . . . . . . . . . . . . .  B  ADDR  0098H.0   A   
-SCON0_SMODE. . . . . . . . . . . . . .  B  ADDR  0098H.7   A   
-SCON0_TB8. . . . . . . . . . . . . . .  B  ADDR  0098H.3   A   
-SCON0_TI . . . . . . . . . . . . . . .  B  ADDR  0098H.1   A   
-SCON1. . . . . . . . . . . . . . . . .  D  ADDR  00C8H     A   
-SCON1_OVR. . . . . . . . . . . . . . .  B  ADDR  00C8H.7   A   
-SCON1_PERR . . . . . . . . . . . . . .  B  ADDR  00C8H.6   A   
-SCON1_RBX. . . . . . . . . . . . . . .  B  ADDR  00C8H.2   A   
-SCON1_REN. . . . . . . . . . . . . . .  B  ADDR  00C8H.4   A   
-SCON1_RI . . . . . . . . . . . . . . .  B  ADDR  00C8H.0   A   
-SCON1_TBX. . . . . . . . . . . . . . .  B  ADDR  00C8H.3   A   
-SCON1_TI . . . . . . . . . . . . . . .  B  ADDR  00C8H.1   A   
-SFRPAGE. . . . . . . . . . . . . . . .  D  ADDR  00A7H     A   
-SFRPGCN. . . . . . . . . . . . . . . .  D  ADDR  00CFH     A   
-SFRSTACK . . . . . . . . . . . . . . .  D  ADDR  00D7H     A   
-SMB0_PAGE. . . . . . . . . . . . . . .  N  NUMB  0020H     A   
-SMB0ADM. . . . . . . . . . . . . . . .  D  ADDR  00D6H     A   
-SMB0ADR. . . . . . . . . . . . . . . .  D  ADDR  00D7H     A   
-SMB0CF . . . . . . . . . . . . . . . .  D  ADDR  00C1H     A   
-SMB0CN0. . . . . . . . . . . . . . . .  D  ADDR  00C0H     A   
-SMB0CN0_ACK. . . . . . . . . . . . . .  B  ADDR  00C0H.1   A   
-SMB0CN0_ACKRQ. . . . . . . . . . . . .  B  ADDR  00C0H.3   A   
-SMB0CN0_ARBLOST. . . . . . . . . . . .  B  ADDR  00C0H.2   A   
-SMB0CN0_MASTER . . . . . . . . . . . .  B  ADDR  00C0H.7   A   
-SMB0CN0_SI . . . . . . . . . . . . . .  B  ADDR  00C0H.0   A   
-SMB0CN0_STA. . . . . . . . . . . . . .  B  ADDR  00C0H.5   A   
-SMB0CN0_STO. . . . . . . . . . . . . .  B  ADDR  00C0H.4   A   
-SMB0CN0_TXMODE . . . . . . . . . . . .  B  ADDR  00C0H.6   A   
-SMB0DAT. . . . . . . . . . . . . . . .  D  ADDR  00C2H     A   
-SMB0FCN0 . . . . . . . . . . . . . . .  D  ADDR  00C3H     A   
-SMB0FCN1 . . . . . . . . . . . . . . .  D  ADDR  00C4H     A   
-SMB0FCT. . . . . . . . . . . . . . . .  D  ADDR  00EFH     A   
-SMB0RXLN . . . . . . . . . . . . . . .  D  ADDR  00C5H     A   
-SMB0TC . . . . . . . . . . . . . . . .  D  ADDR  00ACH     A   
-SMBUS0_IRQN. . . . . . . . . . . . . .  N  NUMB  0007H     A   
-SMOD1. . . . . . . . . . . . . . . . .  D  ADDR  0093H     A   
-SP . . . . . . . . . . . . . . . . . .  D  ADDR  0081H     A   
-SPI0_IRQN. . . . . . . . . . . . . . .  N  NUMB  0006H     A   
-SPI0_PAGE. . . . . . . . . . . . . . .  N  NUMB  0020H     A   
-SPI0CFG. . . . . . . . . . . . . . . .  D  ADDR  00A1H     A   
-SPI0CKR. . . . . . . . . . . . . . . .  D  ADDR  00A2H     A   
-SPI0CN0. . . . . . . . . . . . . . . .  D  ADDR  00F8H     A   
-SPI0CN0_MODF . . . . . . . . . . . . .  B  ADDR  00F8H.5   A   
-SPI0CN0_NSSMD0 . . . . . . . . . . . .  B  ADDR  00F8H.2   A   
-SPI0CN0_NSSMD1 . . . . . . . . . . . .  B  ADDR  00F8H.3   A   
-SPI0CN0_RXOVRN . . . . . . . . . . . .  B  ADDR  00F8H.4   A   
-SPI0CN0_SPIEN. . . . . . . . . . . . .  B  ADDR  00F8H.0   A   
-SPI0CN0_SPIF . . . . . . . . . . . . .  B  ADDR  00F8H.7   A   
-SPI0CN0_TXNF . . . . . . . . . . . . .  B  ADDR  00F8H.1   A   
-SPI0CN0_WCOL . . . . . . . . . . . . .  B  ADDR  00F8H.6   A   
-SPI0DAT. . . . . . . . . . . . . . . .  D  ADDR  00A3H     A   
-SPI0FCN0 . . . . . . . . . . . . . . .  D  ADDR  009AH     A   
-SPI0FCN1 . . . . . . . . . . . . . . .  D  ADDR  009BH     A   
-SPI0FCT. . . . . . . . . . . . . . . .  D  ADDR  00F7H     A   
-TCON . . . . . . . . . . . . . . . . .  D  ADDR  0088H     A   
-AX51 MACRO ASSEMBLER  LEDSTRIP                                                              04/21/20 14:50:40 PAGE    18
+PFE0CN . . . . . . . . . . . . . . . .    D  ADDR  00C1H     A   
+PG2_PAGE . . . . . . . . . . . . . . .    N  NUMB  0010H     A   
+PG3_PAGE . . . . . . . . . . . . . . .    N  NUMB  0020H     A   
+PMATCH_IRQN. . . . . . . . . . . . . .    N  NUMB  0008H     A   
+POWER. . . . . . . . . . . . . . . . .    N  NUMB  0001H     A   
+PRTDRV . . . . . . . . . . . . . . . .    D  ADDR  00F6H     A   
+PSCTL. . . . . . . . . . . . . . . . .    D  ADDR  008FH     A   
+PSW. . . . . . . . . . . . . . . . . .    D  ADDR  00D0H     A   
+PSW_AC . . . . . . . . . . . . . . . .    B  ADDR  00D0H.6   A   
+PSW_CY . . . . . . . . . . . . . . . .    B  ADDR  00D0H.7   A   
+PSW_F0 . . . . . . . . . . . . . . . .    B  ADDR  00D0H.5   A   
+PSW_F1 . . . . . . . . . . . . . . . .    B  ADDR  00D0H.1   A   
+PSW_OV . . . . . . . . . . . . . . . .    B  ADDR  00D0H.2   A   
+PSW_PARITY . . . . . . . . . . . . . .    B  ADDR  00D0H.0   A   
+PSW_RS0. . . . . . . . . . . . . . . .    B  ADDR  00D0H.3   A   
+PSW_RS1. . . . . . . . . . . . . . . .    B  ADDR  00D0H.4   A   
+REF0CN . . . . . . . . . . . . . . . .    D  ADDR  00D1H     A   
+REG0CN . . . . . . . . . . . . . . . .    D  ADDR  00C9H     A   
+REG1CN . . . . . . . . . . . . . . . .    D  ADDR  00C6H     A   
+REVID. . . . . . . . . . . . . . . . .    D  ADDR  00B6H     A   
+RSTSRC . . . . . . . . . . . . . . . .    D  ADDR  00EFH     A   
+SBCON1 . . . . . . . . . . . . . . . .    D  ADDR  0094H     A   
+SBRL1. . . . . . . . . . . . . . . . .    D  ADDR  0095H     A   
+SBRLH1 . . . . . . . . . . . . . . . .    D  ADDR  0096H     A   
+SBRLL1 . . . . . . . . . . . . . . . .    D  ADDR  0095H     A   
+SBUF0. . . . . . . . . . . . . . . . .    D  ADDR  0099H     A   
+SBUF1. . . . . . . . . . . . . . . . .    D  ADDR  0092H     A   
+SCON0. . . . . . . . . . . . . . . . .    D  ADDR  0098H     A   
+SCON0_MCE. . . . . . . . . . . . . . .    B  ADDR  0098H.5   A   
+SCON0_RB8. . . . . . . . . . . . . . .    B  ADDR  0098H.2   A   
+SCON0_REN. . . . . . . . . . . . . . .    B  ADDR  0098H.4   A   
+SCON0_RI . . . . . . . . . . . . . . .    B  ADDR  0098H.0   A   
+SCON0_SMODE. . . . . . . . . . . . . .    B  ADDR  0098H.7   A   
+SCON0_TB8. . . . . . . . . . . . . . .    B  ADDR  0098H.3   A   
+SCON0_TI . . . . . . . . . . . . . . .    B  ADDR  0098H.1   A   
+SCON1. . . . . . . . . . . . . . . . .    D  ADDR  00C8H     A   
+SCON1_OVR. . . . . . . . . . . . . . .    B  ADDR  00C8H.7   A   
+SCON1_PERR . . . . . . . . . . . . . .    B  ADDR  00C8H.6   A   
+SCON1_RBX. . . . . . . . . . . . . . .    B  ADDR  00C8H.2   A   
+SCON1_REN. . . . . . . . . . . . . . .    B  ADDR  00C8H.4   A   
+SCON1_RI . . . . . . . . . . . . . . .    B  ADDR  00C8H.0   A   
+SCON1_TBX. . . . . . . . . . . . . . .    B  ADDR  00C8H.3   A   
+SCON1_TI . . . . . . . . . . . . . . .    B  ADDR  00C8H.1   A   
+SFRPAGE. . . . . . . . . . . . . . . .    D  ADDR  00A7H     A   
+SFRPGCN. . . . . . . . . . . . . . . .    D  ADDR  00CFH     A   
+SFRSTACK . . . . . . . . . . . . . . .    D  ADDR  00D7H     A   
+SMB0_PAGE. . . . . . . . . . . . . . .    N  NUMB  0020H     A   
+SMB0ADM. . . . . . . . . . . . . . . .    D  ADDR  00D6H     A   
+SMB0ADR. . . . . . . . . . . . . . . .    D  ADDR  00D7H     A   
+SMB0CF . . . . . . . . . . . . . . . .    D  ADDR  00C1H     A   
+SMB0CN0. . . . . . . . . . . . . . . .    D  ADDR  00C0H     A   
+SMB0CN0_ACK. . . . . . . . . . . . . .    B  ADDR  00C0H.1   A   
+SMB0CN0_ACKRQ. . . . . . . . . . . . .    B  ADDR  00C0H.3   A   
+SMB0CN0_ARBLOST. . . . . . . . . . . .    B  ADDR  00C0H.2   A   
+SMB0CN0_MASTER . . . . . . . . . . . .    B  ADDR  00C0H.7   A   
+SMB0CN0_SI . . . . . . . . . . . . . .    B  ADDR  00C0H.0   A   
+SMB0CN0_STA. . . . . . . . . . . . . .    B  ADDR  00C0H.5   A   
+SMB0CN0_STO. . . . . . . . . . . . . .    B  ADDR  00C0H.4   A   
+SMB0CN0_TXMODE . . . . . . . . . . . .    B  ADDR  00C0H.6   A   
+SMB0DAT. . . . . . . . . . . . . . . .    D  ADDR  00C2H     A   
+SMB0FCN0 . . . . . . . . . . . . . . .    D  ADDR  00C3H     A   
+SMB0FCN1 . . . . . . . . . . . . . . .    D  ADDR  00C4H     A   
+SMB0FCT. . . . . . . . . . . . . . . .    D  ADDR  00EFH     A   
+AX51 MACRO ASSEMBLER  LEDSTRIP                                                              04/22/20 09:48:45 PAGE    21
 
-TCON_IE0 . . . . . . . . . . . . . . .  B  ADDR  0088H.1   A   
-TCON_IE1 . . . . . . . . . . . . . . .  B  ADDR  0088H.3   A   
-TCON_IT0 . . . . . . . . . . . . . . .  B  ADDR  0088H.0   A   
-TCON_IT1 . . . . . . . . . . . . . . .  B  ADDR  0088H.2   A   
-TCON_TF0 . . . . . . . . . . . . . . .  B  ADDR  0088H.5   A   
-TCON_TF1 . . . . . . . . . . . . . . .  B  ADDR  0088H.7   A   
-TCON_TR0 . . . . . . . . . . . . . . .  B  ADDR  0088H.4   A   
-TCON_TR1 . . . . . . . . . . . . . . .  B  ADDR  0088H.6   A   
-TH0. . . . . . . . . . . . . . . . . .  D  ADDR  008CH     A   
-TH1. . . . . . . . . . . . . . . . . .  D  ADDR  008DH     A   
-TIMER0_IRQN. . . . . . . . . . . . . .  N  NUMB  0001H     A   
-TIMER1_IRQN. . . . . . . . . . . . . .  N  NUMB  0003H     A   
-TIMER2_IRQN. . . . . . . . . . . . . .  N  NUMB  0005H     A   
-TIMER2_PAGE. . . . . . . . . . . . . .  N  NUMB  0010H     A   
-TIMER3_IRQN. . . . . . . . . . . . . .  N  NUMB  000EH     A   
-TIMER3_PAGE. . . . . . . . . . . . . .  N  NUMB  0010H     A   
-TIMER4_IRQN. . . . . . . . . . . . . .  N  NUMB  0013H     A   
-TIMER4_PAGE. . . . . . . . . . . . . .  N  NUMB  0010H     A   
-TL0. . . . . . . . . . . . . . . . . .  D  ADDR  008AH     A   
-TL1. . . . . . . . . . . . . . . . . .  D  ADDR  008BH     A   
-TMOD . . . . . . . . . . . . . . . . .  D  ADDR  0089H     A   
-TMR2 . . . . . . . . . . . . . . . . .  D  ADDR  00CCH     A   
-TMR2CN0. . . . . . . . . . . . . . . .  D  ADDR  00C8H     A   
-TMR2CN0_T2SPLIT. . . . . . . . . . . .  B  ADDR  00C8H.3   A   
-TMR2CN0_T2XCLK0. . . . . . . . . . . .  B  ADDR  00C8H.0   A   
-TMR2CN0_T2XCLK1. . . . . . . . . . . .  B  ADDR  00C8H.1   A   
-TMR2CN0_TF2CEN . . . . . . . . . . . .  B  ADDR  00C8H.4   A   
-TMR2CN0_TF2H . . . . . . . . . . . . .  B  ADDR  00C8H.7   A   
-TMR2CN0_TF2L . . . . . . . . . . . . .  B  ADDR  00C8H.6   A   
-TMR2CN0_TF2LEN . . . . . . . . . . . .  B  ADDR  00C8H.5   A   
-TMR2CN0_TR2. . . . . . . . . . . . . .  B  ADDR  00C8H.2   A   
-TMR2CN1. . . . . . . . . . . . . . . .  D  ADDR  00FDH     A   
-TMR2H. . . . . . . . . . . . . . . . .  D  ADDR  00CDH     A   
-TMR2L. . . . . . . . . . . . . . . . .  D  ADDR  00CCH     A   
-TMR2RL . . . . . . . . . . . . . . . .  D  ADDR  00CAH     A   
-TMR2RLH. . . . . . . . . . . . . . . .  D  ADDR  00CBH     A   
-TMR2RLL. . . . . . . . . . . . . . . .  D  ADDR  00CAH     A   
-TMR3 . . . . . . . . . . . . . . . . .  D  ADDR  0094H     A   
-TMR3CN0. . . . . . . . . . . . . . . .  D  ADDR  0091H     A   
-TMR3CN1. . . . . . . . . . . . . . . .  D  ADDR  00FEH     A   
-TMR3H. . . . . . . . . . . . . . . . .  D  ADDR  0095H     A   
-TMR3L. . . . . . . . . . . . . . . . .  D  ADDR  0094H     A   
-TMR3RL . . . . . . . . . . . . . . . .  D  ADDR  0092H     A   
-TMR3RLH. . . . . . . . . . . . . . . .  D  ADDR  0093H     A   
-TMR3RLL. . . . . . . . . . . . . . . .  D  ADDR  0092H     A   
-TMR4 . . . . . . . . . . . . . . . . .  D  ADDR  00A4H     A   
-TMR4CN0. . . . . . . . . . . . . . . .  D  ADDR  0098H     A   
-TMR4CN0_T4SPLIT. . . . . . . . . . . .  B  ADDR  0098H.3   A   
-TMR4CN0_T4XCLK0. . . . . . . . . . . .  B  ADDR  0098H.0   A   
-TMR4CN0_T4XCLK1. . . . . . . . . . . .  B  ADDR  0098H.1   A   
-TMR4CN0_TF4CEN . . . . . . . . . . . .  B  ADDR  0098H.4   A   
-TMR4CN0_TF4H . . . . . . . . . . . . .  B  ADDR  0098H.7   A   
-TMR4CN0_TF4L . . . . . . . . . . . . .  B  ADDR  0098H.6   A   
-TMR4CN0_TF4LEN . . . . . . . . . . . .  B  ADDR  0098H.5   A   
-TMR4CN0_TR4. . . . . . . . . . . . . .  B  ADDR  0098H.2   A   
-TMR4CN1. . . . . . . . . . . . . . . .  D  ADDR  00FFH     A   
-TMR4H. . . . . . . . . . . . . . . . .  D  ADDR  00A5H     A   
-TMR4L. . . . . . . . . . . . . . . . .  D  ADDR  00A4H     A   
-TMR4RL . . . . . . . . . . . . . . . .  D  ADDR  00A2H     A   
-TMR4RLH. . . . . . . . . . . . . . . .  D  ADDR  00A3H     A   
-TMR4RLL. . . . . . . . . . . . . . . .  D  ADDR  00A2H     A   
-UART0_IRQN . . . . . . . . . . . . . .  N  NUMB  0004H     A   
-UART0_PAGE . . . . . . . . . . . . . .  N  NUMB  0020H     A   
-AX51 MACRO ASSEMBLER  LEDSTRIP                                                              04/21/20 14:50:40 PAGE    19
+SMB0RXLN . . . . . . . . . . . . . . .    D  ADDR  00C5H     A   
+SMB0TC . . . . . . . . . . . . . . . .    D  ADDR  00ACH     A   
+SMBUS0_IRQN. . . . . . . . . . . . . .    N  NUMB  0007H     A   
+SMOD1. . . . . . . . . . . . . . . . .    D  ADDR  0093H     A   
+SP . . . . . . . . . . . . . . . . . .    D  ADDR  0081H     A   
+SPI0_IRQN. . . . . . . . . . . . . . .    N  NUMB  0006H     A   
+SPI0_PAGE. . . . . . . . . . . . . . .    N  NUMB  0020H     A   
+SPI0CFG. . . . . . . . . . . . . . . .    D  ADDR  00A1H     A   
+SPI0CKR. . . . . . . . . . . . . . . .    D  ADDR  00A2H     A   
+SPI0CN0. . . . . . . . . . . . . . . .    D  ADDR  00F8H     A   
+SPI0CN0_MODF . . . . . . . . . . . . .    B  ADDR  00F8H.5   A   
+SPI0CN0_NSSMD0 . . . . . . . . . . . .    B  ADDR  00F8H.2   A   
+SPI0CN0_NSSMD1 . . . . . . . . . . . .    B  ADDR  00F8H.3   A   
+SPI0CN0_RXOVRN . . . . . . . . . . . .    B  ADDR  00F8H.4   A   
+SPI0CN0_SPIEN. . . . . . . . . . . . .    B  ADDR  00F8H.0   A   
+SPI0CN0_SPIF . . . . . . . . . . . . .    B  ADDR  00F8H.7   A   
+SPI0CN0_TXNF . . . . . . . . . . . . .    B  ADDR  00F8H.1   A   
+SPI0CN0_WCOL . . . . . . . . . . . . .    B  ADDR  00F8H.6   A   
+SPI0DAT. . . . . . . . . . . . . . . .    D  ADDR  00A3H     A   
+SPI0FCN0 . . . . . . . . . . . . . . .    D  ADDR  009AH     A   
+SPI0FCN1 . . . . . . . . . . . . . . .    D  ADDR  009BH     A   
+SPI0FCT. . . . . . . . . . . . . . . .    D  ADDR  00F7H     A   
+TCON . . . . . . . . . . . . . . . . .    D  ADDR  0088H     A   
+TCON_IE0 . . . . . . . . . . . . . . .    B  ADDR  0088H.1   A   
+TCON_IE1 . . . . . . . . . . . . . . .    B  ADDR  0088H.3   A   
+TCON_IT0 . . . . . . . . . . . . . . .    B  ADDR  0088H.0   A   
+TCON_IT1 . . . . . . . . . . . . . . .    B  ADDR  0088H.2   A   
+TCON_TF0 . . . . . . . . . . . . . . .    B  ADDR  0088H.5   A   
+TCON_TF1 . . . . . . . . . . . . . . .    B  ADDR  0088H.7   A   
+TCON_TR0 . . . . . . . . . . . . . . .    B  ADDR  0088H.4   A   
+TCON_TR1 . . . . . . . . . . . . . . .    B  ADDR  0088H.6   A   
+TH0. . . . . . . . . . . . . . . . . .    D  ADDR  008CH     A   
+TH1. . . . . . . . . . . . . . . . . .    D  ADDR  008DH     A   
+TIMER0_IRQN. . . . . . . . . . . . . .    N  NUMB  0001H     A   
+TIMER1_IRQN. . . . . . . . . . . . . .    N  NUMB  0003H     A   
+TIMER2_IRQN. . . . . . . . . . . . . .    N  NUMB  0005H     A   
+TIMER2_PAGE. . . . . . . . . . . . . .    N  NUMB  0010H     A   
+TIMER3_IRQN. . . . . . . . . . . . . .    N  NUMB  000EH     A   
+TIMER3_PAGE. . . . . . . . . . . . . .    N  NUMB  0010H     A   
+TIMER4_IRQN. . . . . . . . . . . . . .    N  NUMB  0013H     A   
+TIMER4_PAGE. . . . . . . . . . . . . .    N  NUMB  0010H     A   
+TL0. . . . . . . . . . . . . . . . . .    D  ADDR  008AH     A   
+TL1. . . . . . . . . . . . . . . . . .    D  ADDR  008BH     A   
+TMOD . . . . . . . . . . . . . . . . .    D  ADDR  0089H     A   
+TMR2 . . . . . . . . . . . . . . . . .    D  ADDR  00CCH     A   
+TMR2CN0. . . . . . . . . . . . . . . .    D  ADDR  00C8H     A   
+TMR2CN0_T2SPLIT. . . . . . . . . . . .    B  ADDR  00C8H.3   A   
+TMR2CN0_T2XCLK0. . . . . . . . . . . .    B  ADDR  00C8H.0   A   
+TMR2CN0_T2XCLK1. . . . . . . . . . . .    B  ADDR  00C8H.1   A   
+TMR2CN0_TF2CEN . . . . . . . . . . . .    B  ADDR  00C8H.4   A   
+TMR2CN0_TF2H . . . . . . . . . . . . .    B  ADDR  00C8H.7   A   
+TMR2CN0_TF2L . . . . . . . . . . . . .    B  ADDR  00C8H.6   A   
+TMR2CN0_TF2LEN . . . . . . . . . . . .    B  ADDR  00C8H.5   A   
+TMR2CN0_TR2. . . . . . . . . . . . . .    B  ADDR  00C8H.2   A   
+TMR2CN1. . . . . . . . . . . . . . . .    D  ADDR  00FDH     A   
+TMR2H. . . . . . . . . . . . . . . . .    D  ADDR  00CDH     A   
+TMR2L. . . . . . . . . . . . . . . . .    D  ADDR  00CCH     A   
+TMR2RL . . . . . . . . . . . . . . . .    D  ADDR  00CAH     A   
+TMR2RLH. . . . . . . . . . . . . . . .    D  ADDR  00CBH     A   
+TMR2RLL. . . . . . . . . . . . . . . .    D  ADDR  00CAH     A   
+TMR3 . . . . . . . . . . . . . . . . .    D  ADDR  0094H     A   
+TMR3CN0. . . . . . . . . . . . . . . .    D  ADDR  0091H     A   
+TMR3CN1. . . . . . . . . . . . . . . .    D  ADDR  00FEH     A   
+AX51 MACRO ASSEMBLER  LEDSTRIP                                                              04/22/20 09:48:45 PAGE    22
 
-UART1_IRQN . . . . . . . . . . . . . .  N  NUMB  0011H     A   
-UART1_PAGE . . . . . . . . . . . . . .  N  NUMB  0020H     A   
-UART1FCN0. . . . . . . . . . . . . . .  D  ADDR  009DH     A   
-UART1FCN1. . . . . . . . . . . . . . .  D  ADDR  00D8H     A   
-UART1FCN1_RFRQ . . . . . . . . . . . .  B  ADDR  00D8H.3   A   
-UART1FCN1_RIE. . . . . . . . . . . . .  B  ADDR  00D8H.0   A   
-UART1FCN1_RXTO0. . . . . . . . . . . .  B  ADDR  00D8H.1   A   
-UART1FCN1_RXTO1. . . . . . . . . . . .  B  ADDR  00D8H.2   A   
-UART1FCN1_TFRQ . . . . . . . . . . . .  B  ADDR  00D8H.7   A   
-UART1FCN1_TIE. . . . . . . . . . . . .  B  ADDR  00D8H.4   A   
-UART1FCN1_TXHOLD . . . . . . . . . . .  B  ADDR  00D8H.5   A   
-UART1FCN1_TXNF . . . . . . . . . . . .  B  ADDR  00D8H.6   A   
-UART1FCT . . . . . . . . . . . . . . .  D  ADDR  00FAH     A   
-UART1LIN . . . . . . . . . . . . . . .  D  ADDR  009EH     A   
-USB0_IRQN. . . . . . . . . . . . . . .  N  NUMB  000FH     A   
-USB0_PAGE. . . . . . . . . . . . . . .  N  NUMB  0020H     A   
-USB0ADR. . . . . . . . . . . . . . . .  D  ADDR  00AEH     A   
-USB0AEC. . . . . . . . . . . . . . . .  D  ADDR  00B2H     A   
-USB0CDCF . . . . . . . . . . . . . . .  D  ADDR  00B6H     A   
-USB0CDCN . . . . . . . . . . . . . . .  D  ADDR  00BEH     A   
-USB0CDSTA. . . . . . . . . . . . . . .  D  ADDR  00BFH     A   
-USB0CF . . . . . . . . . . . . . . . .  D  ADDR  00B5H     A   
-USB0DAT. . . . . . . . . . . . . . . .  D  ADDR  00AFH     A   
-USB0XCN. . . . . . . . . . . . . . . .  D  ADDR  00B3H     A   
-VBUS_IRQN. . . . . . . . . . . . . . .  N  NUMB  0010H     A   
-VDM0CN . . . . . . . . . . . . . . . .  D  ADDR  00FFH     A   
-WDTCN. . . . . . . . . . . . . . . . .  D  ADDR  0097H     A   
-XBR0 . . . . . . . . . . . . . . . . .  D  ADDR  00E1H     A   
-XBR1 . . . . . . . . . . . . . . . . .  D  ADDR  00E2H     A   
-XBR2 . . . . . . . . . . . . . . . . .  D  ADDR  00E3H     A   
+TMR3H. . . . . . . . . . . . . . . . .    D  ADDR  0095H     A   
+TMR3L. . . . . . . . . . . . . . . . .    D  ADDR  0094H     A   
+TMR3RL . . . . . . . . . . . . . . . .    D  ADDR  0092H     A   
+TMR3RLH. . . . . . . . . . . . . . . .    D  ADDR  0093H     A   
+TMR3RLL. . . . . . . . . . . . . . . .    D  ADDR  0092H     A   
+TMR4 . . . . . . . . . . . . . . . . .    D  ADDR  00A4H     A   
+TMR4CN0. . . . . . . . . . . . . . . .    D  ADDR  0098H     A   
+TMR4CN0_T4SPLIT. . . . . . . . . . . .    B  ADDR  0098H.3   A   
+TMR4CN0_T4XCLK0. . . . . . . . . . . .    B  ADDR  0098H.0   A   
+TMR4CN0_T4XCLK1. . . . . . . . . . . .    B  ADDR  0098H.1   A   
+TMR4CN0_TF4CEN . . . . . . . . . . . .    B  ADDR  0098H.4   A   
+TMR4CN0_TF4H . . . . . . . . . . . . .    B  ADDR  0098H.7   A   
+TMR4CN0_TF4L . . . . . . . . . . . . .    B  ADDR  0098H.6   A   
+TMR4CN0_TF4LEN . . . . . . . . . . . .    B  ADDR  0098H.5   A   
+TMR4CN0_TR4. . . . . . . . . . . . . .    B  ADDR  0098H.2   A   
+TMR4CN1. . . . . . . . . . . . . . . .    D  ADDR  00FFH     A   
+TMR4H. . . . . . . . . . . . . . . . .    D  ADDR  00A5H     A   
+TMR4L. . . . . . . . . . . . . . . . .    D  ADDR  00A4H     A   
+TMR4RL . . . . . . . . . . . . . . . .    D  ADDR  00A2H     A   
+TMR4RLH. . . . . . . . . . . . . . . .    D  ADDR  00A3H     A   
+TMR4RLL. . . . . . . . . . . . . . . .    D  ADDR  00A2H     A   
+UART0_IRQN . . . . . . . . . . . . . .    N  NUMB  0004H     A   
+UART0_PAGE . . . . . . . . . . . . . .    N  NUMB  0020H     A   
+UART1_IRQN . . . . . . . . . . . . . .    N  NUMB  0011H     A   
+UART1_PAGE . . . . . . . . . . . . . .    N  NUMB  0020H     A   
+UART1FCN0. . . . . . . . . . . . . . .    D  ADDR  009DH     A   
+UART1FCN1. . . . . . . . . . . . . . .    D  ADDR  00D8H     A   
+UART1FCN1_RFRQ . . . . . . . . . . . .    B  ADDR  00D8H.3   A   
+UART1FCN1_RIE. . . . . . . . . . . . .    B  ADDR  00D8H.0   A   
+UART1FCN1_RXTO0. . . . . . . . . . . .    B  ADDR  00D8H.1   A   
+UART1FCN1_RXTO1. . . . . . . . . . . .    B  ADDR  00D8H.2   A   
+UART1FCN1_TFRQ . . . . . . . . . . . .    B  ADDR  00D8H.7   A   
+UART1FCN1_TIE. . . . . . . . . . . . .    B  ADDR  00D8H.4   A   
+UART1FCN1_TXHOLD . . . . . . . . . . .    B  ADDR  00D8H.5   A   
+UART1FCN1_TXNF . . . . . . . . . . . .    B  ADDR  00D8H.6   A   
+UART1FCT . . . . . . . . . . . . . . .    D  ADDR  00FAH     A   
+UART1LIN . . . . . . . . . . . . . . .    D  ADDR  009EH     A   
+USB0_IRQN. . . . . . . . . . . . . . .    N  NUMB  000FH     A   
+USB0_PAGE. . . . . . . . . . . . . . .    N  NUMB  0020H     A   
+USB0ADR. . . . . . . . . . . . . . . .    D  ADDR  00AEH     A   
+USB0AEC. . . . . . . . . . . . . . . .    D  ADDR  00B2H     A   
+USB0CDCF . . . . . . . . . . . . . . .    D  ADDR  00B6H     A   
+USB0CDCN . . . . . . . . . . . . . . .    D  ADDR  00BEH     A   
+USB0CDSTA. . . . . . . . . . . . . . .    D  ADDR  00BFH     A   
+USB0CF . . . . . . . . . . . . . . . .    D  ADDR  00B5H     A   
+USB0DAT. . . . . . . . . . . . . . . .    D  ADDR  00AFH     A   
+USB0XCN. . . . . . . . . . . . . . . .    D  ADDR  00B3H     A   
+VBUS_IRQN. . . . . . . . . . . . . . .    N  NUMB  0010H     A   
+VDM0CN . . . . . . . . . . . . . . . .    D  ADDR  00FFH     A   
+WDTCN. . . . . . . . . . . . . . . . .    D  ADDR  0097H     A   
+XBR0 . . . . . . . . . . . . . . . . .    D  ADDR  00E1H     A   
+XBR1 . . . . . . . . . . . . . . . . .    D  ADDR  00E2H     A   
+XBR2 . . . . . . . . . . . . . . . . .    D  ADDR  00E3H     A   
 
 
 REGISTER BANK(S) USED: 0 
